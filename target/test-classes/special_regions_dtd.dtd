@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!ELEMENT specialRegions (textRegion+ | exclusionRegion+)>
+<!ELEMENT textRegion (rectangle, styleProperties)> <!-- all rectangle values are in pixels -->
+<!ELEMENT exclusionRegion (rectangle)>
+<!ELEMENT rectangle (left, top, width, height)> <!-- (left, top) give the (x, y) co-ordinates of the top-left corner of the rectangle -->
+<!ELEMENT styleProperties (styleProperty+)>
+<!ELEMENT left (#PCDATA)>
+<!ELEMENT top (#PCDATA)>
+<!ELEMENT width (#PCDATA)>
+<!ELEMENT height (#PCDATA)>
+<!ELEMENT styleProperty (#PCDATA)>

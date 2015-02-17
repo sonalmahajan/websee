@@ -1,0 +1,62 @@
+http://www.cs.usc.edu/research/research-areas-labs.htm		background-color	css	new	#ffffff	#ed0afc	/html[1]/body[1]/div[3]/div[1]/div[1]/div[2]/div[2]/div[1]/div[1]/ul[7]/li[2]/a[1]	test1
+http://www.cs.usc.edu/research/research-areas-labs.htm		border-color	css	new	#000000	#552ce5	/html[1]/body[1]/div[2]/div[1]/table[1]/tr[1]/td[4]	test2
+http://www.cs.usc.edu/research/research-areas-labs.htm		border-bottom-color	css	new	#000000	#410de3	/html[1]/body[1]/div[2]/div[1]/table[1]/tr[1]/td[1]/a[1]/span[1]	test3
+http://www.cs.usc.edu/research/research-areas-labs.htm		border-top-color	css	new	#000000	#88c812	/html[1]/body[1]/div[2]/div[1]/table[1]/tr[1]/td[3]	test4
+http://www.cs.usc.edu/research/research-areas-labs.htm		border-left-color	css	new	#000000	#0f1a57	/html[1]/body[1]/div[3]/div[1]	test5
+http://www.cs.usc.edu/research/research-areas-labs.htm		border-right-color	css	new	#000000	#d57226	/html[1]/body[1]/div[2]/div[1]/table[1]/tr[1]/td[3]	test6
+http://www.cs.usc.edu/research/research-areas-labs.htm		color	css	new	#000000	#74c29e	/html[1]/body[1]/div[3]/div[1]/div[1]/div[2]/div[2]/div[1]/div[1]/ul[4]/li[8]/ul[1]/li[1]	test7
+http://www.cs.usc.edu/research/research-areas-labs.htm		background-attachment	css	new	scroll	fixed	/html[1]/body[1]/div[2]/div[1]/div[2]/ul[1]/li[2]/a[1]/span[1]	test8
+http://www.cs.usc.edu/research/research-areas-labs.htm		border-bottom-style	css	new	solid	hidden	/html[1]/body[1]/div[2]/div[1]/table[1]/tr[1]/td[3]/a[1]/span[1]	test9
+http://www.cs.usc.edu/research/research-areas-labs.htm		border-top-style	css	new	solid	none	/html[1]/body[1]/div[3]/div[1]	test10
+http://www.cs.usc.edu/research/research-areas-labs.htm		border-left-style	css	new	none	dotted	/html[1]/body[1]/div[3]/div[1]/div[1]/div[2]/div[2]/div[1]/div[1]/h4[4]	test11
+http://www.cs.usc.edu/research/research-areas-labs.htm		border-right-style	css	new	none	dotted	/html[1]/body[1]/div[3]/div[1]/div[1]/div[2]/div[2]/div[1]/div[1]/ul[6]/li[4]/ul[1]	test12
+http://www.cs.usc.edu/research/research-areas-labs.htm		outline-style	css	new	none	double	/html[1]/body[1]/div[3]/div[1]/div[1]/div[2]/div[2]/div[1]/div[1]/ul[4]/li[6]/ul[1]/li[1]/i[1]	test13
+http://www.cs.usc.edu/research/research-areas-labs.htm		font-family	css	new	arial, sans-serif	cursive	/html[1]/body[1]/div[2]/div[1]/table[1]/tr[1]/td[2]/a[1]/span[1]	test14
+http://www.cs.usc.edu/research/research-areas-labs.htm		font-style	css	new	normal	italic	/html[1]/body[1]/div[2]/div[1]/table[1]/tr[1]/td[2]	test15
+http://www.cs.usc.edu/research/research-areas-labs.htm		font-weight	css	new	bold	400	/html[1]/body[1]/div[3]/div[1]/div[1]/div[2]/div[2]/div[1]/div[1]/h4[7]	test16
+http://www.cs.usc.edu/research/research-areas-labs.htm		list-style-position	css	new	outside	inside	/html[1]/body[1]/div[3]/div[1]/div[1]/div[2]/div[2]/div[1]/div[1]/ul[1]/li[5]	test17
+http://www.cs.usc.edu/research/research-areas-labs.htm		list-style-type	css	new	circle	none	/html[1]/body[1]/div[3]/div[1]/div[1]/div[2]/div[2]/div[1]/div[1]/ul[4]/li[6]/ul[1]/li[1]	test18
+http://www.cs.usc.edu/research/research-areas-labs.htm		clear	css	new	none	both	/html[1]/body[1]/div[3]/div[1]/div[1]/div[2]	test19
+http://www.cs.usc.edu/research/research-areas-labs.htm		display	css	new	block	none	/html[1]/body[1]/div[2]/div[1]/div[2]/form[1]	test20
+http://www.cs.usc.edu/research/research-areas-labs.htm		float	css	new	none	right	/html[1]/body[1]/div[3]/div[1]/div[1]/div[2]/div[2]/div[1]/div[1]/ul[2]/li[4]/ul[1]	test21
+http://www.cs.usc.edu/research/research-areas-labs.htm		overflow	css	new	hidden	visible	/html[1]/body[1]/div[2]/div[1]/div[2]/ul[1]/li[2]/a[1]	test22
+http://www.cs.usc.edu/research/research-areas-labs.htm		position	css	new	static	absolute	/html[1]/body[1]/div[2]/div[1]/table[1]	test23
+http://www.cs.usc.edu/research/research-areas-labs.htm		visibility	css	new	visible	hidden	/html[1]/body[1]/div[3]/div[1]/div[1]/div[2]/div[2]/div[1]/div[1]	test24
+http://www.cs.usc.edu/research/research-areas-labs.htm		table-layout	css	new	auto	fixed	/html[1]/body[1]/div[2]/div[1]/table[1]	test25
+http://www.cs.usc.edu/research/research-areas-labs.htm		direction	css	new	ltr	rtl	/html[1]/body[1]/div[3]/div[1]/div[1]/div[2]/div[2]/div[1]/div[1]/ul[4]/li[1]/ul[1]	test26
+http://www.cs.usc.edu/research/research-areas-labs.htm		text-align	css	new	left	center	/html[1]/body[1]/div[3]/div[1]/div[1]/div[2]/div[2]/div[1]/div[1]/h4[6]	test27
+http://www.cs.usc.edu/research/research-areas-labs.htm		text-decoration	css	new	none	overline	/html[1]/body[1]/div[3]/div[1]/div[1]/div[2]/div[2]/div[1]/div[1]/ul[6]/li[4]/ul[1]	test28
+http://www.cs.usc.edu/research/research-areas-labs.htm		text-transform	css	new	none	uppercase	/html[1]/body[1]/div[3]/div[1]/div[1]/div[2]/div[2]/div[1]/div[1]/ul[1]/li[5]/ul[1]/li[1]/i[1]	test29
+http://www.cs.usc.edu/research/research-areas-labs.htm		height	css	new	16px	8px	/html[1]/body[1]/div[2]/div[1]/div[2]/form[1]/fieldset[1]/input[2]	test30
+http://www.cs.usc.edu/research/research-areas-labs.htm		max-height	css	new	none	10px	/html[1]/body[1]/div[3]/div[1]/div[1]/div[2]/div[2]/div[1]/div[1]/ul[3]/li[3]/ul[1]/li[1]	test31
+http://www.cs.usc.edu/research/research-areas-labs.htm		width	css	new	543px	3px	/html[1]/body[1]/div[3]/div[1]/div[1]/div[2]/div[2]/div[1]/div[1]/ul[1]/li[3]/ul[1]/li[1]	test32
+http://www.cs.usc.edu/research/research-areas-labs.htm		margin	css	new		3px	/html[1]/body[1]/div[3]/div[1]/div[1]/div[2]/div[2]/div[1]/div[1]/ul[3]/li[3]/ul[1]/li[1]/em[1]	test33
+http://www.cs.usc.edu/research/research-areas-labs.htm		margin-bottom	css	new	12px	10px	/html[1]/body[1]/div[3]/div[1]/div[1]/div[2]/div[2]/div[1]/div[1]/ul[4]/li[3]/ul[1]	test34
+http://www.cs.usc.edu/research/research-areas-labs.htm		margin-left	css	new	0px	8px	/html[1]/body[1]/div[3]/div[1]/div[1]/div[2]/div[2]/div[1]/div[1]/ul[1]/li[6]/ul[1]/li[1]/i[1]	test35
+http://www.cs.usc.edu/research/research-areas-labs.htm		margin-right	css	new	0px	2px	/html[1]/body[1]/div[2]/div[1]	test36
+http://www.cs.usc.edu/research/research-areas-labs.htm		margin-top	css	new	0px	7px	/html[1]/body[1]/div[2]/div[1]/table[1]/tr[1]/td[7]/a[1]/span[1]	test37
+http://www.cs.usc.edu/research/research-areas-labs.htm		padding	css	new		5px	/html[1]/body[1]/div[3]/div[1]/div[1]/div[2]/div[2]/div[1]/div[1]/ul[4]/li[1]	test38
+http://www.cs.usc.edu/research/research-areas-labs.htm		padding-bottom	css	new	0px	2px	/html[1]/body[1]/div[3]/div[1]/div[1]/div[2]/div[2]/div[1]/div[1]/ul[3]/li[5]	test39
+http://www.cs.usc.edu/research/research-areas-labs.htm		padding-left	css	new	0px	10px	/html[1]/body[1]/div[3]/div[1]/div[1]/div[2]/div[2]/div[1]/div[1]/ul[4]/li[3]/ul[1]	test40
+http://www.cs.usc.edu/research/research-areas-labs.htm		padding-right	css	new	0px	2px	/html[1]/body[1]/div[2]/div[1]/table[1]/tr[1]/td[4]	test41
+http://www.cs.usc.edu/research/research-areas-labs.htm		padding-top	css	new	0px	7px	/html[1]/body[1]/div[2]/div[1]/div[2]/ul[1]	test42
+http://www.cs.usc.edu/research/research-areas-labs.htm		bottom	css	new	auto	7px	/html[1]/body[1]/div[2]/div[1]/div[1]/div[1]/a[2]	test43
+http://www.cs.usc.edu/research/research-areas-labs.htm		left	css	new	0px	6px	/html[1]/body[1]/div[2]/div[1]/div[2]/ul[1]/li[4]/a[1]/span[1]	test44
+http://www.cs.usc.edu/research/research-areas-labs.htm		top	css	new	auto	2px	/html[1]/body[1]/div[2]/div[1]/div[1]/div[1]/a[2]	test45
+http://www.cs.usc.edu/research/research-areas-labs.htm		right	css	new	auto	2px	/html[1]/body[1]/div[2]/div[1]/div[1]/div[1]	test46
+http://www.cs.usc.edu/research/research-areas-labs.htm		text-indent	css	new	0px	9px	/html[1]/body[1]/div[2]/div[1]/table[1]/tr[1]/td[8]/a[1]	test47
+http://www.cs.usc.edu/research/research-areas-labs.htm		background-position	css	new	0px 0px	7px	/html[1]/body[1]/div[1]/div[1]/a[1]	test48
+http://www.cs.usc.edu/research/research-areas-labs.htm		border-bottom-width	css	new	1px	3px	/html[1]/body[1]/div[2]/div[1]/table[1]/tr[1]/td[1]	test49
+http://www.cs.usc.edu/research/research-areas-labs.htm		line-height	css	new	15px	7px	/html[1]/body[1]/div[3]/div[1]/div[1]/div[2]/div[2]/div[1]/div[1]/ul[5]/li[1]/ul[1]/li[1]	test50
+http://www.cs.usc.edu/research/research-areas-labs.htm		border-left-width	css	new	1px	4px	/html[1]/body[1]/div[2]/div[1]/table[1]/tr[1]/td[4]	test51
+http://www.cs.usc.edu/research/research-areas-labs.htm		border-right-width	css	new	1px	5px	/html[1]/body[1]/div[2]/div[1]/table[1]/tr[1]/td[5]	test52
+http://www.cs.usc.edu/research/research-areas-labs.htm		font-size	css	new	12px	7px	/html[1]/body[1]/div[3]/div[1]/div[1]/div[2]/div[2]/div[1]/div[1]/ul[1]/li[2]/a[1]	test53
+http://www.cs.usc.edu/research/research-areas-labs.htm		letter-spacing	css	new	normal	8px	/html[1]/body[1]/div[3]/div[1]/div[1]/div[2]/div[2]/div[1]/div[1]/ul[4]/li[6]	test54
+http://www.cs.usc.edu/research/research-areas-labs.htm		line-height	css	new	15px	4px	/html[1]/body[1]/div[4]/div[1]/ul[1]/li[1]/a[1]	test55
+http://www.cs.usc.edu/research/research-areas-labs.htm		vertical-align	css	new	baseline	10px	/html[1]/body[1]/div[4]/div[1]/ul[1]/li[1]/a[3]	test56
+http://www.cs.usc.edu/research/research-areas-labs.htm		word-spacing	css	new	0px	3px	/html[1]/body[1]/div[3]/div[1]/div[1]/div[2]/div[2]/div[1]/div[1]/ul[2]/li[1]	test57
+http://www.cs.usc.edu/research/research-areas-labs.htm		dir	html	new		rtl	/html[1]/body[1]/div[3]/div[1]/div[1]/div[2]/div[2]/div[1]/div[1]/ul[4]/li[2]/ul[1]/li[1]	test58
+http://www.cs.usc.edu/research/research-areas-labs.htm		type	html	new	hidden	radio	/html[1]/body[1]/div[2]/div[1]/div[2]/form[1]/fieldset[1]/input[1]	test59
+http://www.cs.usc.edu/research/research-areas-labs.htm		hidden	html	new			/html[1]/body[1]/div[3]/div[1]/div[1]/div[2]/div[2]/div[1]/div[1]/h4[7]	test60
+http://www.cs.usc.edu/research/research-areas-labs.htm		height	html	new	75	50	/html[1]/body[1]/div[2]/div[1]/div[1]/div[1]/a[2]/img[1]	test61
+http://www.cs.usc.edu/research/research-areas-labs.htm		width	html	new	479	250	/html[1]/body[1]/div[2]/div[1]/div[1]/div[1]/a[2]/img[1]	test62

@@ -1,0 +1,147 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+
+	<groupId>WebSee</groupId>
+	<artifactId>WebSee</artifactId>
+	<version>0.0.1-SNAPSHOT</version>
+	<packaging>jar</packaging>
+
+	<name>WebSee</name>
+	<url>http://maven.apache.org</url>
+
+	<properties>
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+	</properties>
+
+	<dependencies>
+		<dependency>
+			<groupId>junit</groupId>
+			<artifactId>junit</artifactId>
+			<version>3.8.1</version>
+			<scope>test</scope>
+		</dependency>
+
+		<dependency>
+			<groupId>org.seleniumhq.selenium</groupId>
+			<artifactId>selenium-java</artifactId>
+			<version>2.43.1</version>
+		</dependency>
+	
+		<dependency>
+			<groupId>org.seleniumhq.selenium</groupId>
+			<artifactId>selenium-api</artifactId>
+			<version>2.43.1</version>
+		</dependency>
+
+		<dependency>
+			<groupId>org.seleniumhq.selenium</groupId>
+			<artifactId>selenium-server</artifactId>
+			<version>2.43.1</version>
+		</dependency>
+		
+		<dependency>
+		    <groupId>org.seleniumhq.selenium</groupId>
+		    <artifactId>selenium-firefox-driver</artifactId>
+		    <version>2.43.1</version>
+		</dependency>
+
+		<dependency>
+		    <groupId>org.seleniumhq.selenium</groupId>
+		    <artifactId>selenium-remote-driver</artifactId>
+		    <version>2.43.1</version>
+		</dependency>
+
+		<dependency>
+			<groupId>commons-io</groupId>
+			<artifactId>commons-io</artifactId>
+			<version>RELEASE</version>
+		</dependency>
+
+		<dependency>
+			<groupId>org.jsoup</groupId>
+			<artifactId>jsoup</artifactId>
+			<version>1.7.3</version>
+		</dependency>
+
+		<dependency>
+			<groupId>log4j</groupId>
+			<artifactId>log4j</artifactId>
+			<version>RELEASE</version>
+		</dependency>
+
+		<dependency>
+			<groupId>commons-lang</groupId>
+			<artifactId>commons-lang</artifactId>
+			<version>RELEASE</version>
+		</dependency>
+
+		<dependency>
+			<groupId>org.apache.poi</groupId>
+			<artifactId>poi</artifactId>
+			<version>3.8</version>
+		</dependency>
+
+		<dependency>
+			<groupId>com.github.detro.ghostdriver</groupId>
+			<artifactId>phantomjsdriver</artifactId>
+			<version>RELEASE</version>
+		</dependency>
+
+		<dependency>
+			<groupId>commons-math</groupId>
+			<artifactId>commons-math</artifactId>
+			<version>RELEASE</version>
+		</dependency>
+		
+		<dependency>
+			<groupId>jgap</groupId>
+			<artifactId>jgap</artifactId>
+			<version>3.6.2</version>
+		</dependency>
+		
+		<dependency>
+			<groupId>jStyleParser</groupId>
+			<artifactId>jStyleParser</artifactId>
+			<version>1.14</version>
+		</dependency>
+		
+		<dependency>
+			<groupId>trove4j</groupId>
+			<artifactId>trove4j</artifactId>
+			<version>2.0.2</version>
+		</dependency>
+		
+		<dependency>
+			<groupId>net.sourceforge.jsi</groupId>
+			<artifactId>jsi</artifactId>
+			<version>1.0.0</version>
+		</dependency>
+		
+		<dependency>
+			<groupId>antlr-runtime</groupId>
+			<artifactId>antlr-runtime</artifactId>
+			<version>3.1</version>
+		</dependency>
+
+		<dependency>
+			<groupId>org.apache.commons</groupId>
+			<artifactId>commons-math3</artifactId>
+			<version>3.3</version>
+		</dependency>
+
+		<dependency>
+		    <groupId>org.apache.mahout</groupId>
+		    <artifactId>mahout-core</artifactId>
+		    <version>LATEST</version>
+		</dependency>
+	</dependencies> 
+	
+	<repositories>
+		<repository>
+			<id>usc.sql</id>
+			<name>USC Software Quality Lab</name>
+			<url>http://atlanta.usc.edu:8081/artifactory/repo</url>
+		</repository>		
+	</repositories>
+</project>

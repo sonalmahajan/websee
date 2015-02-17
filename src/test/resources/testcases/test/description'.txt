@@ -1,0 +1,100 @@
+https://accounts.google.com/ServiceLogin	e44	dir	html	new		rtl	/html[1]/body[1]/div[1]/div[2]/div[2]/form[1]/a[1]	Student1/test1
+https://accounts.google.com/ServiceLogin	e50	height	css	modified	35px	20px	/html[1]/body[1]/div[1]/div[3]	Student1/test2
+http://www.cs.usc.edu/research/research-areas-labs.htm	e80	list-style-type	css	new		decimal	/html[1]/body[1]/div[3]/div[1]/div[1]/div[2]/div[2]/div[1]/div[1]/ul[1]	Student1/test3
+http://www.cs.usc.edu/research/research-areas-labs.htm	no seeding							Student1/test4
+http://losangeles.craigslist.org	e574	position	css	new		fixed	/html[1]/body[1]/article[1]/section[1]/table[1]/tbody[1]/tr[1]/td[3]/ul[1]/li[1]/h5[1]	Student1/test5
+http://losangeles.craigslist.org	e35	font-size	css	modified	13px	10px	/html[1]/body[1]/article[1]/section[1]/table[1]/tbody[1]/tr[1]/td[1]/table[1]	Student1/test6
+http://docs.oracle.com/javase/tutorial/essential/io/summary.html	duke	width	html	modified	55	80	/html[1]/body[1]/div[5]/div[2]/table[1]/tbody[1]/tr[1]/td[1]/table[1]/tbody[1]/tr[1]/td[1]/img[1]	Student1/test7
+http://docs.oracle.com/javase/tutorial/essential/io/summary.html	e86	clear	css	new		right	/html[1]/body[1]/div[4]/div[1]	Student1/test8
+http://www.virginamerica.com	ContainerFooter	text-transform	css	new		lowercase	/html[1]/body[1]/div[2]/div[7]	Student1/test9
+http://www.virginamerica.com	special_offers_header	color	css	modified	#939393	#000000	/html[1]/body[1]/div[2]/div[5]/div[2]/div[3]/div[2]/div[1]	Student1/test10
+https://accounts.google.com/ServiceLogin	e57	font-variant	css	new		small-caps	/html[1]/body[1]/div[1]/div[3]/div[1]/ul[1]/li[3]/a[1]	Student2/test1
+https://accounts.google.com/ServiceLogin	e49	width	css	modified	210px	275px	/html[1]/body[1]/div[1]/div[2]/div[3]/img[1]	Student2/test2
+http://www.cs.usc.edu/research/research-areas-labs.htm	e79	hidden	html	new			/html[1]/body[1]/div[3]/div[1]/div[1]/div[2]/div[2]/div[1]/div[1]/h4[1]	Student2/test3
+http://www.cs.usc.edu/research/research-areas-labs.htm	e78	color	css	new		#008000	/html[1]/body[1]/div[3]/div[1]/div[1]/div[2]/div[2]/div[1]/div[1]	Student2/test4
+http://losangeles.craigslist.org	e574	visibility	css	new		collapse	/html[1]/body[1]/article[1]/section[1]/table[1]/tbody[1]/tr[1]/td[3]/ul[1]/li[1]/h5[1]	Student2/test5
+http://losangeles.craigslist.org	no seeding							Student2/test6
+http://docs.oracle.com/javase/tutorial/essential/io/summary.html	e127	font-size	css	modified	10px	12px	/html[1]/body[1]/div[5]/div[2]/table[1]/tbody[1]/tr[1]/td[2]/p[1]	Student2/test7
+http://docs.oracle.com/javase/tutorial/essential/io/summary.html	e91	text-align	css	new		justify	/html[1]/body[1]/div[4]/div[3]/p[1]	Student2/test8
+http://www.virginamerica.com	e704	position	css	modified	relative	fixed	/html[1]/body[1]/div[2]/div[5]/div[2]/div[3]/div[2]/div[1]/span[1]	Student2/test9
+http://www.virginamerica.com	e788	border	html	modified	0	1	/html[1]/body[1]/div[2]/div[8]/table[1]	Student2/test10
+https://accounts.google.com/ServiceLogin	e44	font-size	css	modified	13px	xx-small	/html[1]/body[1]/div[1]/div[2]/div[2]/form[1]/a[1]	Student4/test1
+https://accounts.google.com/ServiceLogin	e19	float	css	modified	none	left	/html[1]/body[1]/div[1]/div[1]/div[1]/img[1]	Student4/test2
+http://www.cs.usc.edu/research/research-areas-labs.htm	e61	border-style	css	modified	solid	dashed	/html[1]/body[1]/div[3]/div[1]	Student4/test3
+http://www.cs.usc.edu/research/research-areas-labs.htm	nav	table-layout	css	new		fixed	/html[1]/body[1]/div[2]/div[1]/table[1]	Student4/test4
+http://losangeles.craigslist.org	calban	hidden	html	new			/html[1]/body[1]/article[1]/section[1]/table[1]/tbody[1]/tr[1]/td[1]/h4[1]	Student4/test5
+http://losangeles.craigslist.org	e1033	word-spacing	css	new		10px	/html[1]/body[1]/article[1]/footer[1]/ul[1]	Student4/test6
+http://docs.oracle.com/javase/tutorial/essential/io/summary.html	e95	list-style-type	css	new		square	/html[1]/body[1]/div[4]/div[3]/ul[1]	Student4/test7
+http://docs.oracle.com/javase/tutorial/essential/io/summary.html	no seeding							Student4/test8
+http://www.virginamerica.com	e668	text-decoration	css	modified	underlined	none	/html[1]/body[1]/div[2]/div[5]/div[2]/div[1]/table[1]/tbody[1]/tr[3]/td[1]/table[1]/tbody[1]/tr[1]/td[1]/table[1]/tbody[1]/tr[1]/td[2]/a[1]	Student4/test9
+http://www.virginamerica.com	e607	width	html	modified	107	150	/html[1]/body[1]/div[2]/div[5]/div[1]/div[8]/table[1]/tbody[1]/tr[1]/td[2]/table[1]/tbody[1]/tr[1]/td[2]/div[1]/form[1]/div[1]/div[1]/a[1]/img[1]	Student4/test10
+https://accounts.google.com/ServiceLogin	e48	line-height	css	new		4	/html[1]/body[1]/div[1]/div[2]/div[3]/p[2]	Student6/test1
+https://accounts.google.com/ServiceLogin	e15	position	css	modified	absolute	fixed	/html[1]/body[1]	Student6/test2
+http://www.cs.usc.edu/research/research-areas-labs.htm	e73	padding-top	css	modified	6px	10px	/html[1]/body[1]/div[3]/div[1]/div[1]/div[1]/ul[1]/ul[1]/ul[1]/ul[1]/ul[1]/ul[1]/li[1]/a[1]	Student6/test3
+http://www.cs.usc.edu/research/research-areas-labs.htm	e80	font-style	css	new		italic	/html[1]/body[1]/div[3]/div[1]/div[1]/div[2]/div[2]/div[1]/div[1]/ul[1]	Student6/test4
+http://losangeles.craigslist.org	e33	selected	html	new			/html[1]/body[1]/article[1]/section[1]/table[1]/tbody[1]/tr[1]/td[1]/form[1]/select[1]/option[9]	Student6/test5
+http://losangeles.craigslist.org	e134	font-family	css	new		comic sans ms	/html[1]/body[1]/article[1]/section[1]/table[1]/tbody[1]/tr[1]/td[2]/header[1]/span[1]	Student6/test6
+http://docs.oracle.com/javase/tutorial/essential/io/summary.html	e44	margin-left	css	modified	2.5em	1.5em	/html[1]/body[1]/div[3]/div[1]/div[13]	Student6/test7
+http://docs.oracle.com/javase/tutorial/essential/io/summary.html	e90	color	css	modified	#F90000	#AA111F	/html[1]/body[1]/div[4]/div[2]/h1[1]	Student6/test8
+http://www.virginamerica.com	e598	font-weight	css	modified	bold	lighter	/html[1]/body[1]/div[2]/div[5]/div[1]/div[8]/table[1]/tbody[1]/tr[1]/td[2]/table[1]/tbody[1]/tr[1]/td[1]/div[1]	Student6/test9
+http://www.virginamerica.com	no seeding							Student6/test10
+https://accounts.google.com/ServiceLogin	e44	color	css	modified	#427FED	#FFF0F5	/html[1]/body[1]/div[1]/div[2]/div[2]/form[1]/a[1]	Student7/test1
+https://accounts.google.com/ServiceLogin	e25	border-radius	css	modified	0.5	0.1	/html[1]/body[1]/div[1]/div[2]/div[2]/img[1]	Student7/test2
+http://www.cs.usc.edu/research/research-areas-labs.htm	e79	max-height	css	new		8px	/html[1]/body[1]/div[3]/div[1]/div[1]/div[2]/div[2]/div[1]/div[1]/h4[1]	Student7/test3
+http://www.cs.usc.edu/research/research-areas-labs.htm	e63	text-transform	css	new		uppercase	/html[1]/body[1]/div[3]/div[1]/div[1]/div[1]	Student7/test4
+http://losangeles.craigslist.org	e133	display	css	modified	inline	none	/html[1]/body[1]/article[1]/section[1]/table[1]/tbody[1]/tr[1]/td[2]/header[1]/sup[1]/a[1]	Student7/test5
+http://losangeles.craigslist.org	leftbar	padding	css	new		10px	/html[1]/body[1]/article[1]/section[1]/table[1]/tbody[1]/tr[1]/td[1]	Student7/test6
+http://docs.oracle.com/javase/tutorial/essential/io/summary.html	e127	hidden	html	new			/html[1]/body[1]/div[5]/div[2]/table[1]/tbody[1]/tr[1]/td[2]/p[1]	Student7/test7
+http://docs.oracle.com/javase/tutorial/essential/io/summary.html	no seeding							Student7/test8
+http://www.virginamerica.com	e600	white-space	css	new		nowrap	/html[1]/body[1]/div[2]/div[5]/div[1]/div[8]/table[1]/tbody[1]/tr[1]/td[2]/table[1]/tbody[1]/tr[1]/td[1]/div[2]	Student7/test9
+http://www.virginamerica.com	e617	cellpadding	html	modified	0	1	/html[1]/body[1]/div[2]/div[5]/div[2]/div[1]/table[1]	Student7/test10
+https://accounts.google.com/ServiceLogin	e47	text-decoration	css	modified	none	underline	/html[1]/body[1]/div[1]/div[2]/div[3]/p[1]/a[1]	Student9/test1
+https://accounts.google.com/ServiceLogin	e50	bottom	css	modified	0px	10px	/html[1]/body[1]/div[1]/div[3]	Student9/test2
+http://www.cs.usc.edu/research/research-areas-labs.htm	e75	font-style	css	new		italic	/html[1]/body[1]/div[3]/div[1]/div[1]/div[2]/div[1]/h1[1]	Student9/test3
+http://www.cs.usc.edu/research/research-areas-labs.htm	e61	border-width	css	modified	1px	2px	/html[1]/body[1]/div[3]/div[1]	Student9/test4
+http://losangeles.craigslist.org	e439	position	css	modified	relative	absolute	/html[1]/body[1]/article[1]/section[1]/table[1]/tbody[1]/tr[1]/td[2]/table[1]/tbody[1]/tr[1]/td[2]/div[3]/div[1]	Student9/test5
+http://losangeles.craigslist.org	jjj	dir	html	new		rtl	/html[1]/body[1]/article[1]/section[1]/table[1]/tbody[1]/tr[1]/td[2]/table[1]/tbody[1]/tr[1]/td[3]/div[1]	Student9/test6
+http://docs.oracle.com/javase/tutorial/essential/io/summary.html	e94	letter-spacing	css	new		3px	/html[1]/body[1]/div[4]/div[3]/p[2]/code[1]	Student9/test7
+http://docs.oracle.com/javase/tutorial/essential/io/summary.html	no seeding							Student9/test8
+http://www.virginamerica.com	mcRadio	checked	html	new			/html[1]/body[1]/div[2]/div[5]/div[1]/div[1]/div[2]/form[1]/div[2]/div[6]/div[1]/input[3]	Student9/test9
+http://www.virginamerica.com	roundedBoxBody737	background-color	css	new		#E1E1E1	/html[1]/body[1]/div[2]/div[5]/div[1]/div[8]	Student9/test10
+https://accounts.google.com/ServiceLogin	e23	min-height	css	new		83px	/html[1]/body[1]/div[1]/div[2]/div[1]/h2[1]	Student12/test1
+https://accounts.google.com/ServiceLogin	e36	position	css	new		fixed	/html[1]/body[1]/div[1]/div[2]/div[2]/form[1]/label[3]	Student12/test2
+http://www.cs.usc.edu/research/research-areas-labs.htm	e75	display	css	new		inline	/html[1]/body[1]/div[3]/div[1]/div[1]/div[2]/div[1]/h1[1]	Student12/test3
+http://www.cs.usc.edu/research/research-areas-labs.htm	footernav	dir	html	new		rtl	/html[1]/body[1]/div[4]/div[1]/ul[1]	Student12/test4
+http://losangeles.craigslist.org	e550	background-color	css	modified	#EEEEEE	#FFFFFF	/html[1]/body[1]/article[1]/section[1]/table[1]/tbody[1]/tr[1]/td[2]/table[1]/tbody[1]/tr[1]/td[3]/div[2]/h4[1]	Student12/test5
+http://losangeles.craigslist.org	e20	margin-bottom	css	new		10px	/html[1]/body[1]/article[1]/section[1]/table[1]/tbody[1]/tr[1]/td[1]/form[1]/div[1]	Student12/test6
+http://docs.oracle.com/javase/tutorial/essential/io/summary.html	e105	font-size	css	new		14px	/html[1]/body[1]/div[4]/div[4]	Student12/test7
+http://docs.oracle.com/javase/tutorial/essential/io/summary.html	no seeding							Student12/test8
+http://www.virginamerica.com	e736	width	html	modified	203	225	/html[1]/body[1]/div[2]/div[5]/div[2]/div[3]/div[3]/a[2]/img[1]	Student12/test9
+http://www.virginamerica.com	e604	visibility	css	new		hidden	/html[1]/body[1]/div[2]/div[5]/div[1]/div[8]/table[1]/tbody[1]/tr[1]/td[2]/table[1]/tbody[1]/tr[1]/td[2]/div[1]/form[1]/div[1]	Student12/test10
+https://accounts.google.com/ServiceLogin	e48	word-spacing	css	new		10px	/html[1]/body[1]/div[1]/div[2]/div[3]/p[2]	Student13/test1
+https://accounts.google.com/ServiceLogin	e24	background-color	css	modified	#F7F7F7	#E2E2E2	/html[1]/body[1]/div[1]/div[2]/div[2]	Student13/test2
+http://www.cs.usc.edu/research/research-areas-labs.htm	nav	letter-spacing	css	new		2px	/html[1]/body[1]/div[2]/div[1]/table[1]	Student13/test3
+http://www.cs.usc.edu/research/research-areas-labs.htm	e75	max-width	css	new		450px	/html[1]/body[1]/div[3]/div[1]/div[1]/div[2]/div[1]/h1[1]	Student13/test4
+http://losangeles.craigslist.org	e1034	vertical-align	css	new		super	/html[1]/body[1]/article[1]/footer[1]/ul[1]/li[1]	Student13/test5
+http://losangeles.craigslist.org	e552	dir	html	new		rtl	/html[1]/body[1]/article[1]/section[1]/table[1]/tbody[1]/tr[1]/td[2]/table[1]/tbody[1]/tr[1]/td[3]/div[2]/div[1]	Student13/test6
+http://docs.oracle.com/javase/tutorial/essential/io/summary.html	e80	color	css	modified	#F90000	#840000	/html[1]/body[1]/div[3]/div[1]/div[31]	Student13/test7
+http://docs.oracle.com/javase/tutorial/essential/io/summary.html	no seeding							Student13/test8
+http://www.virginamerica.com	e653	text-align	css	new		right	/html[1]/body[1]/div[2]/div[5]/div[2]/div[1]/table[1]/tbody[1]/tr[2]/td[1]/table[1]/tbody[1]/tr[3]/td[1]/table[1]/tbody[1]/tr[2]/td[1]	Student13/test9
+http://www.virginamerica.com	e600	float	css	modified	right	none	/html[1]/body[1]/div[2]/div[5]/div[1]/div[8]/table[1]/tbody[1]/tr[1]/td[2]/table[1]/tbody[1]/tr[1]/td[1]/div[2]	Student13/test10
+https://accounts.google.com/ServiceLogin	e44	letter-spacing	css	new		4px	/html[1]/body[1]/div[1]/div[2]/div[2]/form[1]/a[1]	Student14/test1
+https://accounts.google.com/ServiceLogin	no seeding							Student14/test2
+http://www.cs.usc.edu/research/research-areas-labs.htm	e296	vertical-align	css	new		super	/html[1]/body[1]/div[4]/div[1]/ul[1]/li/a[1]	Student14/test3
+http://www.cs.usc.edu/research/research-areas-labs.htm	e143	float	css	new		right	/html[1]/body[1]/div[3]/div[1]/div[1]/div[2]/div[2]/div[1]/div[1]/h4[2]	Student14/test4
+http://losangeles.craigslist.org	e35	font-style	css	new		italic	/html[1]/body[1]/article[1]/section[1]/table[1]/tbody[1]/tr[1]/td[1]/table[1]	Student14/test5
+http://losangeles.craigslist.org	e637	text-align	css	modified	center	left	/html[1]/body[1]/article[1]/section[1]/table[1]/tbody[1]/tr[1]/td[3]/ul[1]/li[2]/h5[1]	Student14/test6
+http://docs.oracle.com/javase/tutorial/essential/io/summary.html	e114	dir	html	new		rtl	/html[1]/body[1]/div[5]/div[2]/p[1]	Student14/test7
+http://docs.oracle.com/javase/tutorial/essential/io/summary.html	e103	text-decoration	css	modified		none	/html[1]/body[1]/div[4]/div[3]/p[3]/a[1]	Student14/test8
+http://www.virginamerica.com	e813	color	css	modified	#939393	#000000	/html[1]/body[1]/div[2]/div[8]/table[1]/tbody[1]/tr[1]/td[9]	Student14/test9
+http://www.virginamerica.com	e56	padding	css	new		10px	/html[1]/body[1]/div[2]/div[3]/div[1]/div[1]	Student14/test10
+https://accounts.google.com/ServiceLogin	e24	background-color	css	modified	#F7F7F7	#F0F5FF	/html[1]/body[1]/div[1]/div[2]/div[2]	Student15/test1
+https://accounts.google.com/ServiceLogin	e51	white-space	css	new		pre	/html[1]/body[1]/div[1]/div[3]/div[1]	Student15/test2
+http://www.cs.usc.edu/research/research-areas-labs.htm	e242	text-align	css	modified	left	center	/html[1]/body[1]/div[3]/div[1]/div[1]/div[2]/div[2]/div[1]/div[1]/h4[5]	Student15/test3
+http://www.cs.usc.edu/research/research-areas-labs.htm	social	float	css	modified	right	none	/html[1]/body[1]/div[2]/div[1]/div[2]/ul[1]	Student15/test4
+http://losangeles.craigslist.org	e118	letter-spacing	css	new		1px	/html[1]/body[1]/article[1]/section[1]/table[1]/tbody[1]/tr[1]/td[1]/ul[3]/li[2]/a[1]	Student15/test5
+http://losangeles.craigslist.org	no seeding							Student15/test6
+http://docs.oracle.com/javase/tutorial/essential/io/summary.html	e68	position	css	new		fixed	/html[1]/body[1]/div[3]/div[1]/div[25]	Student15/test7
+http://docs.oracle.com/javase/tutorial/essential/io/summary.html	e94	font-style	css	new		italic	/html[1]/body[1]/div[4]/div[3]/p[2]/code[1]	Student15/test8
+http://www.virginamerica.com	contactus	hidden	html	new			/html[1]/body[1]/div[2]/div[7]/ul[1]/li[2]/a[1]	Student15/test9
+http://www.virginamerica.com	e813	vertical-align	css	new		top	/html[1]/body[1]/div[2]/div[8]/table[1]/tbody[1]/tr[1]/td[9]	Student15/test10

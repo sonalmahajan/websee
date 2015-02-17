@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+
+<htmlAttributes>
+	<attribute name="hidden"></attribute>
+	<attribute name="dir">dir</attribute>
+	<attribute name="allowfullscreen"></attribute>
+	<attribute name="autofocus"></attribute>
+	<attribute name="autoplay"></attribute>
+	<attribute name="border">border</attribute>
+	<attribute name="checked"></attribute>
+	<attribute name="cols">number</attribute>
+	<attribute name="colspan">number</attribute>
+	<attribute name="controls"></attribute>
+	<attribute name="coords">coords</attribute>
+	<attribute name="height">number</attribute>
+	<attribute name="label">string</attribute>
+	<attribute name="max">decimal</attribute>
+	<attribute name="min">decimal</attribute>
+	<attribute name="open"></attribute>
+	<attribute name="optimum">decimal</attribute>
+	<attribute name="placeholder">string</attribute>
+	<attribute name="reversed"></attribute>
+	<attribute name="rows">number</attribute>
+	<attribute name="rowspan">number</attribute>
+	<attribute name="scope">scope</attribute>
+	<attribute name="selected"></attribute>
+	<attribute name="shape">shape</attribute>
+	<attribute name="size">number</attribute>
+	<attribute name="span">number</attribute>
+	<attribute name="start">number</attribute>
+	<attribute name="type">type</attribute>
+	<attribute name="value">string</attribute>
+	<attribute name="value_number">number</attribute>
+	<attribute name="value_float">decimal</attribute>
+	<attribute name="width">number</attribute>
+	<attribute name="wrap">wrap</attribute>
+</htmlAttributes>
