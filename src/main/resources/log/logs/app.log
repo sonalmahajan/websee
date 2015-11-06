@@ -481,3 +481,83 @@ INFO 05 Nov 15 23:21:33,920 websee.WebSeeTool.getErrorElements - lDifferencePixe
 INFO 05 Nov 15 23:21:33,920 websee.WebSeeTool.getErrorElements - element /html[1]/body[1]/header[1]/div[1]/div[2]/span[1] found at 897, 51 with rectangle [830, 36, 240, 20]
 INFO 05 Nov 15 23:21:33,920 websee.WebSeeTool.getErrorElements - lDifferencePixels before: 34
 INFO 05 Nov 15 23:21:33,920 websee.WebSeeTool.getErrorElements - lDifferencePixels after: 34
+INFO 05 Nov 15 23:31:19,679 pDiff.PerceptualImageDifferencing.compare - Converting RGB and constructing Laplacian Pyramids
+INFO 05 Nov 15 23:31:19,976 pDiff.PerceptualImageDifferencing.compare - Performing test
+INFO 05 Nov 15 23:31:20,354 pDiff.PerceptualImageDifferencing.compare - 18726 pixels are different
+INFO 05 Nov 15 23:32:06,931 websee.WebSeeTool.getErrorElements - ---- GETERRORELEMENTS START ----
+INFO 05 Nov 15 23:32:06,950 websee.WebSeeTool.getErrorElements - element /html[1]/body[1]/section[1]/section[1]/main[1]/div[2] found at 174, 316 with rectangle [172, 297, 680, 350]
+INFO 05 Nov 15 23:32:06,950 websee.WebSeeTool.getErrorElements - lDifferencePixels before: 1840
+INFO 05 Nov 15 23:32:06,952 websee.WebSeeTool.getErrorElements - lDifferencePixels after: 1840
+INFO 05 Nov 15 23:32:06,952 websee.WebSeeTool.getErrorElements - element /html[1]/body[1]/section[1]/section[1]/main[1]/div[2]/article[1]/p[1] found at 174, 415 with rectangle [174, 377, 322, 80]
+INFO 05 Nov 15 23:32:06,953 websee.WebSeeTool.getErrorElements - lDifferencePixels before: 1840
+INFO 05 Nov 15 23:32:06,954 websee.WebSeeTool.getErrorElements - lDifferencePixels after: 1840
+INFO 05 Nov 15 23:32:06,954 websee.WebSeeTool.getErrorElements - element /html[1]/body[1]/section[1]/section[1]/main[1]/div[2]/article[1]/h4[1] found at 175, 352 with rectangle [174, 352, 322, 18]
+INFO 05 Nov 15 23:32:06,954 websee.WebSeeTool.getErrorElements - lDifferencePixels before: 1840
+INFO 05 Nov 15 23:32:06,955 websee.WebSeeTool.getErrorElements - lDifferencePixels after: 1840
+INFO 05 Nov 15 23:32:06,955 websee.WebSeeTool.getErrorElements - element /html[1]/body[1]/section[1]/section[1]/main[1]/div[2]/article[1]/h4[1]/a[1] found at 175, 352 with rectangle [174, 352, 84, 18]
+INFO 05 Nov 15 23:32:06,955 websee.WebSeeTool.getErrorElements - lDifferencePixels before: 1840
+INFO 05 Nov 15 23:32:06,955 websee.WebSeeTool.getErrorElements - lDifferencePixels after: 1840
+INFO 05 Nov 15 23:32:06,956 websee.WebSeeTool.getErrorElements - element /html[1]/body[1]/section[1]/section[1]/main[1]/div[2]/article[1] found at 177, 371 with rectangle [174, 347, 337, 336]
+INFO 05 Nov 15 23:32:06,957 websee.WebSeeTool.getErrorElements - lDifferencePixels before: 1840
+INFO 05 Nov 15 23:32:06,958 websee.WebSeeTool.getErrorElements - lDifferencePixels after: 1840
+INFO 05 Nov 15 23:32:06,959 websee.WebSeeTool.getErrorElements - element /html[1]/body[1]/section[1]/section[1]/main[1]/div[2]/article[1]/h4[2] found at 175, 481 with rectangle [174, 472, 322, 18]
+INFO 05 Nov 15 23:32:06,959 websee.WebSeeTool.getErrorElements - lDifferencePixels before: 1840
+INFO 05 Nov 15 23:32:06,959 websee.WebSeeTool.getErrorElements - lDifferencePixels after: 1840
+INFO 05 Nov 15 23:32:06,960 websee.WebSeeTool.getErrorElements - element /html[1]/body[1]/section[1]/section[1]/main[1]/div[2]/article[1]/ul[1] found at 181, 503 with rectangle [174, 497, 322, 54]
+INFO 05 Nov 15 23:32:06,960 websee.WebSeeTool.getErrorElements - lDifferencePixels before: 1840
+INFO 05 Nov 15 23:32:06,960 websee.WebSeeTool.getErrorElements - lDifferencePixels after: 1840
+INFO 05 Nov 15 23:32:06,960 websee.WebSeeTool.getErrorElements - element /html[1]/body[1]/section[1]/section[1]/main[1]/div[2]/article[1]/ul[1]/li[1] found at 190, 510 with rectangle [190, 497, 298, 16]
+INFO 05 Nov 15 23:32:06,961 websee.WebSeeTool.getErrorElements - lDifferencePixels before: 1840
+INFO 05 Nov 15 23:32:06,961 websee.WebSeeTool.getErrorElements - lDifferencePixels after: 1840
+INFO 05 Nov 15 23:32:06,961 websee.WebSeeTool.getErrorElements - element /html[1]/body[1]/section[1]/section[1]/main[1]/div[2]/article[1]/ul[1]/li[1]/a[1] found at 190, 510 with rectangle [190, 497, 47, 16]
+INFO 05 Nov 15 23:32:06,961 websee.WebSeeTool.getErrorElements - lDifferencePixels before: 1840
+INFO 05 Nov 15 23:32:06,961 websee.WebSeeTool.getErrorElements - lDifferencePixels after: 1840
+INFO 05 Nov 15 23:32:06,961 websee.WebSeeTool.getErrorElements - element /html[1]/body[1]/section[1]/section[1]/main[1]/div[2]/article[1]/ul[1]/li[3] found at 190, 548 with rectangle [190, 535, 298, 16]
+INFO 05 Nov 15 23:32:06,962 websee.WebSeeTool.getErrorElements - lDifferencePixels before: 1840
+INFO 05 Nov 15 23:32:06,962 websee.WebSeeTool.getErrorElements - lDifferencePixels after: 1840
+INFO 05 Nov 15 23:32:06,962 websee.WebSeeTool.getErrorElements - element /html[1]/body[1]/section[1]/section[1]/main[1]/div[2]/article[1]/ul[1]/li[3]/a[1] found at 190, 548 with rectangle [190, 535, 75, 16]
+INFO 05 Nov 15 23:32:06,962 websee.WebSeeTool.getErrorElements - lDifferencePixels before: 1840
+INFO 05 Nov 15 23:32:06,962 websee.WebSeeTool.getErrorElements - lDifferencePixels after: 1840
+INFO 05 Nov 15 23:32:06,962 websee.WebSeeTool.getErrorElements - element /html[1]/body[1]/section[1]/section[1]/main[1]/div[2]/article[1]/ul[1]/li[2] found at 191, 531 with rectangle [190, 516, 298, 16]
+INFO 05 Nov 15 23:32:06,962 websee.WebSeeTool.getErrorElements - lDifferencePixels before: 1840
+INFO 05 Nov 15 23:32:06,963 websee.WebSeeTool.getErrorElements - lDifferencePixels after: 1840
+INFO 05 Nov 15 23:32:06,963 websee.WebSeeTool.getErrorElements - element /html[1]/body[1]/section[1]/section[1]/main[1]/div[2]/article[1]/ul[1]/li[2]/a[1] found at 191, 531 with rectangle [190, 516, 55, 16]
+INFO 05 Nov 15 23:32:06,963 websee.WebSeeTool.getErrorElements - lDifferencePixels before: 1840
+INFO 05 Nov 15 23:32:06,963 websee.WebSeeTool.getErrorElements - lDifferencePixels after: 1840
+INFO 05 Nov 15 23:32:06,963 websee.WebSeeTool.getErrorElements - element /html[1]/body[1]/section[1]/section[1]/main[1]/div[2]/article[1]/h4[3] found at 175, 574 with rectangle [174, 567, 322, 18]
+INFO 05 Nov 15 23:32:06,964 websee.WebSeeTool.getErrorElements - lDifferencePixels before: 1840
+INFO 05 Nov 15 23:32:06,964 websee.WebSeeTool.getErrorElements - lDifferencePixels after: 1840
+INFO 05 Nov 15 23:32:06,964 websee.WebSeeTool.getErrorElements - element /html[1]/body[1]/section[1]/section[1]/main[1]/div[2]/article[1]/ul[2] found at 175, 601 with rectangle [174, 592, 322, 35]
+INFO 05 Nov 15 23:32:06,964 websee.WebSeeTool.getErrorElements - lDifferencePixels before: 1840
+INFO 05 Nov 15 23:32:06,965 websee.WebSeeTool.getErrorElements - lDifferencePixels after: 1840
+INFO 05 Nov 15 23:32:06,965 websee.WebSeeTool.getErrorElements - element /html[1]/body[1]/section[1]/section[1]/main[1]/div[2]/article[1]/ul[2]/li[1]/a[1] found at 191, 596 with rectangle [190, 592, 159, 16]
+INFO 05 Nov 15 23:32:06,965 websee.WebSeeTool.getErrorElements - lDifferencePixels before: 1840
+INFO 05 Nov 15 23:32:06,965 websee.WebSeeTool.getErrorElements - lDifferencePixels after: 1840
+INFO 05 Nov 15 23:32:06,965 websee.WebSeeTool.getErrorElements - element /html[1]/body[1]/section[1]/section[1]/main[1]/div[2]/article[1]/ul[2]/li[1] found at 191, 596 with rectangle [190, 592, 298, 16]
+INFO 05 Nov 15 23:32:06,965 websee.WebSeeTool.getErrorElements - lDifferencePixels before: 1840
+INFO 05 Nov 15 23:32:06,966 websee.WebSeeTool.getErrorElements - lDifferencePixels after: 1840
+INFO 05 Nov 15 23:32:06,966 websee.WebSeeTool.getErrorElements - element /html[1]/body[1]/section[1]/section[1]/main[1]/div[2]/article[1]/ul[2]/li[2] found at 191, 622 with rectangle [190, 611, 298, 16]
+INFO 05 Nov 15 23:32:06,966 websee.WebSeeTool.getErrorElements - lDifferencePixels before: 1840
+INFO 05 Nov 15 23:32:06,966 websee.WebSeeTool.getErrorElements - lDifferencePixels after: 1840
+INFO 05 Nov 15 23:32:06,966 websee.WebSeeTool.getErrorElements - element /html[1]/body[1]/section[1]/section[1]/main[1]/div[2]/article[1]/ul[2]/li[2]/a[1] found at 191, 622 with rectangle [190, 611, 121, 16]
+INFO 05 Nov 15 23:32:06,966 websee.WebSeeTool.getErrorElements - lDifferencePixels before: 1840
+INFO 05 Nov 15 23:32:06,966 websee.WebSeeTool.getErrorElements - lDifferencePixels after: 1840
+INFO 05 Nov 15 23:32:06,967 websee.WebSeeTool.getErrorElements - element /html[1]/body[1]/section[1]/section[1]/main[1]/div[2]/article[1]/h4[4] found at 181, 647 with rectangle [174, 643, 322, 18]
+INFO 05 Nov 15 23:32:06,967 websee.WebSeeTool.getErrorElements - lDifferencePixels before: 1840
+INFO 05 Nov 15 23:32:06,967 websee.WebSeeTool.getErrorElements - lDifferencePixels after: 1840
+INFO 05 Nov 15 23:32:06,968 websee.WebSeeTool.getErrorElements - element /html[1]/body[1]/section[1]/section[1]/main[1]/div[2]/article[1]/ul[3] found at 195, 671 with rectangle [174, 668, 322, 16]
+INFO 05 Nov 15 23:32:06,968 websee.WebSeeTool.getErrorElements - lDifferencePixels before: 1840
+INFO 05 Nov 15 23:32:06,968 websee.WebSeeTool.getErrorElements - lDifferencePixels after: 1840
+INFO 05 Nov 15 23:32:06,968 websee.WebSeeTool.getErrorElements - element /html[1]/body[1]/section[1]/section[1]/main[1]/div[2]/article[1]/ul[3]/li[1] found at 195, 671 with rectangle [190, 668, 298, 16]
+INFO 05 Nov 15 23:32:06,968 websee.WebSeeTool.getErrorElements - lDifferencePixels before: 1840
+INFO 05 Nov 15 23:32:06,968 websee.WebSeeTool.getErrorElements - lDifferencePixels after: 1840
+INFO 05 Nov 15 23:32:06,969 websee.WebSeeTool.getErrorElements - element /html[1]/body[1]/section[1]/section[1]/main[1]/div[2]/article[1]/ul[3]/li[1]/a[1] found at 195, 671 with rectangle [190, 668, 162, 16]
+INFO 05 Nov 15 23:32:06,969 websee.WebSeeTool.getErrorElements - lDifferencePixels before: 1840
+INFO 05 Nov 15 23:32:06,969 websee.WebSeeTool.getErrorElements - lDifferencePixels after: 1840
+INFO 05 Nov 15 23:32:09,524 websee.WebSeeTool.getErrorElements - ---- GETERRORELEMENTS START ----
+INFO 05 Nov 15 23:32:09,542 websee.WebSeeTool.getErrorElements - element /html[1]/body[1]/header[1]/div[1]/div[2] found at 898, 46 with rectangle [829, 13, 240, 65]
+INFO 05 Nov 15 23:32:09,542 websee.WebSeeTool.getErrorElements - lDifferencePixels before: 33
+INFO 05 Nov 15 23:32:09,542 websee.WebSeeTool.getErrorElements - lDifferencePixels after: 33
+INFO 05 Nov 15 23:32:09,542 websee.WebSeeTool.getErrorElements - element /html[1]/body[1]/header[1]/div[1]/div[2]/span[1] found at 898, 46 with rectangle [829, 36, 240, 20]
+INFO 05 Nov 15 23:32:09,542 websee.WebSeeTool.getErrorElements - lDifferencePixels before: 33
+INFO 05 Nov 15 23:32:09,542 websee.WebSeeTool.getErrorElements - lDifferencePixels after: 33

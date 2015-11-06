@@ -36,9 +36,6 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.remote.UnreachableBrowserException;
 import org.xml.sax.SAXException;
 
-import rca.NumericAnalysis;
-import rca.RootCauseAnalysis;
-import rca.RunS1Test;
 import util.Util;
 import clustering.DifferencePixelsClustering;
 import config.Constants;
@@ -73,16 +70,8 @@ public class WebSeeTool
 	private boolean isClusteringToBeUsed = true;
 	
 	private String specialRegionsFullPath;
-
-	private RunS1Test statsObj;
 	
 	private Map<String, Double> timeMapInSec;
-
-	public WebSeeTool(String oracleFullPath, String testFileFullPath, RunS1Test statsObj)
-	{
-		this(oracleFullPath, testFileFullPath);
-		this.statsObj = statsObj;
-	}
 
 	public WebSeeTool(String oracleFullPath, String testFileFullPath, String specialRegionsFullPath)
 	{
@@ -141,12 +130,6 @@ public class WebSeeTool
 		this.isRCATimeoutInMins = isRCATimeoutInMins;
 		this.isRCAElementsCutoff = isRCAElementsCutoff;
 		this.isRCANumericAnalysisRateOfChange = isRCANumericAnalysisRateOfChange;
-
-		RootCauseAnalysis.setPropertyPrioritizationOn(isPropertyPrioritizationOn);
-		RootCauseAnalysis.setFitnessFunctionNew(isFitnessFunctionNew);
-		RootCauseAnalysis.setSearchSpaceSetByHeuristic(isSearchSpaceSetByHeuristic);
-		RootCauseAnalysis.setSimmulatedAnnealingToBeUsed(isSimmulatedAnnealingToBeUsed);
-		RootCauseAnalysis.setExpectedValue(expectedValue);
 	}
 
 	public boolean isR_TREE_FLAG()
@@ -634,26 +617,6 @@ public class WebSeeTool
 		return errorElements;
 	}
 
-	public void runVisualInvariantsTool(String oracleImageName, String oracleImagePath, String testWebPagePath, String testHTMLFileName, String reportFileName, String specialRegionsFileFullPath, Logger log, boolean doNotOverwrite)
-			throws IOException, SAXException, InvalidConfigurationException
-	{
-		runWebSeeCore(oracleImageName, oracleImagePath, testWebPagePath, testHTMLFileName, reportFileName, specialRegionsFileFullPath, log, doNotOverwrite);
-
-		// System.out.println("Phase 5: Root cause analysis");
-		long startTime = System.nanoTime();
-		for (Integer cid : clusterElementsMap.keySet())
-		{
-			rootCauseAnalysis(clusterElementsMap.get(cid), startTime);
-			long endTime = System.nanoTime() - startTime;
-			if (log != null)
-			{
-				DecimalFormat decimal = new DecimalFormat("0.00");
-				log.info("Phase 5: " + decimal.format(Util.convertNanosecondsToSeconds(endTime)) + "s");
-			}
-		}
-		postProcessing(reportFileName);
-	}
-
 	public List<Point> detection(boolean doNotOverwrite) throws IOException
 	{
 		Util.getScreenshot(savedHtmlFile.getName(), comparisonImagePath, comparisonImageName, referenceImagePath + File.separatorChar + referenceImageName, doNotOverwrite);
@@ -921,77 +884,6 @@ public class WebSeeTool
 		return filteredList;
 	}
 
-	public void rootCauseAnalysis(List<Node<HtmlElement>> processedResult, long startTime) throws IOException, InvalidConfigurationException
-	{
-		Logger resultsLog = Util.getNewLogger(comparisonImagePath + File.separatorChar + "RCA_results.txt", "RCA_results" + System.currentTimeMillis());
-		Logger detailsLog = Util.getNewLogger(comparisonImagePath + File.separatorChar + "RCA_details.txt", "RCA_details" + System.currentTimeMillis());
-
-		int numberOfDifferencePixels = Integer.MAX_VALUE;
-		HtmlElement rootCauseElement = new HtmlElement();
-		String rootCauseProperty = null;
-		String fixValue = null;
-		boolean fixFound = false;
-		int count = 0;
-		String fixString = "";
-		int retValue = -1;
-		for (Node<HtmlElement> node : processedResult)
-		{
-			if (isRCATimeoutInMins && Util.convertNanosecondsToSeconds(System.nanoTime() - startTime) > Constants.RCA_TIMEOUT_IN_MINS * 60)
-			{
-				detailsLog.info("");
-				detailsLog.info("RCA timed out. Remaining elements cannot be checked.");
-				break;
-			}
-
-			if (isRCAElementsCutoff && count >= Constants.RCA_WEBSEE_RANKING_BASED_ELEMENTS_CUTOFF)
-			{
-				detailsLog.info("");
-				detailsLog.info("RCA terminated based on WebSee elements cutoff. Remaining elements cannot be checked.");
-				break;
-			}
-
-			detailsLog.info("************************** Processing element " + count++ + " of " + processedResult.size() + " **************************");
-			HtmlElement element = node.getData();
-			RootCauseAnalysis rca = new RootCauseAnalysis(element, referenceImagePath + File.separatorChar + referenceImageName, savedHtmlFile.getAbsolutePath(), resultsLog, detailsLog, isRCANumericAnalysisRateOfChange);
-			rca.runRootCauseAnalysis();
-			retValue = rca.getReducedNumberOfDifferencePixels();
-
-			if (retValue > numberOfDifferencePixels)
-				continue;
-
-			rootCauseElement = element;
-			rootCauseProperty = rca.getRootCauseProperty();
-			fixValue = rca.getFixValue();
-			if (retValue == 0 || Util.isCurrentInAcceptableReductionThreshold(retValue, differencePixels.size()))
-			{
-				rootCauseElement = element;
-				fixFound = true;
-				fixString = (retValue == 0) ? " => exact" : " => acceptable";
-				fixString = fixString + " root cause found!";
-				break;
-			}
-			else if (retValue < numberOfDifferencePixels)
-			{
-				numberOfDifferencePixels = retValue;
-			}
-		}
-		NumericAnalysis.resetTranslationValues();
-		long endTime = System.nanoTime() - startTime;
-
-		DecimalFormat decimal = new DecimalFormat("0.00");
-		resultsLog.info("");
-		resultsLog.info("===================================================================================");
-		resultsLog.info("Final result is of element " + rootCauseElement.getXpath() + ", the visual property is " + rootCauseProperty + " with value " + fixValue + fixString + ". Number of difference pixels reduced from "
-				+ differencePixels.size() + " to " + retValue);
-		resultsLog.info("Total time = " + decimal.format(Util.convertNanosecondsToSeconds(endTime)) + " sec");
-
-		detailsLog.info("");
-		detailsLog.info("===================================================================================");
-		detailsLog.info("Final result is of element " + rootCauseElement.getXpath() + ", the visual property is " + rootCauseProperty + " with value " + fixValue + fixString + ". Number of difference pixels reduced from "
-				+ differencePixels.size() + " to " + retValue);
-		detailsLog.info("Total time = " + decimal.format(Util.convertNanosecondsToSeconds(endTime)) + " sec");
-	}
-
 	public Map<Integer, List<Point>> clustering()
 	{
 		Map<Integer, List<Point>> retVal = new HashMap<Integer, List<Point>>();
@@ -1144,26 +1036,6 @@ public class WebSeeTool
 		outWriter.println();
 		outWriter.println(Constants.RESULT_FILE_TIME_REQUIRED_LINE + Util.convertNanosecondsToSeconds(endTimeThisTestCase) + " " + Constants.TIME_REQUIRED_UNIT);
 		outWriter.close();
-	}
-
-	public void runVisualInvariantsToolWithRCATimeout(String oracleImageName, String oracleImagePath, String testWebPagePath, String testHTMLFileName, String reportFileName, String specialRegionsFileFullPath, Logger log,
-			boolean doNotOverwrite) throws IOException, SAXException, InvalidConfigurationException
-	{
-		runWebSeeCore(oracleImageName, oracleImagePath, testWebPagePath, testHTMLFileName, reportFileName, specialRegionsFileFullPath, log, doNotOverwrite);
-
-		// System.out.println("Phase 5: Root cause analysis");
-		long startTime = System.nanoTime();
-		for (Integer cid : clusterElementsMap.keySet())
-		{
-			rootCauseAnalysis(clusterElementsMap.get(cid), startTime);
-			long endTime = System.nanoTime() - startTime;
-			if (log != null)
-			{
-				DecimalFormat decimal = new DecimalFormat("0.00");
-				log.info("Phase 5: " + decimal.format(Util.convertNanosecondsToSeconds(endTime)) + "s");
-			}
-		}
-		postProcessing(reportFileName);
 	}
 
 	public Set<Node<HtmlElement>> runWebSeeToolWithOnlyDetectionAndLocalization() throws IOException, SAXException
