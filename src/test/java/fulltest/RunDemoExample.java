@@ -28,20 +28,6 @@ public class RunDemoExample
 		
 		// run tool
 		String specialRegions = basePath + File.separatorChar + Constants.SPECIAL_REGIONS_XML_FILENAME;
-		Logger log = getNewLogger(basePath + File.separatorChar + Util.getNextAvailableFileName(basePath, Constants.CUMULATIVE_RESULT_DETAILED_FILENAME), "detailedLogger" + basePath);
-		ResultsVerification rv = new ResultsVerification();
-		rv.printInitial(log, basePath);
-		wst.setConfig(true, false, false, true, true, true, false, "");
-		wst.runWebSeeToolWithoutRCA("oracle.png", basePath, basePath, "test.html", reportFileName, specialRegions, log, Constants.DO_NOT_OVERWRITE);
 		System.out.println("Done");
-	}
-	
-	private static Logger getNewLogger(String filePathWithName, String loggerName) throws IOException
-	{
-		Logger log = org.apache.log4j.Logger.getLogger(loggerName);
-		PatternLayout layout = new PatternLayout(Layout.LINE_SEP + "%m");
-	    FileAppender appender = new FileAppender(layout, filePathWithName, true);    
-	    log.addAppender(appender);
-	    return log;
-	}
+	}	
 }

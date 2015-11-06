@@ -9,6 +9,10 @@ import java.io.FileReader;
 import java.io.FileWriter;
 import java.io.IOException;
 import java.io.PrintWriter;
+import java.net.MalformedURLException;
+import java.net.URI;
+import java.net.URISyntaxException;
+import java.net.URL;
 import java.text.DecimalFormat;
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -34,9 +38,6 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.remote.UnreachableBrowserException;
 import org.xml.sax.SAXException;
 
-import rca.NumericAnalysis;
-import rca.RootCauseAnalysis;
-import rca.RunS1Test;
 import util.Util;
 import clustering.DifferencePixelsClustering;
 import config.Constants;
@@ -60,26 +61,20 @@ public class WebSeeTool
 	private List<Point> differencePixels;
 	private String differenceImageFullPath;
 
-	private boolean isRCATimeoutInMins;
-	private boolean isRCAElementsCutoff;
-	private boolean isRCANumericAnalysisRateOfChange;
-
 	private long startTimeThisTestCase;
 	private long endTimeThisTestCase;
 
 	private Map<Integer, List<Node<HtmlElement>>> clusterElementsMap;
 	private boolean isClusteringToBeUsed = true;
 
-	private RunS1Test statsObj;
-
-	public WebSeeTool(String oracleFullPath, String testFileFullPath, RunS1Test statsObj)
+	public WebSeeTool(String oracleFullPath, String testPageFullPath)
 	{
-		this(oracleFullPath, testFileFullPath);
-		this.statsObj = statsObj;
-	}
-
-	public WebSeeTool(String oracleFullPath, String testFileFullPath)
-	{
+		// check if oracle is an image or URL
+		checkFileIsRemoteURL(oracleFullPath);
+		System.exit(0);
+		
+		// check if test web page is on the network
+		
 		rTree = null;
 		specialRegions = new HashSet<SpecialRegion>();
 
@@ -87,11 +82,11 @@ public class WebSeeTool
 		this.referenceImagePath = oraclePathAndName[0];
 		this.referenceImageName = oraclePathAndName[1];
 
-		String[] testFilePathAndName = Util.getPathAndFileNameFromFullPath(testFileFullPath);
+		String[] testFilePathAndName = Util.getPathAndFileNameFromFullPath(testPageFullPath);
 		this.comparisonImagePath = testFilePathAndName[0];
 		comparisonImageName = Util.getFileNameAndExtension(testFilePathAndName[1])[0] + Constants.SCREENSHOT_FILE_EXTENSION;
 
-		this.savedHtmlFile = new File(testFileFullPath);
+		this.savedHtmlFile = new File(testPageFullPath);
 
 		// compute difference text name (diff_oracle_test.txt)
 		String tempDiffName[] = Util.getFileNameAndExtension(Constants.COMPARE_IMAGES_DIFFERENCE_TEXT_FILENAME, "_" + Util.getFileNameAndExtension(referenceImageName)[0] + "_" + Util.getFileNameAndExtension(testFilePathAndName[1])[0]);
@@ -100,19 +95,16 @@ public class WebSeeTool
 		differencePixels = new ArrayList<Point>();
 		clusterElementsMap = new HashMap<Integer, List<Node<HtmlElement>>>();
 	}
-
-	public void setConfig(boolean isRCATimeoutInMins, boolean isRCAElementsCutoff, boolean isRCANumericAnalysisRateOfChange, boolean isPropertyPrioritizationOn, boolean isSearchSpaceSetByHeuristic, boolean isFitnessFunctionNew,
-			boolean isSimmulatedAnnealingToBeUsed, String expectedValue)
+	
+	private boolean checkFileIsRemoteURL(String path)
 	{
-		this.isRCATimeoutInMins = isRCATimeoutInMins;
-		this.isRCAElementsCutoff = isRCAElementsCutoff;
-		this.isRCANumericAnalysisRateOfChange = isRCANumericAnalysisRateOfChange;
-
-		RootCauseAnalysis.setPropertyPrioritizationOn(isPropertyPrioritizationOn);
-		RootCauseAnalysis.setFitnessFunctionNew(isFitnessFunctionNew);
-		RootCauseAnalysis.setSearchSpaceSetByHeuristic(isSearchSpaceSetByHeuristic);
-		RootCauseAnalysis.setSimmulatedAnnealingToBeUsed(isSimmulatedAnnealingToBeUsed);
-		RootCauseAnalysis.setExpectedValue(expectedValue);
+		try {
+			URI url = new URI(path);
+		} catch (URISyntaxException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		return true;
 	}
 
 	public boolean isR_TREE_FLAG()
@@ -599,26 +591,6 @@ public class WebSeeTool
 		return errorElements;
 	}
 
-	public void runVisualInvariantsTool(String oracleImageName, String oracleImagePath, String testWebPagePath, String testHTMLFileName, String reportFileName, String specialRegionsFileFullPath, Logger log, boolean doNotOverwrite)
-			throws IOException, SAXException, InvalidConfigurationException
-	{
-		runWebSeeCore(oracleImageName, oracleImagePath, testWebPagePath, testHTMLFileName, reportFileName, specialRegionsFileFullPath, log, doNotOverwrite);
-
-		// System.out.println("Phase 5: Root cause analysis");
-		long startTime = System.nanoTime();
-		for (Integer cid : clusterElementsMap.keySet())
-		{
-			rootCauseAnalysis(clusterElementsMap.get(cid), startTime);
-			long endTime = System.nanoTime() - startTime;
-			if (log != null)
-			{
-				DecimalFormat decimal = new DecimalFormat("0.00");
-				log.info("Phase 5: " + decimal.format(Util.convertNanosecondsToSeconds(endTime)) + "s");
-			}
-		}
-		postProcessing(reportFileName);
-	}
-
 	public List<Point> detection(boolean doNotOverwrite) throws IOException
 	{
 		Util.getScreenshot(savedHtmlFile.getName(), comparisonImagePath, comparisonImageName, doNotOverwrite);
@@ -883,77 +855,6 @@ public class WebSeeTool
 		return filteredList;
 	}
 
-	public void rootCauseAnalysis(List<Node<HtmlElement>> processedResult, long startTime) throws IOException, InvalidConfigurationException
-	{
-		Logger resultsLog = Util.getNewLogger(comparisonImagePath + File.separatorChar + "RCA_results.txt", "RCA_results" + System.currentTimeMillis());
-		Logger detailsLog = Util.getNewLogger(comparisonImagePath + File.separatorChar + "RCA_details.txt", "RCA_details" + System.currentTimeMillis());
-
-		int numberOfDifferencePixels = Integer.MAX_VALUE;
-		HtmlElement rootCauseElement = new HtmlElement();
-		String rootCauseProperty = null;
-		String fixValue = null;
-		boolean fixFound = false;
-		int count = 0;
-		String fixString = "";
-		int retValue = -1;
-		for (Node<HtmlElement> node : processedResult)
-		{
-			if (isRCATimeoutInMins && Util.convertNanosecondsToSeconds(System.nanoTime() - startTime) > Constants.RCA_TIMEOUT_IN_MINS * 60)
-			{
-				detailsLog.info("");
-				detailsLog.info("RCA timed out. Remaining elements cannot be checked.");
-				break;
-			}
-
-			if (isRCAElementsCutoff && count >= Constants.RCA_WEBSEE_RANKING_BASED_ELEMENTS_CUTOFF)
-			{
-				detailsLog.info("");
-				detailsLog.info("RCA terminated based on WebSee elements cutoff. Remaining elements cannot be checked.");
-				break;
-			}
-
-			detailsLog.info("************************** Processing element " + count++ + " of " + processedResult.size() + " **************************");
-			HtmlElement element = node.getData();
-			RootCauseAnalysis rca = new RootCauseAnalysis(element, referenceImagePath + File.separatorChar + referenceImageName, savedHtmlFile.getAbsolutePath(), resultsLog, detailsLog, isRCANumericAnalysisRateOfChange);
-			rca.runRootCauseAnalysis();
-			retValue = rca.getReducedNumberOfDifferencePixels();
-
-			if (retValue > numberOfDifferencePixels)
-				continue;
-
-			rootCauseElement = element;
-			rootCauseProperty = rca.getRootCauseProperty();
-			fixValue = rca.getFixValue();
-			if (retValue == 0 || Util.isCurrentInAcceptableReductionThreshold(retValue, differencePixels.size()))
-			{
-				rootCauseElement = element;
-				fixFound = true;
-				fixString = (retValue == 0) ? " => exact" : " => acceptable";
-				fixString = fixString + " root cause found!";
-				break;
-			}
-			else if (retValue < numberOfDifferencePixels)
-			{
-				numberOfDifferencePixels = retValue;
-			}
-		}
-		NumericAnalysis.resetTranslationValues();
-		long endTime = System.nanoTime() - startTime;
-
-		DecimalFormat decimal = new DecimalFormat("0.00");
-		resultsLog.info("");
-		resultsLog.info("===================================================================================");
-		resultsLog.info("Final result is of element " + rootCauseElement.getXpath() + ", the visual property is " + rootCauseProperty + " with value " + fixValue + fixString + ". Number of difference pixels reduced from "
-				+ differencePixels.size() + " to " + retValue);
-		resultsLog.info("Total time = " + decimal.format(Util.convertNanosecondsToSeconds(endTime)) + " sec");
-
-		detailsLog.info("");
-		detailsLog.info("===================================================================================");
-		detailsLog.info("Final result is of element " + rootCauseElement.getXpath() + ", the visual property is " + rootCauseProperty + " with value " + fixValue + fixString + ". Number of difference pixels reduced from "
-				+ differencePixels.size() + " to " + retValue);
-		detailsLog.info("Total time = " + decimal.format(Util.convertNanosecondsToSeconds(endTime)) + " sec");
-	}
-
 	public Map<Integer, List<Point>> clustering()
 	{
 		Map<Integer, List<Point>> retVal = new HashMap<Integer, List<Point>>();
@@ -1005,10 +906,6 @@ public class WebSeeTool
 		{
 			log.info("Phase 1: " + decimal.format(Util.convertNanosecondsToSeconds(endTime)) + "s");
 		}
-		if (statsObj != null)
-		{
-			statsObj.getWebSeeP1TimeStats().addValue(Util.convertNanosecondsToSeconds(endTime));
-		}
 
 		long rTreeBuildStartTime = System.nanoTime();
 		if(differencePixels.size() > 0)
@@ -1025,10 +922,6 @@ public class WebSeeTool
 		{
 			log.info("Phase 2: " + decimal.format(Util.convertNanosecondsToSeconds(endTime)) + "s");
 		}
-		if (statsObj != null)
-		{
-			statsObj.getWebSeeP2TimeStats().addValue(Util.convertNanosecondsToSeconds(endTime));
-		}
 
 		System.out.println("Phase 3: Clustering");
 		startTime = System.nanoTime();
@@ -1037,10 +930,6 @@ public class WebSeeTool
 		if (log != null)
 		{
 			log.info("Phase 3: " + decimal.format(Util.convertNanosecondsToSeconds(endTime)) + "s");
-		}
-		if (statsObj != null)
-		{
-			statsObj.getWebSeeP3TimeStats().addValue(Util.convertNanosecondsToSeconds(endTime));
 		}
 
 		long localizationTotalTime = 0;
@@ -1069,33 +958,7 @@ public class WebSeeTool
 			resultSetProcessingTotalTime = resultSetProcessingTotalTime + endTime;
 			clusterElementsMap.put(cid, processedResult);
 		}
-		if (statsObj != null)
-		{
-			if(clusterDifferencePixelsMap.size() > 0)
-			{
-				statsObj.getWebSeeP4TimeStats().addValue(Util.convertNanosecondsToSeconds(rTreeBuildEndTime) + (Util.convertNanosecondsToSeconds(localizationTotalTime) / clusterDifferencePixelsMap.size()));
-				statsObj.getWebSeeP5TimeStats().addValue(Util.convertNanosecondsToSeconds(resultSetProcessingTotalTime) / clusterDifferencePixelsMap.size());
-			}
-			else
-			{
-				statsObj.getWebSeeP4TimeStats().addValue(Util.convertNanosecondsToSeconds(rTreeBuildEndTime));
-				statsObj.getWebSeeP5TimeStats().addValue(0);
-			}
-		}
 		// ------------------------------------------------------------------------------------------------------
-	}
-
-	public void runWebSeeToolWithoutRCA(String oracleImageName, String oracleImagePath, String testWebPagePath, String testHTMLFileName, String reportFileName, String specialRegionsFileFullPath, Logger log, boolean doNotOverwrite)
-			throws IOException, SAXException, InvalidConfigurationException
-	{
-		long startTime = System.nanoTime();
-		runWebSeeCore(oracleImageName, oracleImagePath, testWebPagePath, testHTMLFileName, reportFileName, specialRegionsFileFullPath, log, doNotOverwrite);
-		postProcessing(reportFileName);
-		long endTime = System.nanoTime() - startTime;
-		if (statsObj != null)
-		{
-			statsObj.getWebSeeTotalTimeStats().addValue(Util.convertNanosecondsToSeconds(endTime));
-		}
 	}
 
 	private void postProcessing(String reportFileName) throws IOException
@@ -1112,64 +975,16 @@ public class WebSeeTool
 		{
 			outWriter.println("\n\n******* CLUSTER " + (cid + 1) + " ***************");
 			writeReportFile(clusterElementsMap.get(cid), outWriter);
-			// markResultOnSavedHtml(clusterElementsMap.get(cid),
-			// savedHtmlFile);
 		}
 		outWriter.println();
 		outWriter.println();
 		outWriter.println(Constants.RESULT_FILE_TIME_REQUIRED_LINE + Util.convertNanosecondsToSeconds(endTimeThisTestCase) + " " + Constants.TIME_REQUIRED_UNIT);
 		outWriter.close();
 	}
-
-	public void runVisualInvariantsToolWithRCATimeout(String oracleImageName, String oracleImagePath, String testWebPagePath, String testHTMLFileName, String reportFileName, String specialRegionsFileFullPath, Logger log,
-			boolean doNotOverwrite) throws IOException, SAXException, InvalidConfigurationException
-	{
-		runWebSeeCore(oracleImageName, oracleImagePath, testWebPagePath, testHTMLFileName, reportFileName, specialRegionsFileFullPath, log, doNotOverwrite);
-
-		// System.out.println("Phase 5: Root cause analysis");
-		long startTime = System.nanoTime();
-		for (Integer cid : clusterElementsMap.keySet())
-		{
-			rootCauseAnalysis(clusterElementsMap.get(cid), startTime);
-			long endTime = System.nanoTime() - startTime;
-			if (log != null)
-			{
-				DecimalFormat decimal = new DecimalFormat("0.00");
-				log.info("Phase 5: " + decimal.format(Util.convertNanosecondsToSeconds(endTime)) + "s");
-			}
-		}
-		postProcessing(reportFileName);
-	}
-
-	public Set<Node<HtmlElement>> runWebSeeToolWithOnlyDetectionAndLocalization() throws IOException, SAXException
-	{
-		differencePixels = detection(true);
-		buildRTree();
-		Set<Node<HtmlElement>> errorElements = localization(differencePixels, "report.txt", true);
-		WebDriverSingleton.closeDriver();
-		return errorElements;
-	}
 	
-	public List<Node<HtmlElement>> runWebSeeToolWithoutRCAWrapper()
+	public static void main(String[] args) 
 	{
-		try
-		{
-			runWebSeeCore(this.referenceImageName, this.referenceImagePath, this.comparisonImagePath, this.savedHtmlFile.getName(), "report.txt", "", null, false);
-			postProcessing("websee_report.txt");
-		}
-		catch (IOException e)
-		{
-			e.printStackTrace();
-		}
-		catch (SAXException e)
-		{
-			e.printStackTrace();
-		}
-		catch (InvalidConfigurationException e)
-		{
-			e.printStackTrace();
-		}
-		WebDriverSingleton.closeDriver();
-		return clusterElementsMap.get(0);
+		WebSeeTool wst = new WebSeeTool("", "");
+		wst.checkFileIsRemoteURL("file:///www.google.com");
 	}
 }
