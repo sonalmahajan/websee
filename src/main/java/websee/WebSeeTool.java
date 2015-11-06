@@ -5,14 +5,12 @@ import java.awt.Rectangle;
 import java.awt.image.BufferedImage;
 import java.io.BufferedReader;
 import java.io.File;
+import java.io.FileOutputStream;
 import java.io.FileReader;
 import java.io.FileWriter;
 import java.io.IOException;
+import java.io.PrintStream;
 import java.io.PrintWriter;
-import java.net.MalformedURLException;
-import java.net.URI;
-import java.net.URISyntaxException;
-import java.net.URL;
 import java.text.DecimalFormat;
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -38,6 +36,9 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.remote.UnreachableBrowserException;
 import org.xml.sax.SAXException;
 
+import rca.NumericAnalysis;
+import rca.RootCauseAnalysis;
+import rca.RunS1Test;
 import util.Util;
 import clustering.DifferencePixelsClustering;
 import config.Constants;
@@ -61,32 +62,45 @@ public class WebSeeTool
 	private List<Point> differencePixels;
 	private String differenceImageFullPath;
 
+	private boolean isRCATimeoutInMins;
+	private boolean isRCAElementsCutoff;
+	private boolean isRCANumericAnalysisRateOfChange;
+
 	private long startTimeThisTestCase;
 	private long endTimeThisTestCase;
 
 	private Map<Integer, List<Node<HtmlElement>>> clusterElementsMap;
 	private boolean isClusteringToBeUsed = true;
+	
+	private String specialRegionsFullPath;
 
-	public WebSeeTool(String oracleFullPath, String testPageFullPath)
+	private RunS1Test statsObj;
+	
+	private Map<String, Double> timeMapInSec;
+
+	public WebSeeTool(String oracleFullPath, String testFileFullPath, RunS1Test statsObj)
 	{
-		// check if oracle is an image or URL
-		checkFileIsRemoteURL(oracleFullPath);
-		System.exit(0);
-		
-		// check if test web page is on the network
+		this(oracleFullPath, testFileFullPath);
+		this.statsObj = statsObj;
+	}
+
+	public WebSeeTool(String oracleFullPath, String testFileFullPath, String specialRegionsFullPath)
+	{
+		timeMapInSec = new HashMap<String, Double>();
 		
 		rTree = null;
+		this.specialRegionsFullPath = specialRegionsFullPath;
 		specialRegions = new HashSet<SpecialRegion>();
 
 		String[] oraclePathAndName = Util.getPathAndFileNameFromFullPath(oracleFullPath);
 		this.referenceImagePath = oraclePathAndName[0];
 		this.referenceImageName = oraclePathAndName[1];
 
-		String[] testFilePathAndName = Util.getPathAndFileNameFromFullPath(testPageFullPath);
+		String[] testFilePathAndName = Util.getPathAndFileNameFromFullPath(testFileFullPath);
 		this.comparisonImagePath = testFilePathAndName[0];
 		comparisonImageName = Util.getFileNameAndExtension(testFilePathAndName[1])[0] + Constants.SCREENSHOT_FILE_EXTENSION;
 
-		this.savedHtmlFile = new File(testPageFullPath);
+		this.savedHtmlFile = new File(testFileFullPath);
 
 		// compute difference text name (diff_oracle_test.txt)
 		String tempDiffName[] = Util.getFileNameAndExtension(Constants.COMPARE_IMAGES_DIFFERENCE_TEXT_FILENAME, "_" + Util.getFileNameAndExtension(referenceImageName)[0] + "_" + Util.getFileNameAndExtension(testFilePathAndName[1])[0]);
@@ -96,15 +110,43 @@ public class WebSeeTool
 		clusterElementsMap = new HashMap<Integer, List<Node<HtmlElement>>>();
 	}
 	
-	private boolean checkFileIsRemoteURL(String path)
+	public WebSeeTool(String oracleFullPath, String testFileFullPath)
 	{
-		try {
-			URI url = new URI(path);
-		} catch (URISyntaxException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
-		return true;
+		timeMapInSec = new HashMap<String, Double>();
+		
+		rTree = null;
+		specialRegions = new HashSet<SpecialRegion>();
+
+		String[] oraclePathAndName = Util.getPathAndFileNameFromFullPath(oracleFullPath);
+		this.referenceImagePath = oraclePathAndName[0];
+		this.referenceImageName = oraclePathAndName[1];
+
+		String[] testFilePathAndName = Util.getPathAndFileNameFromFullPath(testFileFullPath);
+		this.comparisonImagePath = testFilePathAndName[0];
+		comparisonImageName = Util.getFileNameAndExtension(testFilePathAndName[1])[0] + Constants.SCREENSHOT_FILE_EXTENSION;
+
+		this.savedHtmlFile = new File(testFileFullPath);
+
+		// compute difference text name (diff_oracle_test.txt)
+		String tempDiffName[] = Util.getFileNameAndExtension(Constants.COMPARE_IMAGES_DIFFERENCE_TEXT_FILENAME, "_" + Util.getFileNameAndExtension(referenceImageName)[0] + "_" + Util.getFileNameAndExtension(testFilePathAndName[1])[0]);
+		differenceText = tempDiffName[0] + tempDiffName[1];
+
+		differencePixels = new ArrayList<Point>();
+		clusterElementsMap = new HashMap<Integer, List<Node<HtmlElement>>>();
+	}
+
+	public void setConfig(boolean isRCATimeoutInMins, boolean isRCAElementsCutoff, boolean isRCANumericAnalysisRateOfChange, boolean isPropertyPrioritizationOn, boolean isSearchSpaceSetByHeuristic, boolean isFitnessFunctionNew,
+			boolean isSimmulatedAnnealingToBeUsed, String expectedValue)
+	{
+		this.isRCATimeoutInMins = isRCATimeoutInMins;
+		this.isRCAElementsCutoff = isRCAElementsCutoff;
+		this.isRCANumericAnalysisRateOfChange = isRCANumericAnalysisRateOfChange;
+
+		RootCauseAnalysis.setPropertyPrioritizationOn(isPropertyPrioritizationOn);
+		RootCauseAnalysis.setFitnessFunctionNew(isFitnessFunctionNew);
+		RootCauseAnalysis.setSearchSpaceSetByHeuristic(isSearchSpaceSetByHeuristic);
+		RootCauseAnalysis.setSimmulatedAnnealingToBeUsed(isSimmulatedAnnealingToBeUsed);
+		RootCauseAnalysis.setExpectedValue(expectedValue);
 	}
 
 	public boolean isR_TREE_FLAG()
@@ -530,7 +572,8 @@ public class WebSeeTool
 		int count = 1;
 		for (Node<HtmlElement> node : errorElements)
 		{
-			outWriter.println(count + Constants.RESULT_FILE_PRIORITY_VALUE_SEPARATOR + node.getData().getXpath() + " -> " + node.getData().printInformation());
+			//outWriter.println(count + Constants.RESULT_FILE_PRIORITY_VALUE_SEPARATOR + node.getData().getXpath() + " -> " + node.getData().printInformation());
+			outWriter.println(count + Constants.RESULT_FILE_PRIORITY_VALUE_SEPARATOR + node.getData().getXpath());
 			count++;
 		}
 	}
@@ -591,9 +634,29 @@ public class WebSeeTool
 		return errorElements;
 	}
 
+	public void runVisualInvariantsTool(String oracleImageName, String oracleImagePath, String testWebPagePath, String testHTMLFileName, String reportFileName, String specialRegionsFileFullPath, Logger log, boolean doNotOverwrite)
+			throws IOException, SAXException, InvalidConfigurationException
+	{
+		runWebSeeCore(oracleImageName, oracleImagePath, testWebPagePath, testHTMLFileName, reportFileName, specialRegionsFileFullPath, log, doNotOverwrite);
+
+		// System.out.println("Phase 5: Root cause analysis");
+		long startTime = System.nanoTime();
+		for (Integer cid : clusterElementsMap.keySet())
+		{
+			rootCauseAnalysis(clusterElementsMap.get(cid), startTime);
+			long endTime = System.nanoTime() - startTime;
+			if (log != null)
+			{
+				DecimalFormat decimal = new DecimalFormat("0.00");
+				log.info("Phase 5: " + decimal.format(Util.convertNanosecondsToSeconds(endTime)) + "s");
+			}
+		}
+		postProcessing(reportFileName);
+	}
+
 	public List<Point> detection(boolean doNotOverwrite) throws IOException
 	{
-		Util.getScreenshot(savedHtmlFile.getName(), comparisonImagePath, comparisonImageName, doNotOverwrite);
+		Util.getScreenshot(savedHtmlFile.getName(), comparisonImagePath, comparisonImageName, referenceImagePath + File.separatorChar + referenceImageName, doNotOverwrite);
 
 		Detection detection = new Detection();
 		differenceImageFullPath = comparisonImagePath + File.separatorChar + Constants.COMPARE_IMAGES_DIFFERENCE_IMAGENAME;
@@ -608,6 +671,7 @@ public class WebSeeTool
 				lDifferencePixels.add(new Point(p.x, p.y));
 			}
 		}
+		System.out.println("Filtered difference pixels after special regions = " + lDifferencePixels.size());
 
 		// sample difference pixels if the size is too large
 		if(lDifferencePixels.size() > 1000)
@@ -642,6 +706,8 @@ public class WebSeeTool
 		}
 		ImageIO.write(bi, "png", new File(comparisonImagePath + File.separatorChar + Constants.DIFFERENCE_IMAGE_FILTERED_WITH_SPECIAL_REGIONS_IMAGENAME));
 
+		System.out.println("Filtered difference pixels with a factor of 10 = " + lDifferencePixels.size());
+		
 		return lDifferencePixels;
 	}
 
@@ -855,6 +921,77 @@ public class WebSeeTool
 		return filteredList;
 	}
 
+	public void rootCauseAnalysis(List<Node<HtmlElement>> processedResult, long startTime) throws IOException, InvalidConfigurationException
+	{
+		Logger resultsLog = Util.getNewLogger(comparisonImagePath + File.separatorChar + "RCA_results.txt", "RCA_results" + System.currentTimeMillis());
+		Logger detailsLog = Util.getNewLogger(comparisonImagePath + File.separatorChar + "RCA_details.txt", "RCA_details" + System.currentTimeMillis());
+
+		int numberOfDifferencePixels = Integer.MAX_VALUE;
+		HtmlElement rootCauseElement = new HtmlElement();
+		String rootCauseProperty = null;
+		String fixValue = null;
+		boolean fixFound = false;
+		int count = 0;
+		String fixString = "";
+		int retValue = -1;
+		for (Node<HtmlElement> node : processedResult)
+		{
+			if (isRCATimeoutInMins && Util.convertNanosecondsToSeconds(System.nanoTime() - startTime) > Constants.RCA_TIMEOUT_IN_MINS * 60)
+			{
+				detailsLog.info("");
+				detailsLog.info("RCA timed out. Remaining elements cannot be checked.");
+				break;
+			}
+
+			if (isRCAElementsCutoff && count >= Constants.RCA_WEBSEE_RANKING_BASED_ELEMENTS_CUTOFF)
+			{
+				detailsLog.info("");
+				detailsLog.info("RCA terminated based on WebSee elements cutoff. Remaining elements cannot be checked.");
+				break;
+			}
+
+			detailsLog.info("************************** Processing element " + count++ + " of " + processedResult.size() + " **************************");
+			HtmlElement element = node.getData();
+			RootCauseAnalysis rca = new RootCauseAnalysis(element, referenceImagePath + File.separatorChar + referenceImageName, savedHtmlFile.getAbsolutePath(), resultsLog, detailsLog, isRCANumericAnalysisRateOfChange);
+			rca.runRootCauseAnalysis();
+			retValue = rca.getReducedNumberOfDifferencePixels();
+
+			if (retValue > numberOfDifferencePixels)
+				continue;
+
+			rootCauseElement = element;
+			rootCauseProperty = rca.getRootCauseProperty();
+			fixValue = rca.getFixValue();
+			if (retValue == 0 || Util.isCurrentInAcceptableReductionThreshold(retValue, differencePixels.size()))
+			{
+				rootCauseElement = element;
+				fixFound = true;
+				fixString = (retValue == 0) ? " => exact" : " => acceptable";
+				fixString = fixString + " root cause found!";
+				break;
+			}
+			else if (retValue < numberOfDifferencePixels)
+			{
+				numberOfDifferencePixels = retValue;
+			}
+		}
+		NumericAnalysis.resetTranslationValues();
+		long endTime = System.nanoTime() - startTime;
+
+		DecimalFormat decimal = new DecimalFormat("0.00");
+		resultsLog.info("");
+		resultsLog.info("===================================================================================");
+		resultsLog.info("Final result is of element " + rootCauseElement.getXpath() + ", the visual property is " + rootCauseProperty + " with value " + fixValue + fixString + ". Number of difference pixels reduced from "
+				+ differencePixels.size() + " to " + retValue);
+		resultsLog.info("Total time = " + decimal.format(Util.convertNanosecondsToSeconds(endTime)) + " sec");
+
+		detailsLog.info("");
+		detailsLog.info("===================================================================================");
+		detailsLog.info("Final result is of element " + rootCauseElement.getXpath() + ", the visual property is " + rootCauseProperty + " with value " + fixValue + fixString + ". Number of difference pixels reduced from "
+				+ differencePixels.size() + " to " + retValue);
+		detailsLog.info("Total time = " + decimal.format(Util.convertNanosecondsToSeconds(endTime)) + " sec");
+	}
+
 	public Map<Integer, List<Point>> clustering()
 	{
 		Map<Integer, List<Point>> retVal = new HashMap<Integer, List<Point>>();
@@ -889,7 +1026,7 @@ public class WebSeeTool
 
 		// extract special regions information
 		specialRegions = new HashSet<SpecialRegion>();
-		if (!specialRegionsFileFullPath.isEmpty() && new File(specialRegionsFileFullPath).exists())
+		if (specialRegionsFileFullPath != null && !specialRegionsFileFullPath.isEmpty() && new File(specialRegionsFileFullPath).exists())
 		{
 			SpecialRegion sr = new SpecialRegion(specialRegionsFileFullPath);
 			specialRegions = sr.getSpecialRegions();
@@ -898,67 +1035,92 @@ public class WebSeeTool
 		// ------------------------------------------------------------------------------------------------------
 		DecimalFormat decimal = new DecimalFormat("0.00");
 
-		System.out.println("Phase 1: Detection");
+		System.out.println("Detection started");
 		long startTime = System.nanoTime();
+		System.out.println("Comparing images using PID");
 		differencePixels = detection(doNotOverwrite);
 		long endTime = System.nanoTime() - startTime;
-		if (log != null)
+		timeMapInSec.put("detection", Util.convertNanosecondsToSeconds(endTime));		
+
+		long rTreeBuildStartTime = 0;
+		long rTreeBuildEndTime = 0;
+		if(specialRegionsFileFullPath != null && !specialRegionsFileFullPath.isEmpty())
 		{
-			log.info("Phase 1: " + decimal.format(Util.convertNanosecondsToSeconds(endTime)) + "s");
+			rTreeBuildStartTime = System.nanoTime();
+			if(differencePixels.size() > 0)
+			{
+				System.out.println("\nBuilding R-tree started");
+				buildRTree();
+				System.out.println("Building R-tree finished");
+			}
+			rTreeBuildEndTime = System.nanoTime() - rTreeBuildStartTime;
+			timeMapInSec.put("rTreeBuildTime", Util.convertNanosecondsToSeconds(rTreeBuildEndTime));
+			
+			System.out.println("\nFiltering difference pixels belonging to special regions");
+			startTime = System.nanoTime();
+			Set<Point> specialRegionDifferencePixels = specialRegionsProcessing();
+			differencePixels.addAll(specialRegionDifferencePixels);
+			endTime = System.nanoTime() - startTime;
+			timeMapInSec.put("specialRegionsProcessing", Util.convertNanosecondsToSeconds(endTime));
 		}
 
-		long rTreeBuildStartTime = System.nanoTime();
-		if(differencePixels.size() > 0)
-		{
-			buildRTree();
-		}
-		long rTreeBuildEndTime = System.nanoTime() - rTreeBuildStartTime;
-		System.out.println("Phase 2: Special Regions Processing");
-		startTime = System.nanoTime();
-		Set<Point> specialRegionDifferencePixels = specialRegionsProcessing();
-		differencePixels.addAll(specialRegionDifferencePixels);
-		endTime = System.nanoTime() - startTime;
-		if (log != null)
-		{
-			log.info("Phase 2: " + decimal.format(Util.convertNanosecondsToSeconds(endTime)) + "s");
-		}
-
-		System.out.println("Phase 3: Clustering");
+		System.out.println("Clustering difference pixels using DBSCAN");
 		startTime = System.nanoTime();
 		Map<Integer, List<Point>> clusterDifferencePixelsMap = clustering();
 		endTime = System.nanoTime() - startTime;
-		if (log != null)
+		timeMapInSec.put("clustering", Util.convertNanosecondsToSeconds(endTime));
+		
+		System.out.println("Number of clusters = " + clusterDifferencePixelsMap.size());
+		System.out.println("Detection finished");
+		
+		if(specialRegionsFileFullPath == null || specialRegionsFileFullPath.isEmpty())
 		{
-			log.info("Phase 3: " + decimal.format(Util.convertNanosecondsToSeconds(endTime)) + "s");
+			rTreeBuildStartTime = System.nanoTime();
+			if(differencePixels.size() > 0)
+			{
+				System.out.println("\nBuilding R-tree started");
+				buildRTree();
+				System.out.println("Building R-tree finished");
+			}
+			rTreeBuildEndTime = System.nanoTime() - rTreeBuildStartTime;
+			timeMapInSec.put("rTreeBuildTime", Util.convertNanosecondsToSeconds(rTreeBuildEndTime));
 		}
-
+		
 		long localizationTotalTime = 0;
 		long resultSetProcessingTotalTime = 0;
 		for (Integer cid : clusterDifferencePixelsMap.keySet())
 		{
-			System.out.println("Phase 4: Localization");
+			System.out.println("\nCluster " + (cid+1));
+			System.out.println("\tLocalization started");
 			startTime = System.nanoTime();
 			Set<Node<HtmlElement>> errorElements = localization(clusterDifferencePixelsMap.get(cid), reportFileName, doNotOverwrite);
 			endTime = System.nanoTime() - startTime;
-			if (log != null)
-			{
-				log.info("Phase 4: " + decimal.format(Util.convertNanosecondsToSeconds(endTime)) + "s");
-			}
 			localizationTotalTime = localizationTotalTime + endTime;
+			System.out.println("\tLocalization finished");
 
-			System.out.println("Phase 5: Result Set Processing");
+			System.out.println("\n\tResult set processing started");
 			startTime = System.nanoTime();
 			List<Node<HtmlElement>> processedResult = resultSetProcessing(errorElements, reportFileName);
 
 			endTime = System.nanoTime() - startTime;
-			if (log != null)
-			{
-				log.info("Phase 5: " + decimal.format(Util.convertNanosecondsToSeconds(endTime)) + "s");
-			}
+			
 			resultSetProcessingTotalTime = resultSetProcessingTotalTime + endTime;
+			System.out.println("\tResult set processing finished");
 			clusterElementsMap.put(cid, processedResult);
 		}
+		timeMapInSec.put("localization", Util.convertNanosecondsToSeconds(localizationTotalTime));
+		timeMapInSec.put("resultSetProcessing", Util.convertNanosecondsToSeconds(resultSetProcessingTotalTime));
 		// ------------------------------------------------------------------------------------------------------
+	}
+
+	public void runWebSeeToolWithoutRCA(String oracleImageName, String oracleImagePath, String testWebPagePath, String testHTMLFileName, String reportFileName, String specialRegionsFileFullPath, Logger log, boolean doNotOverwrite)
+			throws IOException, SAXException, InvalidConfigurationException
+	{
+		long startTime = System.nanoTime();
+		runWebSeeCore(oracleImageName, oracleImagePath, testWebPagePath, testHTMLFileName, reportFileName, specialRegionsFileFullPath, log, doNotOverwrite);
+		postProcessing(reportFileName);
+		long endTime = System.nanoTime() - startTime;
+		timeMapInSec.put("totalTime", Util.convertNanosecondsToSeconds(endTime));
 	}
 
 	private void postProcessing(String reportFileName) throws IOException
@@ -975,16 +1137,132 @@ public class WebSeeTool
 		{
 			outWriter.println("\n\n******* CLUSTER " + (cid + 1) + " ***************");
 			writeReportFile(clusterElementsMap.get(cid), outWriter);
+			// markResultOnSavedHtml(clusterElementsMap.get(cid),
+			// savedHtmlFile);
 		}
 		outWriter.println();
 		outWriter.println();
 		outWriter.println(Constants.RESULT_FILE_TIME_REQUIRED_LINE + Util.convertNanosecondsToSeconds(endTimeThisTestCase) + " " + Constants.TIME_REQUIRED_UNIT);
 		outWriter.close();
 	}
-	
-	public static void main(String[] args) 
+
+	public void runVisualInvariantsToolWithRCATimeout(String oracleImageName, String oracleImagePath, String testWebPagePath, String testHTMLFileName, String reportFileName, String specialRegionsFileFullPath, Logger log,
+			boolean doNotOverwrite) throws IOException, SAXException, InvalidConfigurationException
 	{
-		WebSeeTool wst = new WebSeeTool("", "");
-		wst.checkFileIsRemoteURL("file:///www.google.com");
+		runWebSeeCore(oracleImageName, oracleImagePath, testWebPagePath, testHTMLFileName, reportFileName, specialRegionsFileFullPath, log, doNotOverwrite);
+
+		// System.out.println("Phase 5: Root cause analysis");
+		long startTime = System.nanoTime();
+		for (Integer cid : clusterElementsMap.keySet())
+		{
+			rootCauseAnalysis(clusterElementsMap.get(cid), startTime);
+			long endTime = System.nanoTime() - startTime;
+			if (log != null)
+			{
+				DecimalFormat decimal = new DecimalFormat("0.00");
+				log.info("Phase 5: " + decimal.format(Util.convertNanosecondsToSeconds(endTime)) + "s");
+			}
+		}
+		postProcessing(reportFileName);
+	}
+
+	public Set<Node<HtmlElement>> runWebSeeToolWithOnlyDetectionAndLocalization() throws IOException, SAXException
+	{
+		differencePixels = detection(true);
+		buildRTree();
+		Set<Node<HtmlElement>> errorElements = localization(differencePixels, "report.txt", true);
+		WebDriverSingleton.closeDriver();
+		return errorElements;
+	}
+	
+	public List<Node<HtmlElement>> runWebSeeToolWithoutRCAWrapper()
+	{
+		try
+		{
+			runWebSeeCore(this.referenceImageName, this.referenceImagePath, this.comparisonImagePath, this.savedHtmlFile.getName(), "report.txt", "", null, false);
+			postProcessing("websee_report.txt");
+		}
+		catch (IOException e)
+		{
+			e.printStackTrace();
+		}
+		catch (SAXException e)
+		{
+			e.printStackTrace();
+		}
+		catch (InvalidConfigurationException e)
+		{
+			e.printStackTrace();
+		}
+		WebDriverSingleton.closeDriver();
+		return clusterElementsMap.get(0);
+	}
+	
+	public void runWebSeeTool() throws IOException, SAXException, InvalidConfigurationException
+	{
+		File file = new File("err.txt");
+		FileOutputStream fos = new FileOutputStream(file);
+		PrintStream ps = new PrintStream(fos);
+		System.setErr(ps);
+		
+		long startTime = System.nanoTime();
+		setConfig(true, false, false, true, true, true, false, "");
+		runWebSeeCore(referenceImageName, referenceImagePath, comparisonImagePath, savedHtmlFile.getName(), "report.txt", specialRegionsFullPath, null, true);
+		postProcessing("report.txt");
+		long endTime = System.nanoTime() - startTime;
+		timeMapInSec.put("totalTime", Util.convertNanosecondsToSeconds(endTime));
+	}
+	
+	public boolean runWebSeeToolWithOnlyDetection() throws IOException
+	{
+		// extract special regions information
+		specialRegions = new HashSet<SpecialRegion>();
+		if (specialRegionsFullPath != null && !specialRegionsFullPath.isEmpty() && new File(specialRegionsFullPath).exists())
+		{
+			SpecialRegion sr = new SpecialRegion(specialRegionsFullPath);
+			specialRegions = sr.getSpecialRegions();
+		}
+		
+		differencePixels = detection(true);
+		WebDriverSingleton.closeDriver();
+		if(differencePixels.size() > 0)
+		{
+			return true;
+		}
+		return false;
+	}
+	
+	public void runWebSeeToolWithNoClustering(String timeResultsFile, String outputFile) throws IOException, SAXException, InvalidConfigurationException
+	{
+		setClusteringToBeUsed(false);
+		
+		long startTime = System.nanoTime();
+		runWebSeeCore(referenceImageName, referenceImagePath, comparisonImagePath, savedHtmlFile.getName(), "report.txt", specialRegionsFullPath, null, true);
+		postProcessing("report.txt");
+		long endTime = System.nanoTime() - startTime;
+		timeMapInSec.put("totalTime", Util.convertNanosecondsToSeconds(endTime));
+		
+		// write time results to file
+		PrintWriter outTime = new PrintWriter(new File(timeResultsFile));
+		if(timeMapInSec.containsKey("detection") && timeMapInSec.containsKey("clustering"))
+			outTime.println("detection time in sec = " + (timeMapInSec.get("detection") + timeMapInSec.get("clustering")));
+		if(timeMapInSec.containsKey("localization") && timeMapInSec.containsKey("rTreeBuildTime"))
+			outTime.println("localization time in sec = " + (timeMapInSec.get("localization") + timeMapInSec.get("rTreeBuildTime")));
+		if(timeMapInSec.containsKey("resultSetProcessing"))
+			outTime.println("resultSetProcessing time in sec = " + timeMapInSec.get("resultSetProcessing"));
+		if(timeMapInSec.containsKey("totalTime"))
+			outTime.println("total time in sec = " + timeMapInSec.get("totalTime"));
+		outTime.close();
+		
+		// write clusterElementsMap.get(0) to output file
+		PrintWriter outResults = new PrintWriter(new File(outputFile));
+		if(clusterElementsMap.size() > 0)
+		{
+			for(Node<HtmlElement> n : clusterElementsMap.get(0))
+			{
+				outResults.println(n.getData().getXpath());
+			}
+		}
+		outResults.close();
 	}
 }

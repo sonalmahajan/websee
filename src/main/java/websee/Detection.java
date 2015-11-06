@@ -21,7 +21,7 @@ public class Detection
 {
 	// perceptual image differencing constants
 	// parameter values for getting pixel-perfect match like pixel-to-pixel difference
- 	private double COLOR_FACTOR = 1.0;
+/* 	private double COLOR_FACTOR = 1.0;
 	private double FOV = 89.9;
 	private double GAMMA = 4.2;
 	private double LUMINANCE = 800.0;
@@ -29,7 +29,7 @@ public class Detection
 	private int THRESHOLD_PIXELS = 100;
 	private int DOWNSAMPLE = 0;
 	private int PERCENTAGE_OF_TOTAL_IMAGE_SIZE = 0;
-
+*/
 /*	// default values from pdiff page by Hector Yee
  	private double COLOR_FACTOR = 1.0;
 	private double FOV = 27.0;
@@ -40,8 +40,8 @@ public class Detection
 	private int DOWNSAMPLE = 0;
 	private int PERCENTAGE_OF_TOTAL_IMAGE_SIZE = 0;
 */
-	
-/*	private double COLOR_FACTOR = 0.0;
+	//getting correct perceptible differences only
+	private double COLOR_FACTOR = 0.0;
 	private double FOV = 27;
 	private double GAMMA = 4.2;
 	private double LUMINANCE = 20.0;
@@ -49,8 +49,8 @@ public class Detection
 	private int THRESHOLD_PIXELS = 100;
 	private int DOWNSAMPLE = 0;
 	private int PERCENTAGE_OF_TOTAL_IMAGE_SIZE = 0;
-*/	
-	private String differenceColor = "#ff0000";
+	
+	private String differenceColor = Util.getHexFromDecimal(PerceptualImageDifferencing.COLOR_FAIL);
 
 	private static final ForkJoinPool pool = new ForkJoinPool();
 
@@ -102,7 +102,7 @@ public class Detection
 
 		PerceptualImageDifferencing pd = builder.build();
 		boolean passed = pd.compare(pool, imgA, imgB, imgDiff);
-		pd.dump();
+		//pd.dump();
 
 		for(int r = 0; r < imgDiff.getWidth(); r++)
         {

@@ -38,7 +38,10 @@ public class ResultSetProcessing
 					{
 						if (nodeTemp.getData().getXpath().equals(child.getData().getXpath()))
 						{
-							childCount++;
+							if(child.getData().getNumberOfDifferencePixels() > 0)
+							{
+								childCount++;
+							}
 						}
 					}
 				}
@@ -73,7 +76,10 @@ public class ResultSetProcessing
 					{
 						if (nodeTemp.getData().getXpath().equals(child.getData().getXpath()))
 						{
-							childCount++;
+							if(child.getData().getNumberOfDifferencePixels() > 0)
+							{
+								childCount++;
+							}
 						}
 					}
 				}
@@ -155,6 +161,10 @@ public class ResultSetProcessing
 		for(Node<HtmlElement> node : errorElements)
 		{
 			HtmlElement element = node.getData();
+			if(element.getWidth() <= 0 || element.getHeight() <= 0)
+			{
+				continue;
+			}
 			element.setCascadingError(isCascadingError(element, testImageFullPath, oracleImageFullPath) ? 1 : 0);
 		
 			Double ratio = element.getNumberOfDifferencePixels() / (double) (element.getWidth() * element.getHeight());
@@ -212,7 +222,23 @@ public class ResultSetProcessing
 			}
 			if(isH4On)
 			{
-				score = score + Constants.WEIGHT_FOR_RATIO_CALCULATION * (1 - element.getRatio());
+				if(element.getRatio() == 0.0)
+				{
+					if(element.getCssProperties().get("display") != null && element.getCssProperties().get("display").equalsIgnoreCase("none") ||
+						element.getCssProperties().get("visibility") != null && element.getCssProperties().get("visibility").equalsIgnoreCase("hidden") ||
+						element.getHtmlAttributes().containsKey("hidden"))
+					{
+						score = score + Constants.WEIGHT_FOR_RATIO_CALCULATION * (1 - element.getRatio());
+					}
+					else // apply penalty, pushing down the element in rank
+					{
+						score = score + Constants.WEIGHT_FOR_RATIO_CALCULATION * 5 * (1 - element.getRatio());
+					}
+				}
+				else
+				{
+					score = score + Constants.WEIGHT_FOR_RATIO_CALCULATION * (1 - element.getRatio());
+				}
 			}
 
 			if(isH5On)

@@ -1,18 +1,24 @@
 package websee;
 
+import java.awt.Rectangle;
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.util.concurrent.TimeUnit;
 
 import org.apache.commons.io.FileUtils;
+import org.openqa.selenium.Capabilities;
+import org.openqa.selenium.Dimension;
 import org.openqa.selenium.Platform;
+import org.openqa.selenium.Proxy;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.firefox.FirefoxBinary;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.phantomjs.PhantomJSDriver;
 import org.openqa.selenium.remote.BrowserType;
 import org.openqa.selenium.remote.DesiredCapabilities;
 
+import util.Util;
 import config.Constants;
 
 public class WebDriverSingleton
@@ -24,7 +30,19 @@ public class WebDriverSingleton
 	{
 		if(Constants.WEBDRIVER_BROWSER.equalsIgnoreCase("FIREFOX"))
 		{
-			driver = new FirefoxDriver();
+			if(Constants.HEADLESS_FIREFOX)
+			{
+				String Xport = System.getProperty("lmportal.xvfb.id", ":2");
+		        final File firefoxPath = new File(System.getProperty("lmportal.deploy.firefox.path", "/usr/bin/firefox"));
+		        FirefoxBinary firefoxBinary = new FirefoxBinary(firefoxPath);
+		        firefoxBinary.setEnvironmentProperty("DISPLAY", Xport);
+		        
+				driver = new FirefoxDriver(firefoxBinary, null);
+			}
+			else
+			{
+				driver = new FirefoxDriver();
+			}
 		}
 		else
 		{
@@ -38,7 +56,7 @@ public class WebDriverSingleton
 //		driver.manage().window().setSize(new Dimension(640, 480));
 //		driver.manage().window().setSize(new Dimension(640, 480));
 	}
-	
+
 	public static WebDriverSingleton getInstance()
 	{
 		if(instance == null)
@@ -70,7 +88,7 @@ public class WebDriverSingleton
 	
 	public void loadPage(String htmlFileFullPath)
 	{
-		System.out.println("Loading page " + htmlFileFullPath);
+		//System.out.println("Loading page " + htmlFileFullPath);
 		String urlString = "";
 		if(Constants.WEBDRIVER_BROWSER.equalsIgnoreCase("FIREFOX"))
 		{

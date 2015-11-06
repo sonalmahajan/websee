@@ -435,10 +435,10 @@ public class HtmlDomTree
 				
 				// check if the containing and contained element don't have the same size
 				if(resultRectIds.contains(cid) && 
-						containingElement.getX() != containedElement.getX() &&
-						containingElement.getY() != containedElement.getY() &&
-						containingElement.getWidth() != containedElement.getWidth() &&
-						containingElement.getHeight() != containedElement.getHeight() && cid > id)
+						containingElement.getX() <= containedElement.getX() &&
+						containingElement.getY() <= containedElement.getY() &&
+						containingElement.getWidth() > containedElement.getWidth() &&
+						containingElement.getHeight() > containedElement.getHeight() && cid > id)
 				{
 					//System.out.println("rect " + id + " contains rect " + cid);
 					// keep contained element, remove containing element
@@ -671,15 +671,16 @@ public class HtmlDomTree
 	public static void main(String[] args) throws SAXException, IOException
 	{
 		WebDriverSingleton instance = WebDriverSingleton.getInstance();
-		instance.loadPage("C:\\USC\\visual_checking\\evaluation\\inconsistency\\page1.html");
+		instance.loadPage("/Users/sonal/USC/visual_checking/evaluation/test/dbi-perl/dbi.perl.org/index.html");
 		WebDriver driver = instance.getDriver();
 		
 		//WebDriver driver = new FirefoxDriver();
 		//driver.manage().window().maximize();
 		//driver.get("file:///C:\\USC\\visual_checking\\evaluation\\root_cause_analysis\\color\\test.html");
-		HtmlDomTree rt = new HtmlDomTree(driver, "C:\\USC\\visual_checking\\evaluation\\inconsistency\\page1.html");
+		HtmlDomTree rt = new HtmlDomTree(driver, "/Users/sonal/USC/visual_checking/evaluation/test/dbi-perl/dbi.perl.org/index.html");
 		rt.buildHtmlDomTree();
 		rt.preOrderTraversalRTree();
+		rt.drawRectangles("test.png", "/Users/sonal/USC/visual_checking/evaluation/test/dbi-perl/dbi.perl.org");
 		//rt.searchRTreeByPoint(150, 766);
 		/*JavascriptExecutor js = (JavascriptExecutor) driver;
 		WebElement e = Util.getElementFromCoordinates(js, 215, 768);

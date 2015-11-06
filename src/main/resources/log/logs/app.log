@@ -1,228 +1,483 @@
-INFO 22 Dec 14 20:12:07,576 pDiff.PerceptualImageDifferencing.compare - Converting RGB and constructing Laplacian Pyramids
-INFO 22 Dec 14 20:12:07,798 pDiff.PerceptualImageDifferencing.compare - Performing test
-INFO 22 Dec 14 20:12:08,179 pDiff.PerceptualImageDifferencing.compare - 68559 pixels are different
-INFO 13 Feb 15 19:35:14,731 pDiff.PerceptualImageDifferencing.compare - Converting RGB and constructing Laplacian Pyramids
-INFO 13 Feb 15 19:35:15,036 pDiff.PerceptualImageDifferencing.compare - Performing test
-INFO 13 Feb 15 19:35:15,549 pDiff.PerceptualImageDifferencing.compare - 1130824 pixels are different
-INFO 13 Feb 15 19:36:31,435 pDiff.PerceptualImageDifferencing.compare - Converting RGB and constructing Laplacian Pyramids
-INFO 13 Feb 15 19:36:31,754 pDiff.PerceptualImageDifferencing.compare - Performing test
-INFO 13 Feb 15 19:36:32,156 pDiff.PerceptualImageDifferencing.compare - 1130824 pixels are different
-INFO 13 Feb 15 19:37:08,609 pDiff.PerceptualImageDifferencing.compare - Converting RGB and constructing Laplacian Pyramids
-INFO 13 Feb 15 19:37:08,917 pDiff.PerceptualImageDifferencing.compare - Performing test
-INFO 13 Feb 15 19:37:09,343 pDiff.PerceptualImageDifferencing.compare - 326367 pixels are different
-INFO 13 Feb 15 19:37:51,884 pDiff.PerceptualImageDifferencing.compare - Converting RGB and constructing Laplacian Pyramids
-INFO 13 Feb 15 19:37:52,195 pDiff.PerceptualImageDifferencing.compare - Performing test
-INFO 13 Feb 15 19:37:52,626 pDiff.PerceptualImageDifferencing.compare - 326367 pixels are different
-INFO 13 Feb 15 19:39:09,894 pDiff.PerceptualImageDifferencing.compare - Converting RGB and constructing Laplacian Pyramids
-INFO 13 Feb 15 19:39:10,212 pDiff.PerceptualImageDifferencing.compare - Performing test
-INFO 13 Feb 15 19:39:10,668 pDiff.PerceptualImageDifferencing.compare - 326367 pixels are different
-INFO 13 Feb 15 19:47:35,300 pDiff.PerceptualImageDifferencing.compare - Converting RGB and constructing Laplacian Pyramids
-INFO 13 Feb 15 19:47:35,634 pDiff.PerceptualImageDifferencing.compare - Performing test
-INFO 13 Feb 15 19:47:36,100 pDiff.PerceptualImageDifferencing.compare - 418499 pixels are different
-INFO 13 Feb 15 19:48:03,153 pDiff.PerceptualImageDifferencing.compare - Converting RGB and constructing Laplacian Pyramids
-INFO 13 Feb 15 19:48:03,496 pDiff.PerceptualImageDifferencing.compare - Performing test
-INFO 13 Feb 15 19:48:04,039 pDiff.PerceptualImageDifferencing.compare - 301868 pixels are different
-INFO 13 Feb 15 20:48:04,519 pDiff.PerceptualImageDifferencing.compare - Converting RGB and constructing Laplacian Pyramids
-INFO 13 Feb 15 20:48:04,902 pDiff.PerceptualImageDifferencing.compare - Performing test
-INFO 13 Feb 15 20:48:05,264 pDiff.PerceptualImageDifferencing.compare - 86805 pixels are different
-INFO 13 Feb 15 20:48:44,473 pDiff.PerceptualImageDifferencing.compare - Converting RGB and constructing Laplacian Pyramids
-INFO 13 Feb 15 20:48:45,066 pDiff.PerceptualImageDifferencing.compare - Performing test
-INFO 13 Feb 15 20:48:45,489 pDiff.PerceptualImageDifferencing.compare - 64230 pixels are different
-INFO 13 Feb 15 20:49:15,171 pDiff.PerceptualImageDifferencing.compare - Converting RGB and constructing Laplacian Pyramids
-INFO 13 Feb 15 20:49:15,621 pDiff.PerceptualImageDifferencing.compare - Performing test
-INFO 13 Feb 15 20:49:16,042 pDiff.PerceptualImageDifferencing.compare - 38516 pixels are different
-INFO 13 Feb 15 20:50:52,863 pDiff.PerceptualImageDifferencing.compare - Converting RGB and constructing Laplacian Pyramids
-INFO 13 Feb 15 20:50:53,166 pDiff.PerceptualImageDifferencing.compare - Performing test
-INFO 13 Feb 15 20:50:53,553 pDiff.PerceptualImageDifferencing.compare - 35951 pixels are different
-INFO 13 Feb 15 20:51:05,889 pDiff.PerceptualImageDifferencing.compare - Converting RGB and constructing Laplacian Pyramids
-INFO 13 Feb 15 20:51:06,205 pDiff.PerceptualImageDifferencing.compare - Performing test
-INFO 13 Feb 15 20:51:08,699 pDiff.PerceptualImageDifferencing.compare - 0 pixels are different
-INFO 13 Feb 15 20:51:25,869 pDiff.PerceptualImageDifferencing.compare - Converting RGB and constructing Laplacian Pyramids
-INFO 13 Feb 15 20:51:26,179 pDiff.PerceptualImageDifferencing.compare - Performing test
-INFO 13 Feb 15 20:51:26,561 pDiff.PerceptualImageDifferencing.compare - 35494 pixels are different
-INFO 13 Feb 15 20:56:30,409 pDiff.PerceptualImageDifferencing.compare - Converting RGB and constructing Laplacian Pyramids
-INFO 13 Feb 15 20:56:30,710 pDiff.PerceptualImageDifferencing.compare - Performing test
-INFO 13 Feb 15 20:56:31,110 pDiff.PerceptualImageDifferencing.compare - 1137479 pixels are different
-INFO 13 Feb 15 20:58:00,640 pDiff.PerceptualImageDifferencing.compare - Converting RGB and constructing Laplacian Pyramids
-INFO 13 Feb 15 20:58:00,950 pDiff.PerceptualImageDifferencing.compare - Performing test
-INFO 13 Feb 15 20:58:01,317 pDiff.PerceptualImageDifferencing.compare - 0 pixels are different
-INFO 13 Feb 15 20:58:11,808 pDiff.PerceptualImageDifferencing.compare - Converting RGB and constructing Laplacian Pyramids
-INFO 13 Feb 15 20:58:12,118 pDiff.PerceptualImageDifferencing.compare - Performing test
-INFO 13 Feb 15 20:58:12,456 pDiff.PerceptualImageDifferencing.compare - 57869 pixels are different
-INFO 13 Feb 15 20:58:39,357 pDiff.PerceptualImageDifferencing.compare - Converting RGB and constructing Laplacian Pyramids
-INFO 13 Feb 15 20:58:39,672 pDiff.PerceptualImageDifferencing.compare - Performing test
-INFO 13 Feb 15 20:58:40,189 pDiff.PerceptualImageDifferencing.compare - 709869 pixels are different
-INFO 13 Feb 15 20:59:16,788 pDiff.PerceptualImageDifferencing.compare - Converting RGB and constructing Laplacian Pyramids
-INFO 13 Feb 15 20:59:17,101 pDiff.PerceptualImageDifferencing.compare - Performing test
-INFO 13 Feb 15 20:59:17,474 pDiff.PerceptualImageDifferencing.compare - 598531 pixels are different
-INFO 13 Feb 15 20:59:33,328 pDiff.PerceptualImageDifferencing.compare - Converting RGB and constructing Laplacian Pyramids
-INFO 13 Feb 15 20:59:33,634 pDiff.PerceptualImageDifferencing.compare - Performing test
-INFO 13 Feb 15 20:59:34,000 pDiff.PerceptualImageDifferencing.compare - 595531 pixels are different
-INFO 13 Feb 15 20:59:45,214 pDiff.PerceptualImageDifferencing.compare - Converting RGB and constructing Laplacian Pyramids
-INFO 13 Feb 15 20:59:45,519 pDiff.PerceptualImageDifferencing.compare - Performing test
-INFO 13 Feb 15 20:59:45,970 pDiff.PerceptualImageDifferencing.compare - 1026279 pixels are different
-INFO 13 Feb 15 21:00:11,004 pDiff.PerceptualImageDifferencing.compare - Converting RGB and constructing Laplacian Pyramids
-INFO 13 Feb 15 21:00:11,319 pDiff.PerceptualImageDifferencing.compare - Performing test
-INFO 13 Feb 15 21:00:11,743 pDiff.PerceptualImageDifferencing.compare - 594896 pixels are different
-INFO 13 Feb 15 21:00:34,898 pDiff.PerceptualImageDifferencing.compare - Converting RGB and constructing Laplacian Pyramids
-INFO 13 Feb 15 21:00:35,220 pDiff.PerceptualImageDifferencing.compare - Performing test
-INFO 13 Feb 15 21:00:35,653 pDiff.PerceptualImageDifferencing.compare - 1026877 pixels are different
-INFO 13 Feb 15 21:00:47,117 pDiff.PerceptualImageDifferencing.compare - Converting RGB and constructing Laplacian Pyramids
-INFO 13 Feb 15 21:00:47,424 pDiff.PerceptualImageDifferencing.compare - Performing test
-INFO 13 Feb 15 21:00:47,843 pDiff.PerceptualImageDifferencing.compare - 567167 pixels are different
-INFO 13 Feb 15 21:00:59,074 pDiff.PerceptualImageDifferencing.compare - Converting RGB and constructing Laplacian Pyramids
-INFO 13 Feb 15 21:00:59,380 pDiff.PerceptualImageDifferencing.compare - Performing test
-INFO 13 Feb 15 21:00:59,791 pDiff.PerceptualImageDifferencing.compare - 594326 pixels are different
-INFO 13 Feb 15 21:01:10,764 pDiff.PerceptualImageDifferencing.compare - Converting RGB and constructing Laplacian Pyramids
-INFO 13 Feb 15 21:01:11,106 pDiff.PerceptualImageDifferencing.compare - Performing test
-INFO 13 Feb 15 21:01:11,462 pDiff.PerceptualImageDifferencing.compare - 442632 pixels are different
-INFO 13 Feb 15 21:01:20,003 pDiff.PerceptualImageDifferencing.compare - Converting RGB and constructing Laplacian Pyramids
-INFO 13 Feb 15 21:01:20,323 pDiff.PerceptualImageDifferencing.compare - Performing test
-INFO 13 Feb 15 21:01:20,723 pDiff.PerceptualImageDifferencing.compare - 1025072 pixels are different
-INFO 13 Feb 15 21:01:33,605 pDiff.PerceptualImageDifferencing.compare - Converting RGB and constructing Laplacian Pyramids
-INFO 13 Feb 15 21:01:33,932 pDiff.PerceptualImageDifferencing.compare - Performing test
-INFO 13 Feb 15 21:01:34,275 pDiff.PerceptualImageDifferencing.compare - 1025072 pixels are different
-INFO 13 Feb 15 21:01:56,923 pDiff.PerceptualImageDifferencing.compare - Converting RGB and constructing Laplacian Pyramids
-INFO 13 Feb 15 21:01:57,230 pDiff.PerceptualImageDifferencing.compare - Performing test
-INFO 13 Feb 15 21:01:57,601 pDiff.PerceptualImageDifferencing.compare - 1285366 pixels are different
-INFO 13 Feb 15 21:02:17,212 pDiff.PerceptualImageDifferencing.compare - Converting RGB and constructing Laplacian Pyramids
-INFO 13 Feb 15 21:02:17,504 pDiff.PerceptualImageDifferencing.compare - Performing test
-INFO 13 Feb 15 21:02:17,925 pDiff.PerceptualImageDifferencing.compare - 1323714 pixels are different
-INFO 13 Feb 15 21:02:35,629 pDiff.PerceptualImageDifferencing.compare - Converting RGB and constructing Laplacian Pyramids
-INFO 13 Feb 15 21:02:35,948 pDiff.PerceptualImageDifferencing.compare - Performing test
-INFO 13 Feb 15 21:02:36,380 pDiff.PerceptualImageDifferencing.compare - 1330535 pixels are different
-INFO 13 Feb 15 21:02:59,570 pDiff.PerceptualImageDifferencing.compare - Converting RGB and constructing Laplacian Pyramids
-INFO 13 Feb 15 21:02:59,876 pDiff.PerceptualImageDifferencing.compare - Performing test
-INFO 13 Feb 15 21:03:00,258 pDiff.PerceptualImageDifferencing.compare - 1330721 pixels are different
-INFO 13 Feb 15 21:03:41,351 pDiff.PerceptualImageDifferencing.compare - Converting RGB and constructing Laplacian Pyramids
-INFO 13 Feb 15 21:03:41,652 pDiff.PerceptualImageDifferencing.compare - Performing test
-INFO 13 Feb 15 21:03:42,060 pDiff.PerceptualImageDifferencing.compare - 1352647 pixels are different
-INFO 13 Feb 15 21:04:01,392 pDiff.PerceptualImageDifferencing.compare - Converting RGB and constructing Laplacian Pyramids
-INFO 13 Feb 15 21:04:01,713 pDiff.PerceptualImageDifferencing.compare - Performing test
-INFO 13 Feb 15 21:04:02,139 pDiff.PerceptualImageDifferencing.compare - 1352636 pixels are different
-INFO 13 Feb 15 21:04:12,379 pDiff.PerceptualImageDifferencing.compare - Converting RGB and constructing Laplacian Pyramids
-INFO 13 Feb 15 21:04:12,690 pDiff.PerceptualImageDifferencing.compare - Performing test
-INFO 13 Feb 15 21:04:13,082 pDiff.PerceptualImageDifferencing.compare - 1380157 pixels are different
-INFO 13 Feb 15 21:04:38,107 pDiff.PerceptualImageDifferencing.compare - Converting RGB and constructing Laplacian Pyramids
-INFO 13 Feb 15 21:04:38,410 pDiff.PerceptualImageDifferencing.compare - Performing test
-INFO 13 Feb 15 21:04:38,788 pDiff.PerceptualImageDifferencing.compare - 1323890 pixels are different
-INFO 13 Feb 15 21:04:54,074 pDiff.PerceptualImageDifferencing.compare - Converting RGB and constructing Laplacian Pyramids
-INFO 13 Feb 15 21:04:54,380 pDiff.PerceptualImageDifferencing.compare - Performing test
-INFO 13 Feb 15 21:04:54,802 pDiff.PerceptualImageDifferencing.compare - 1377346 pixels are different
-INFO 13 Feb 15 21:05:14,162 pDiff.PerceptualImageDifferencing.compare - Converting RGB and constructing Laplacian Pyramids
-INFO 13 Feb 15 21:05:14,476 pDiff.PerceptualImageDifferencing.compare - Performing test
-INFO 13 Feb 15 21:05:14,846 pDiff.PerceptualImageDifferencing.compare - 1378760 pixels are different
-INFO 13 Feb 15 21:05:28,107 pDiff.PerceptualImageDifferencing.compare - Converting RGB and constructing Laplacian Pyramids
-INFO 13 Feb 15 21:05:28,417 pDiff.PerceptualImageDifferencing.compare - Performing test
-INFO 13 Feb 15 21:05:28,871 pDiff.PerceptualImageDifferencing.compare - 1380157 pixels are different
-INFO 13 Feb 15 21:05:41,887 pDiff.PerceptualImageDifferencing.compare - Converting RGB and constructing Laplacian Pyramids
-INFO 13 Feb 15 21:05:42,229 pDiff.PerceptualImageDifferencing.compare - Performing test
-INFO 13 Feb 15 21:05:42,643 pDiff.PerceptualImageDifferencing.compare - 1288854 pixels are different
-INFO 13 Feb 15 21:06:03,272 pDiff.PerceptualImageDifferencing.compare - Converting RGB and constructing Laplacian Pyramids
-INFO 13 Feb 15 21:06:03,593 pDiff.PerceptualImageDifferencing.compare - Performing test
-INFO 13 Feb 15 21:06:04,024 pDiff.PerceptualImageDifferencing.compare - 1204413 pixels are different
-INFO 13 Feb 15 21:11:23,038 pDiff.PerceptualImageDifferencing.compare - Converting RGB and constructing Laplacian Pyramids
-INFO 13 Feb 15 21:11:23,347 pDiff.PerceptualImageDifferencing.compare - Performing test
-INFO 13 Feb 15 21:11:23,728 pDiff.PerceptualImageDifferencing.compare - 1380287 pixels are different
-INFO 13 Feb 15 21:11:45,910 pDiff.PerceptualImageDifferencing.compare - Converting RGB and constructing Laplacian Pyramids
-INFO 13 Feb 15 21:11:46,232 pDiff.PerceptualImageDifferencing.compare - Performing test
-INFO 13 Feb 15 21:11:46,622 pDiff.PerceptualImageDifferencing.compare - 1370332 pixels are different
-INFO 13 Feb 15 21:11:55,441 pDiff.PerceptualImageDifferencing.compare - Converting RGB and constructing Laplacian Pyramids
-INFO 13 Feb 15 21:11:55,771 pDiff.PerceptualImageDifferencing.compare - Performing test
-INFO 13 Feb 15 21:11:56,208 pDiff.PerceptualImageDifferencing.compare - 1379459 pixels are different
-INFO 13 Feb 15 21:12:26,517 pDiff.PerceptualImageDifferencing.compare - Converting RGB and constructing Laplacian Pyramids
-INFO 13 Feb 15 21:12:26,816 pDiff.PerceptualImageDifferencing.compare - Performing test
-INFO 13 Feb 15 21:12:27,235 pDiff.PerceptualImageDifferencing.compare - 1248441 pixels are different
-INFO 13 Feb 15 21:16:32,193 pDiff.PerceptualImageDifferencing.compare - Converting RGB and constructing Laplacian Pyramids
-INFO 13 Feb 15 21:16:32,509 pDiff.PerceptualImageDifferencing.compare - Performing test
-INFO 13 Feb 15 21:16:32,996 pDiff.PerceptualImageDifferencing.compare - 1321882 pixels are different
-INFO 13 Feb 15 21:16:51,955 pDiff.PerceptualImageDifferencing.compare - Converting RGB and constructing Laplacian Pyramids
-INFO 13 Feb 15 21:16:52,272 pDiff.PerceptualImageDifferencing.compare - Performing test
-INFO 13 Feb 15 21:16:52,655 pDiff.PerceptualImageDifferencing.compare - 1347223 pixels are different
-INFO 13 Feb 15 21:21:23,614 pDiff.PerceptualImageDifferencing.compare - Converting RGB and constructing Laplacian Pyramids
-INFO 13 Feb 15 21:21:23,928 pDiff.PerceptualImageDifferencing.compare - Performing test
-INFO 13 Feb 15 21:21:24,357 pDiff.PerceptualImageDifferencing.compare - 326367 pixels are different
-INFO 15 Feb 15 02:22:39,175 pDiff.PerceptualImageDifferencing.compare - Converting RGB and constructing Laplacian Pyramids
-INFO 15 Feb 15 02:22:39,486 pDiff.PerceptualImageDifferencing.compare - Performing test
-INFO 15 Feb 15 02:22:39,929 pDiff.PerceptualImageDifferencing.compare - 1168985 pixels are different
-INFO 15 Feb 15 02:23:12,447 pDiff.PerceptualImageDifferencing.compare - Converting RGB and constructing Laplacian Pyramids
-INFO 15 Feb 15 02:23:12,750 pDiff.PerceptualImageDifferencing.compare - Performing test
-INFO 15 Feb 15 02:23:13,151 pDiff.PerceptualImageDifferencing.compare - 1217563 pixels are different
-INFO 15 Feb 15 02:23:36,528 pDiff.PerceptualImageDifferencing.compare - Converting RGB and constructing Laplacian Pyramids
-INFO 15 Feb 15 02:23:36,821 pDiff.PerceptualImageDifferencing.compare - Performing test
-INFO 15 Feb 15 02:23:37,220 pDiff.PerceptualImageDifferencing.compare - 1137742 pixels are different
-INFO 15 Feb 15 02:24:38,822 pDiff.PerceptualImageDifferencing.compare - Converting RGB and constructing Laplacian Pyramids
-INFO 15 Feb 15 02:24:39,124 pDiff.PerceptualImageDifferencing.compare - Performing test
-INFO 15 Feb 15 02:24:39,517 pDiff.PerceptualImageDifferencing.compare - 545228 pixels are different
-INFO 15 Feb 15 02:24:55,864 pDiff.PerceptualImageDifferencing.compare - Converting RGB and constructing Laplacian Pyramids
-INFO 15 Feb 15 02:24:56,168 pDiff.PerceptualImageDifferencing.compare - Performing test
-INFO 15 Feb 15 02:24:56,617 pDiff.PerceptualImageDifferencing.compare - 1095705 pixels are different
-INFO 15 Feb 15 02:25:09,226 pDiff.PerceptualImageDifferencing.compare - Converting RGB and constructing Laplacian Pyramids
-INFO 15 Feb 15 02:25:09,542 pDiff.PerceptualImageDifferencing.compare - Performing test
-INFO 15 Feb 15 02:25:09,966 pDiff.PerceptualImageDifferencing.compare - 1213866 pixels are different
-INFO 15 Feb 15 02:25:24,067 pDiff.PerceptualImageDifferencing.compare - Converting RGB and constructing Laplacian Pyramids
-INFO 15 Feb 15 02:25:24,380 pDiff.PerceptualImageDifferencing.compare - Performing test
-INFO 15 Feb 15 02:25:24,739 pDiff.PerceptualImageDifferencing.compare - 1198123 pixels are different
-INFO 15 Feb 15 02:25:33,177 pDiff.PerceptualImageDifferencing.compare - Converting RGB and constructing Laplacian Pyramids
-INFO 15 Feb 15 02:25:33,476 pDiff.PerceptualImageDifferencing.compare - Performing test
-INFO 15 Feb 15 02:25:33,869 pDiff.PerceptualImageDifferencing.compare - 1200536 pixels are different
-INFO 15 Feb 15 02:25:42,743 pDiff.PerceptualImageDifferencing.compare - Converting RGB and constructing Laplacian Pyramids
-INFO 15 Feb 15 02:25:43,062 pDiff.PerceptualImageDifferencing.compare - Performing test
-INFO 15 Feb 15 02:25:43,551 pDiff.PerceptualImageDifferencing.compare - 1203564 pixels are different
-INFO 15 Feb 15 02:26:08,800 pDiff.PerceptualImageDifferencing.compare - Converting RGB and constructing Laplacian Pyramids
-INFO 15 Feb 15 02:26:09,085 pDiff.PerceptualImageDifferencing.compare - Performing test
-INFO 15 Feb 15 02:26:09,453 pDiff.PerceptualImageDifferencing.compare - 547682 pixels are different
-INFO 15 Feb 15 02:26:18,654 pDiff.PerceptualImageDifferencing.compare - Converting RGB and constructing Laplacian Pyramids
-INFO 15 Feb 15 02:26:18,954 pDiff.PerceptualImageDifferencing.compare - Performing test
-INFO 15 Feb 15 02:26:19,322 pDiff.PerceptualImageDifferencing.compare - 1068776 pixels are different
-INFO 15 Feb 15 02:26:29,402 pDiff.PerceptualImageDifferencing.compare - Converting RGB and constructing Laplacian Pyramids
-INFO 15 Feb 15 02:26:29,692 pDiff.PerceptualImageDifferencing.compare - Performing test
-INFO 15 Feb 15 02:26:30,120 pDiff.PerceptualImageDifferencing.compare - 1198123 pixels are different
-INFO 15 Feb 15 02:26:37,904 pDiff.PerceptualImageDifferencing.compare - Converting RGB and constructing Laplacian Pyramids
-INFO 15 Feb 15 02:26:38,198 pDiff.PerceptualImageDifferencing.compare - Performing test
-INFO 15 Feb 15 02:26:38,605 pDiff.PerceptualImageDifferencing.compare - 1146055 pixels are different
-INFO 15 Feb 15 02:26:47,790 pDiff.PerceptualImageDifferencing.compare - Converting RGB and constructing Laplacian Pyramids
-INFO 15 Feb 15 02:26:48,086 pDiff.PerceptualImageDifferencing.compare - Performing test
-INFO 15 Feb 15 02:26:48,509 pDiff.PerceptualImageDifferencing.compare - 1200536 pixels are different
-INFO 15 Feb 15 02:26:58,980 pDiff.PerceptualImageDifferencing.compare - Converting RGB and constructing Laplacian Pyramids
-INFO 15 Feb 15 02:26:59,296 pDiff.PerceptualImageDifferencing.compare - Performing test
-INFO 15 Feb 15 02:26:59,673 pDiff.PerceptualImageDifferencing.compare - 1207120 pixels are different
-INFO 15 Feb 15 02:27:09,512 pDiff.PerceptualImageDifferencing.compare - Converting RGB and constructing Laplacian Pyramids
-INFO 15 Feb 15 02:27:09,809 pDiff.PerceptualImageDifferencing.compare - Performing test
-INFO 15 Feb 15 02:27:10,276 pDiff.PerceptualImageDifferencing.compare - 1208646 pixels are different
-INFO 15 Feb 15 02:27:23,070 pDiff.PerceptualImageDifferencing.compare - Converting RGB and constructing Laplacian Pyramids
-INFO 15 Feb 15 02:27:23,378 pDiff.PerceptualImageDifferencing.compare - Performing test
-INFO 15 Feb 15 02:27:23,733 pDiff.PerceptualImageDifferencing.compare - 1200536 pixels are different
-INFO 15 Feb 15 02:27:35,701 pDiff.PerceptualImageDifferencing.compare - Converting RGB and constructing Laplacian Pyramids
-INFO 15 Feb 15 02:27:35,995 pDiff.PerceptualImageDifferencing.compare - Performing test
-INFO 15 Feb 15 02:27:36,368 pDiff.PerceptualImageDifferencing.compare - 1207120 pixels are different
-INFO 15 Feb 15 02:29:06,390 pDiff.PerceptualImageDifferencing.compare - Converting RGB and constructing Laplacian Pyramids
-INFO 15 Feb 15 02:29:06,694 pDiff.PerceptualImageDifferencing.compare - Performing test
-INFO 15 Feb 15 02:29:07,054 pDiff.PerceptualImageDifferencing.compare - 1158379 pixels are different
-INFO 15 Feb 15 02:29:27,819 pDiff.PerceptualImageDifferencing.compare - Converting RGB and constructing Laplacian Pyramids
-INFO 15 Feb 15 02:29:28,120 pDiff.PerceptualImageDifferencing.compare - Performing test
-INFO 15 Feb 15 02:29:28,505 pDiff.PerceptualImageDifferencing.compare - 1161988 pixels are different
-INFO 15 Feb 15 02:29:53,677 pDiff.PerceptualImageDifferencing.compare - Converting RGB and constructing Laplacian Pyramids
-INFO 15 Feb 15 02:29:53,988 pDiff.PerceptualImageDifferencing.compare - Performing test
-INFO 15 Feb 15 02:29:54,359 pDiff.PerceptualImageDifferencing.compare - 1158379 pixels are different
-INFO 15 Feb 15 02:30:47,104 pDiff.PerceptualImageDifferencing.compare - Converting RGB and constructing Laplacian Pyramids
-INFO 15 Feb 15 02:30:47,406 pDiff.PerceptualImageDifferencing.compare - Performing test
-INFO 15 Feb 15 02:30:47,838 pDiff.PerceptualImageDifferencing.compare - 742249 pixels are different
-INFO 15 Feb 15 02:32:53,072 pDiff.PerceptualImageDifferencing.compare - Converting RGB and constructing Laplacian Pyramids
-INFO 15 Feb 15 02:32:53,366 pDiff.PerceptualImageDifferencing.compare - Performing test
-INFO 15 Feb 15 02:32:54,015 pDiff.PerceptualImageDifferencing.compare - 0 pixels are different
-INFO 15 Feb 15 02:33:06,782 pDiff.PerceptualImageDifferencing.compare - Converting RGB and constructing Laplacian Pyramids
-INFO 15 Feb 15 02:33:07,093 pDiff.PerceptualImageDifferencing.compare - Performing test
-INFO 15 Feb 15 02:33:07,739 pDiff.PerceptualImageDifferencing.compare - 0 pixels are different
-INFO 15 Feb 15 02:33:21,779 pDiff.PerceptualImageDifferencing.compare - Converting RGB and constructing Laplacian Pyramids
-INFO 15 Feb 15 02:33:22,082 pDiff.PerceptualImageDifferencing.compare - Performing test
-INFO 15 Feb 15 02:33:22,526 pDiff.PerceptualImageDifferencing.compare - 211213 pixels are different
-INFO 15 Feb 15 02:34:26,702 pDiff.PerceptualImageDifferencing.compare - Converting RGB and constructing Laplacian Pyramids
-INFO 15 Feb 15 02:34:27,014 pDiff.PerceptualImageDifferencing.compare - Performing test
-INFO 15 Feb 15 02:34:27,421 pDiff.PerceptualImageDifferencing.compare - 1158379 pixels are different
-INFO 16 Feb 15 21:21:08,582 pDiff.PerceptualImageDifferencing.compare - Converting RGB and constructing Laplacian Pyramids
-INFO 16 Feb 15 21:21:08,866 pDiff.PerceptualImageDifferencing.compare - Performing test
-INFO 16 Feb 15 21:21:09,288 pDiff.PerceptualImageDifferencing.compare - 742249 pixels are different
-INFO 16 Feb 15 21:23:17,468 pDiff.PerceptualImageDifferencing.compare - Converting RGB and constructing Laplacian Pyramids
-INFO 16 Feb 15 21:23:17,771 pDiff.PerceptualImageDifferencing.compare - Performing test
-INFO 16 Feb 15 21:23:18,198 pDiff.PerceptualImageDifferencing.compare - 590092 pixels are different
+INFO 17 Sep 15 16:53:20,668 pDiff.PerceptualImageDifferencing.compare - Converting RGB and constructing Laplacian Pyramids
+INFO 17 Sep 15 16:53:20,956 pDiff.PerceptualImageDifferencing.compare - Performing test
+INFO 17 Sep 15 16:53:21,423 pDiff.PerceptualImageDifferencing.compare - 18678 pixels are different
+INFO 17 Sep 15 16:55:03,957 pDiff.PerceptualImageDifferencing.compare - Converting RGB and constructing Laplacian Pyramids
+INFO 17 Sep 15 16:55:04,225 pDiff.PerceptualImageDifferencing.compare - Performing test
+INFO 17 Sep 15 16:55:04,605 pDiff.PerceptualImageDifferencing.compare - 18670 pixels are different
+INFO 17 Sep 15 17:09:39,317 pDiff.PerceptualImageDifferencing.compare - Converting RGB and constructing Laplacian Pyramids
+INFO 17 Sep 15 17:09:39,598 pDiff.PerceptualImageDifferencing.compare - Performing test
+INFO 17 Sep 15 17:09:40,129 pDiff.PerceptualImageDifferencing.compare - 18670 pixels are different
+INFO 17 Sep 15 17:10:55,646 pDiff.PerceptualImageDifferencing.compare - Converting RGB and constructing Laplacian Pyramids
+INFO 17 Sep 15 17:10:55,892 pDiff.PerceptualImageDifferencing.compare - Performing test
+INFO 17 Sep 15 17:10:58,630 pDiff.PerceptualImageDifferencing.compare - 18670 pixels are different
+INFO 17 Sep 15 17:11:59,750 pDiff.PerceptualImageDifferencing.compare - Converting RGB and constructing Laplacian Pyramids
+INFO 17 Sep 15 17:12:00,047 pDiff.PerceptualImageDifferencing.compare - Performing test
+INFO 17 Sep 15 17:12:00,531 pDiff.PerceptualImageDifferencing.compare - 18670 pixels are different
+INFO 17 Sep 15 17:15:22,161 pDiff.PerceptualImageDifferencing.compare - Converting RGB and constructing Laplacian Pyramids
+INFO 17 Sep 15 17:15:22,428 pDiff.PerceptualImageDifferencing.compare - Performing test
+INFO 17 Sep 15 17:15:22,847 pDiff.PerceptualImageDifferencing.compare - 18670 pixels are different
+INFO 17 Sep 15 17:16:01,566 pDiff.PerceptualImageDifferencing.compare - Converting RGB and constructing Laplacian Pyramids
+INFO 17 Sep 15 17:16:01,822 pDiff.PerceptualImageDifferencing.compare - Performing test
+INFO 17 Sep 15 17:16:02,238 pDiff.PerceptualImageDifferencing.compare - 18670 pixels are different
+INFO 17 Sep 15 17:20:47,425 pDiff.PerceptualImageDifferencing.compare - Converting RGB and constructing Laplacian Pyramids
+INFO 17 Sep 15 17:20:47,655 pDiff.PerceptualImageDifferencing.compare - Performing test
+INFO 17 Sep 15 17:20:48,152 pDiff.PerceptualImageDifferencing.compare - 18670 pixels are different
+INFO 06 Oct 15 18:00:17,106 pDiff.PerceptualImageDifferencing.compare - Converting RGB and constructing Laplacian Pyramids
+INFO 06 Oct 15 18:00:17,354 pDiff.PerceptualImageDifferencing.compare - Performing test
+INFO 06 Oct 15 18:00:17,825 pDiff.PerceptualImageDifferencing.compare - 18678 pixels are different
+INFO 06 Oct 15 18:01:05,852 websee.WebSeeTool.getErrorElements - ---- GETERRORELEMENTS START ----
+INFO 06 Oct 15 18:01:05,869 websee.WebSeeTool.getErrorElements - element /html[1]/body[1]/section[1]/section[1]/main[1]/div[2] found at 171, 317 with rectangle [170, 297, 680, 350]
+INFO 06 Oct 15 18:01:05,869 websee.WebSeeTool.getErrorElements - lDifferencePixels before: 1868
+INFO 06 Oct 15 18:01:05,871 websee.WebSeeTool.getErrorElements - lDifferencePixels after: 1868
+INFO 06 Oct 15 18:01:05,872 websee.WebSeeTool.getErrorElements - element /html[1]/body[1]/section[1]/section[1]/main[1]/div[2]/article[1]/h4[1] found at 172, 357 with rectangle [172, 352, 322, 18]
+INFO 06 Oct 15 18:01:05,872 websee.WebSeeTool.getErrorElements - lDifferencePixels before: 1868
+INFO 06 Oct 15 18:01:05,872 websee.WebSeeTool.getErrorElements - lDifferencePixels after: 1868
+INFO 06 Oct 15 18:01:05,872 websee.WebSeeTool.getErrorElements - element /html[1]/body[1]/section[1]/section[1]/main[1]/div[2]/article[1]/h4[1]/a[1] found at 172, 357 with rectangle [172, 352, 84, 18]
+INFO 06 Oct 15 18:01:05,872 websee.WebSeeTool.getErrorElements - lDifferencePixels before: 1868
+INFO 06 Oct 15 18:01:05,873 websee.WebSeeTool.getErrorElements - lDifferencePixels after: 1868
+INFO 06 Oct 15 18:01:05,873 websee.WebSeeTool.getErrorElements - element /html[1]/body[1]/section[1]/section[1]/main[1]/div[2]/article[1]/p[1] found at 172, 388 with rectangle [172, 377, 322, 80]
+INFO 06 Oct 15 18:01:05,873 websee.WebSeeTool.getErrorElements - lDifferencePixels before: 1868
+INFO 06 Oct 15 18:01:05,874 websee.WebSeeTool.getErrorElements - lDifferencePixels after: 1868
+INFO 06 Oct 15 18:01:05,875 websee.WebSeeTool.getErrorElements - element /html[1]/body[1]/section[1]/section[1]/main[1]/div[2]/article[1]/h4[2] found at 172, 481 with rectangle [172, 472, 322, 18]
+INFO 06 Oct 15 18:01:05,875 websee.WebSeeTool.getErrorElements - lDifferencePixels before: 1868
+INFO 06 Oct 15 18:01:05,876 websee.WebSeeTool.getErrorElements - lDifferencePixels after: 1868
+INFO 06 Oct 15 18:01:05,876 websee.WebSeeTool.getErrorElements - element /html[1]/body[1]/section[1]/section[1]/main[1]/div[2]/article[1]/ul[1] found at 172, 527 with rectangle [172, 497, 322, 54]
+INFO 06 Oct 15 18:01:05,876 websee.WebSeeTool.getErrorElements - lDifferencePixels before: 1868
+INFO 06 Oct 15 18:01:05,877 websee.WebSeeTool.getErrorElements - lDifferencePixels after: 1868
+INFO 06 Oct 15 18:01:05,878 websee.WebSeeTool.getErrorElements - element /html[1]/body[1]/section[1]/section[1]/main[1]/div[2]/article[1]/h4[3] found at 172, 574 with rectangle [172, 567, 322, 18]
+INFO 06 Oct 15 18:01:05,878 websee.WebSeeTool.getErrorElements - lDifferencePixels before: 1868
+INFO 06 Oct 15 18:01:05,878 websee.WebSeeTool.getErrorElements - lDifferencePixels after: 1868
+INFO 06 Oct 15 18:01:05,878 websee.WebSeeTool.getErrorElements - element /html[1]/body[1]/section[1]/section[1]/main[1]/div[2]/article[1]/ul[2] found at 172, 601 with rectangle [172, 592, 322, 35]
+INFO 06 Oct 15 18:01:05,879 websee.WebSeeTool.getErrorElements - lDifferencePixels before: 1868
+INFO 06 Oct 15 18:01:05,879 websee.WebSeeTool.getErrorElements - lDifferencePixels after: 1868
+INFO 06 Oct 15 18:01:05,879 websee.WebSeeTool.getErrorElements - element /html[1]/body[1]/section[1]/section[1]/main[1]/div[2]/article[1]/h4[4] found at 172, 648 with rectangle [172, 643, 322, 18]
+INFO 06 Oct 15 18:01:05,879 websee.WebSeeTool.getErrorElements - lDifferencePixels before: 1868
+INFO 06 Oct 15 18:01:05,880 websee.WebSeeTool.getErrorElements - lDifferencePixels after: 1868
+INFO 06 Oct 15 18:01:05,880 websee.WebSeeTool.getErrorElements - element /html[1]/body[1]/section[1]/section[1]/main[1]/div[2]/article[1] found at 173, 351 with rectangle [172, 347, 337, 336]
+INFO 06 Oct 15 18:01:05,880 websee.WebSeeTool.getErrorElements - lDifferencePixels before: 1868
+INFO 06 Oct 15 18:01:05,881 websee.WebSeeTool.getErrorElements - lDifferencePixels after: 1868
+INFO 06 Oct 15 18:01:05,882 websee.WebSeeTool.getErrorElements - element /html[1]/body[1]/section[1]/section[1]/main[1]/div[2]/article[1]/ul[1]/li[1] found at 188, 503 with rectangle [188, 497, 298, 16]
+INFO 06 Oct 15 18:01:05,882 websee.WebSeeTool.getErrorElements - lDifferencePixels before: 1868
+INFO 06 Oct 15 18:01:05,882 websee.WebSeeTool.getErrorElements - lDifferencePixels after: 1868
+INFO 06 Oct 15 18:01:05,882 websee.WebSeeTool.getErrorElements - element /html[1]/body[1]/section[1]/section[1]/main[1]/div[2]/article[1]/ul[1]/li[1]/a[1] found at 188, 503 with rectangle [188, 497, 47, 16]
+INFO 06 Oct 15 18:01:05,883 websee.WebSeeTool.getErrorElements - lDifferencePixels before: 1868
+INFO 06 Oct 15 18:01:05,883 websee.WebSeeTool.getErrorElements - lDifferencePixels after: 1868
+INFO 06 Oct 15 18:01:05,883 websee.WebSeeTool.getErrorElements - element /html[1]/body[1]/section[1]/section[1]/main[1]/div[2]/article[1]/ul[1]/li[2] found at 188, 525 with rectangle [188, 516, 298, 16]
+INFO 06 Oct 15 18:01:05,883 websee.WebSeeTool.getErrorElements - lDifferencePixels before: 1868
+INFO 06 Oct 15 18:01:05,884 websee.WebSeeTool.getErrorElements - lDifferencePixels after: 1868
+INFO 06 Oct 15 18:01:05,884 websee.WebSeeTool.getErrorElements - element /html[1]/body[1]/section[1]/section[1]/main[1]/div[2]/article[1]/ul[1]/li[2]/a[1] found at 188, 525 with rectangle [188, 516, 55, 16]
+INFO 06 Oct 15 18:01:05,884 websee.WebSeeTool.getErrorElements - lDifferencePixels before: 1868
+INFO 06 Oct 15 18:01:05,884 websee.WebSeeTool.getErrorElements - lDifferencePixels after: 1868
+INFO 06 Oct 15 18:01:05,884 websee.WebSeeTool.getErrorElements - element /html[1]/body[1]/section[1]/section[1]/main[1]/div[2]/article[1]/ul[1]/li[3] found at 188, 543 with rectangle [188, 535, 298, 16]
+INFO 06 Oct 15 18:01:05,884 websee.WebSeeTool.getErrorElements - lDifferencePixels before: 1868
+INFO 06 Oct 15 18:01:05,885 websee.WebSeeTool.getErrorElements - lDifferencePixels after: 1868
+INFO 06 Oct 15 18:01:05,885 websee.WebSeeTool.getErrorElements - element /html[1]/body[1]/section[1]/section[1]/main[1]/div[2]/article[1]/ul[1]/li[3]/a[1] found at 188, 543 with rectangle [188, 535, 75, 16]
+INFO 06 Oct 15 18:01:05,885 websee.WebSeeTool.getErrorElements - lDifferencePixels before: 1868
+INFO 06 Oct 15 18:01:05,885 websee.WebSeeTool.getErrorElements - lDifferencePixels after: 1868
+INFO 06 Oct 15 18:01:05,885 websee.WebSeeTool.getErrorElements - element /html[1]/body[1]/section[1]/section[1]/main[1]/div[2]/article[1]/ul[2]/li[1]/a[1] found at 188, 596 with rectangle [188, 592, 159, 16]
+INFO 06 Oct 15 18:01:05,885 websee.WebSeeTool.getErrorElements - lDifferencePixels before: 1868
+INFO 06 Oct 15 18:01:05,885 websee.WebSeeTool.getErrorElements - lDifferencePixels after: 1868
+INFO 06 Oct 15 18:01:05,885 websee.WebSeeTool.getErrorElements - element /html[1]/body[1]/section[1]/section[1]/main[1]/div[2]/article[1]/ul[2]/li[1] found at 188, 596 with rectangle [188, 592, 298, 16]
+INFO 06 Oct 15 18:01:05,886 websee.WebSeeTool.getErrorElements - lDifferencePixels before: 1868
+INFO 06 Oct 15 18:01:05,886 websee.WebSeeTool.getErrorElements - lDifferencePixels after: 1868
+INFO 06 Oct 15 18:01:05,886 websee.WebSeeTool.getErrorElements - element /html[1]/body[1]/section[1]/section[1]/main[1]/div[2]/article[1]/ul[2]/li[2] found at 188, 626 with rectangle [188, 611, 298, 16]
+INFO 06 Oct 15 18:01:05,886 websee.WebSeeTool.getErrorElements - lDifferencePixels before: 1868
+INFO 06 Oct 15 18:01:05,886 websee.WebSeeTool.getErrorElements - lDifferencePixels after: 1868
+INFO 06 Oct 15 18:01:05,886 websee.WebSeeTool.getErrorElements - element /html[1]/body[1]/section[1]/section[1]/main[1]/div[2]/article[1]/ul[2]/li[2]/a[1] found at 188, 626 with rectangle [188, 611, 121, 16]
+INFO 06 Oct 15 18:01:05,886 websee.WebSeeTool.getErrorElements - lDifferencePixels before: 1868
+INFO 06 Oct 15 18:01:05,887 websee.WebSeeTool.getErrorElements - lDifferencePixels after: 1868
+INFO 06 Oct 15 18:01:05,887 websee.WebSeeTool.getErrorElements - element /html[1]/body[1]/section[1]/section[1]/main[1]/div[2]/article[1]/ul[3] found at 188, 675 with rectangle [172, 668, 322, 16]
+INFO 06 Oct 15 18:01:05,887 websee.WebSeeTool.getErrorElements - lDifferencePixels before: 1868
+INFO 06 Oct 15 18:01:05,887 websee.WebSeeTool.getErrorElements - lDifferencePixels after: 1868
+INFO 06 Oct 15 18:01:05,887 websee.WebSeeTool.getErrorElements - element /html[1]/body[1]/section[1]/section[1]/main[1]/div[2]/article[1]/ul[3]/li[1] found at 188, 675 with rectangle [188, 668, 298, 16]
+INFO 06 Oct 15 18:01:05,887 websee.WebSeeTool.getErrorElements - lDifferencePixels before: 1868
+INFO 06 Oct 15 18:01:05,888 websee.WebSeeTool.getErrorElements - lDifferencePixels after: 1868
+INFO 06 Oct 15 18:01:05,888 websee.WebSeeTool.getErrorElements - element /html[1]/body[1]/section[1]/section[1]/main[1]/div[2]/article[1]/ul[3]/li[1]/a[1] found at 188, 675 with rectangle [188, 668, 162, 16]
+INFO 06 Oct 15 18:01:05,888 websee.WebSeeTool.getErrorElements - lDifferencePixels before: 1868
+INFO 06 Oct 15 18:01:05,888 websee.WebSeeTool.getErrorElements - lDifferencePixels after: 1868
+INFO 06 Oct 15 18:01:05,888 websee.WebSeeTool.getErrorElements - element /html[1]/body[1]/header[1]/div[1]/div[2] found at 894, 49 with rectangle [827, 13, 240, 65]
+INFO 06 Oct 15 18:01:05,888 websee.WebSeeTool.getErrorElements - lDifferencePixels before: 1868
+INFO 06 Oct 15 18:01:05,888 websee.WebSeeTool.getErrorElements - lDifferencePixels after: 1868
+INFO 06 Oct 15 18:01:05,889 websee.WebSeeTool.getErrorElements - element /html[1]/body[1]/header[1]/div[1]/div[2]/span[1] found at 894, 49 with rectangle [827, 36, 240, 20]
+INFO 06 Oct 15 18:01:05,889 websee.WebSeeTool.getErrorElements - lDifferencePixels before: 1868
+INFO 06 Oct 15 18:01:05,889 websee.WebSeeTool.getErrorElements - lDifferencePixels after: 1868
+INFO 06 Oct 15 18:04:03,576 pDiff.PerceptualImageDifferencing.compare - Converting RGB and constructing Laplacian Pyramids
+INFO 06 Oct 15 18:04:03,831 pDiff.PerceptualImageDifferencing.compare - Performing test
+INFO 06 Oct 15 18:04:04,324 pDiff.PerceptualImageDifferencing.compare - 18678 pixels are different
+INFO 06 Oct 15 18:04:53,156 websee.WebSeeTool.getErrorElements - ---- GETERRORELEMENTS START ----
+INFO 06 Oct 15 18:04:53,174 websee.WebSeeTool.getErrorElements - element /html[1]/body[1]/section[1]/section[1]/main[1]/div[2] found at 171, 317 with rectangle [171, 297, 680, 350]
+INFO 06 Oct 15 18:04:53,174 websee.WebSeeTool.getErrorElements - lDifferencePixels before: 1868
+INFO 06 Oct 15 18:04:53,175 websee.WebSeeTool.getErrorElements - lDifferencePixels after: 1868
+INFO 06 Oct 15 18:04:53,176 websee.WebSeeTool.getErrorElements - element /html[1]/body[1]/section[1]/section[1]/main[1] found at 172, 648 with rectangle [168, 132, 683, 551]
+INFO 06 Oct 15 18:04:53,176 websee.WebSeeTool.getErrorElements - lDifferencePixels before: 1868
+INFO 06 Oct 15 18:04:53,177 websee.WebSeeTool.getErrorElements - lDifferencePixels after: 1868
+INFO 06 Oct 15 18:04:53,178 websee.WebSeeTool.getErrorElements - element /html[1]/body[1]/section[1]/section[1]/main[1]/div[2]/article[1] found at 173, 351 with rectangle [173, 347, 337, 336]
+INFO 06 Oct 15 18:04:53,178 websee.WebSeeTool.getErrorElements - lDifferencePixels before: 1868
+INFO 06 Oct 15 18:04:53,180 websee.WebSeeTool.getErrorElements - lDifferencePixels after: 1868
+INFO 06 Oct 15 18:04:53,180 websee.WebSeeTool.getErrorElements - element /html[1]/body[1]/section[1]/section[1]/main[1]/div[2]/article[1]/h4[1] found at 173, 362 with rectangle [173, 352, 322, 18]
+INFO 06 Oct 15 18:04:53,180 websee.WebSeeTool.getErrorElements - lDifferencePixels before: 1868
+INFO 06 Oct 15 18:04:53,181 websee.WebSeeTool.getErrorElements - lDifferencePixels after: 1868
+INFO 06 Oct 15 18:04:53,182 websee.WebSeeTool.getErrorElements - element /html[1]/body[1]/section[1]/section[1]/main[1]/div[2]/article[1]/h4[1]/a[1] found at 173, 362 with rectangle [173, 352, 84, 18]
+INFO 06 Oct 15 18:04:53,182 websee.WebSeeTool.getErrorElements - lDifferencePixels before: 1868
+INFO 06 Oct 15 18:04:53,182 websee.WebSeeTool.getErrorElements - lDifferencePixels after: 1868
+INFO 06 Oct 15 18:04:53,182 websee.WebSeeTool.getErrorElements - element /html[1]/body[1]/section[1]/section[1]/main[1]/div[2]/article[1]/p[1] found at 173, 384 with rectangle [173, 377, 322, 80]
+INFO 06 Oct 15 18:04:53,183 websee.WebSeeTool.getErrorElements - lDifferencePixels before: 1868
+INFO 06 Oct 15 18:04:53,184 websee.WebSeeTool.getErrorElements - lDifferencePixels after: 1868
+INFO 06 Oct 15 18:04:53,184 websee.WebSeeTool.getErrorElements - element /html[1]/body[1]/section[1]/section[1]/main[1]/div[2]/article[1]/h4[2] found at 173, 484 with rectangle [173, 472, 322, 18]
+INFO 06 Oct 15 18:04:53,184 websee.WebSeeTool.getErrorElements - lDifferencePixels before: 1868
+INFO 06 Oct 15 18:04:53,184 websee.WebSeeTool.getErrorElements - lDifferencePixels after: 1868
+INFO 06 Oct 15 18:04:53,185 websee.WebSeeTool.getErrorElements - element /html[1]/body[1]/section[1]/section[1]/main[1]/div[2]/article[1]/ul[1] found at 173, 530 with rectangle [173, 497, 322, 54]
+INFO 06 Oct 15 18:04:53,185 websee.WebSeeTool.getErrorElements - lDifferencePixels before: 1868
+INFO 06 Oct 15 18:04:53,185 websee.WebSeeTool.getErrorElements - lDifferencePixels after: 1868
+INFO 06 Oct 15 18:04:53,185 websee.WebSeeTool.getErrorElements - element /html[1]/body[1]/section[1]/section[1]/main[1]/div[2]/article[1]/h4[3] found at 173, 577 with rectangle [173, 567, 322, 18]
+INFO 06 Oct 15 18:04:53,186 websee.WebSeeTool.getErrorElements - lDifferencePixels before: 1868
+INFO 06 Oct 15 18:04:53,186 websee.WebSeeTool.getErrorElements - lDifferencePixels after: 1868
+INFO 06 Oct 15 18:04:53,186 websee.WebSeeTool.getErrorElements - element /html[1]/body[1]/section[1]/section[1]/main[1]/div[2]/article[1]/ul[2] found at 173, 604 with rectangle [173, 592, 322, 35]
+INFO 06 Oct 15 18:04:53,186 websee.WebSeeTool.getErrorElements - lDifferencePixels before: 1868
+INFO 06 Oct 15 18:04:53,187 websee.WebSeeTool.getErrorElements - lDifferencePixels after: 1868
+INFO 06 Oct 15 18:04:53,187 websee.WebSeeTool.getErrorElements - element /html[1]/body[1]/section[1]/section[1]/main[1]/div[2]/article[1]/h4[4] found at 177, 647 with rectangle [173, 643, 322, 18]
+INFO 06 Oct 15 18:04:53,187 websee.WebSeeTool.getErrorElements - lDifferencePixels before: 1868
+INFO 06 Oct 15 18:04:53,187 websee.WebSeeTool.getErrorElements - lDifferencePixels after: 1868
+INFO 06 Oct 15 18:04:53,188 websee.WebSeeTool.getErrorElements - element /html[1]/body[1]/section[1]/section[1]/main[1]/div[2]/article[1]/ul[1]/li[1] found at 189, 499 with rectangle [189, 497, 298, 16]
+INFO 06 Oct 15 18:04:53,188 websee.WebSeeTool.getErrorElements - lDifferencePixels before: 1868
+INFO 06 Oct 15 18:04:53,188 websee.WebSeeTool.getErrorElements - lDifferencePixels after: 1868
+INFO 06 Oct 15 18:04:53,188 websee.WebSeeTool.getErrorElements - element /html[1]/body[1]/section[1]/section[1]/main[1]/div[2]/article[1]/ul[1]/li[1]/a[1] found at 189, 499 with rectangle [189, 497, 47, 16]
+INFO 06 Oct 15 18:04:53,188 websee.WebSeeTool.getErrorElements - lDifferencePixels before: 1868
+INFO 06 Oct 15 18:04:53,188 websee.WebSeeTool.getErrorElements - lDifferencePixels after: 1868
+INFO 06 Oct 15 18:04:53,188 websee.WebSeeTool.getErrorElements - element /html[1]/body[1]/section[1]/section[1]/main[1]/div[2]/article[1]/ul[1]/li[3] found at 189, 540 with rectangle [189, 535, 298, 16]
+INFO 06 Oct 15 18:04:53,189 websee.WebSeeTool.getErrorElements - lDifferencePixels before: 1868
+INFO 06 Oct 15 18:04:53,189 websee.WebSeeTool.getErrorElements - lDifferencePixels after: 1868
+INFO 06 Oct 15 18:04:53,189 websee.WebSeeTool.getErrorElements - element /html[1]/body[1]/section[1]/section[1]/main[1]/div[2]/article[1]/ul[1]/li[3]/a[1] found at 189, 540 with rectangle [189, 535, 75, 16]
+INFO 06 Oct 15 18:04:53,189 websee.WebSeeTool.getErrorElements - lDifferencePixels before: 1868
+INFO 06 Oct 15 18:04:53,189 websee.WebSeeTool.getErrorElements - lDifferencePixels after: 1868
+INFO 06 Oct 15 18:04:53,189 websee.WebSeeTool.getErrorElements - element /html[1]/body[1]/section[1]/section[1]/main[1]/div[2]/article[1]/ul[2]/li[1]/a[1] found at 189, 608 with rectangle [189, 592, 159, 16]
+INFO 06 Oct 15 18:04:53,190 websee.WebSeeTool.getErrorElements - lDifferencePixels before: 1868
+INFO 06 Oct 15 18:04:53,190 websee.WebSeeTool.getErrorElements - lDifferencePixels after: 1868
+INFO 06 Oct 15 18:04:53,190 websee.WebSeeTool.getErrorElements - element /html[1]/body[1]/section[1]/section[1]/main[1]/div[2]/article[1]/ul[2]/li[1] found at 189, 608 with rectangle [189, 592, 298, 16]
+INFO 06 Oct 15 18:04:53,190 websee.WebSeeTool.getErrorElements - lDifferencePixels before: 1868
+INFO 06 Oct 15 18:04:53,190 websee.WebSeeTool.getErrorElements - lDifferencePixels after: 1868
+INFO 06 Oct 15 18:04:53,190 websee.WebSeeTool.getErrorElements - element /html[1]/body[1]/section[1]/section[1]/main[1]/div[2]/article[1]/ul[1]/li[2] found at 190, 522 with rectangle [189, 516, 298, 16]
+INFO 06 Oct 15 18:04:53,190 websee.WebSeeTool.getErrorElements - lDifferencePixels before: 1868
+INFO 06 Oct 15 18:04:53,191 websee.WebSeeTool.getErrorElements - lDifferencePixels after: 1868
+INFO 06 Oct 15 18:04:53,191 websee.WebSeeTool.getErrorElements - element /html[1]/body[1]/section[1]/section[1]/main[1]/div[2]/article[1]/ul[1]/li[2]/a[1] found at 190, 522 with rectangle [189, 516, 55, 16]
+INFO 06 Oct 15 18:04:53,191 websee.WebSeeTool.getErrorElements - lDifferencePixels before: 1868
+INFO 06 Oct 15 18:04:53,191 websee.WebSeeTool.getErrorElements - lDifferencePixels after: 1868
+INFO 06 Oct 15 18:04:53,191 websee.WebSeeTool.getErrorElements - element /html[1]/body[1]/section[1]/section[1]/main[1]/div[2]/article[1]/ul[2]/li[2] found at 191, 627 with rectangle [189, 611, 298, 16]
+INFO 06 Oct 15 18:04:53,191 websee.WebSeeTool.getErrorElements - lDifferencePixels before: 1868
+INFO 06 Oct 15 18:04:53,191 websee.WebSeeTool.getErrorElements - lDifferencePixels after: 1868
+INFO 06 Oct 15 18:04:53,191 websee.WebSeeTool.getErrorElements - element /html[1]/body[1]/section[1]/section[1]/main[1]/div[2]/article[1]/ul[2]/li[2]/a[1] found at 191, 627 with rectangle [189, 611, 121, 16]
+INFO 06 Oct 15 18:04:53,192 websee.WebSeeTool.getErrorElements - lDifferencePixels before: 1868
+INFO 06 Oct 15 18:04:53,192 websee.WebSeeTool.getErrorElements - lDifferencePixels after: 1868
+INFO 06 Oct 15 18:04:53,192 websee.WebSeeTool.getErrorElements - element /html[1]/body[1]/header[1]/div[1]/div[2] found at 894, 49 with rectangle [828, 13, 240, 65]
+INFO 06 Oct 15 18:04:53,192 websee.WebSeeTool.getErrorElements - lDifferencePixels before: 1868
+INFO 06 Oct 15 18:04:53,192 websee.WebSeeTool.getErrorElements - lDifferencePixels after: 1868
+INFO 06 Oct 15 18:04:53,192 websee.WebSeeTool.getErrorElements - element /html[1]/body[1]/header[1]/div[1]/div[2]/span[1] found at 894, 49 with rectangle [828, 36, 240, 20]
+INFO 06 Oct 15 18:04:53,192 websee.WebSeeTool.getErrorElements - lDifferencePixels before: 1868
+INFO 06 Oct 15 18:04:53,192 websee.WebSeeTool.getErrorElements - lDifferencePixels after: 1868
+INFO 06 Oct 15 18:05:56,028 pDiff.PerceptualImageDifferencing.compare - Converting RGB and constructing Laplacian Pyramids
+INFO 06 Oct 15 18:05:56,300 pDiff.PerceptualImageDifferencing.compare - Performing test
+INFO 06 Oct 15 18:05:56,726 pDiff.PerceptualImageDifferencing.compare - 18678 pixels are different
+INFO 06 Oct 15 18:06:45,044 websee.WebSeeTool.getErrorElements - ---- GETERRORELEMENTS START ----
+INFO 06 Oct 15 18:06:45,062 websee.WebSeeTool.getErrorElements - element /html[1]/body[1]/section[1]/section[1]/main[1]/div[2] found at 171, 317 with rectangle [171, 297, 680, 350]
+INFO 06 Oct 15 18:06:45,062 websee.WebSeeTool.getErrorElements - lDifferencePixels before: 1868
+INFO 06 Oct 15 18:06:45,064 websee.WebSeeTool.getErrorElements - lDifferencePixels after: 1868
+INFO 06 Oct 15 18:06:45,064 websee.WebSeeTool.getErrorElements - element /html[1]/body[1]/section[1]/section[1]/main[1] found at 172, 648 with rectangle [168, 132, 683, 551]
+INFO 06 Oct 15 18:06:45,064 websee.WebSeeTool.getErrorElements - lDifferencePixels before: 1868
+INFO 06 Oct 15 18:06:45,066 websee.WebSeeTool.getErrorElements - lDifferencePixels after: 1868
+INFO 06 Oct 15 18:06:45,066 websee.WebSeeTool.getErrorElements - element /html[1]/body[1]/section[1]/section[1]/main[1]/div[2]/article[1] found at 173, 351 with rectangle [173, 347, 337, 336]
+INFO 06 Oct 15 18:06:45,066 websee.WebSeeTool.getErrorElements - lDifferencePixels before: 1868
+INFO 06 Oct 15 18:06:45,068 websee.WebSeeTool.getErrorElements - lDifferencePixels after: 1868
+INFO 06 Oct 15 18:06:45,069 websee.WebSeeTool.getErrorElements - element /html[1]/body[1]/section[1]/section[1]/main[1]/div[2]/article[1]/h4[1] found at 173, 362 with rectangle [173, 352, 322, 18]
+INFO 06 Oct 15 18:06:45,069 websee.WebSeeTool.getErrorElements - lDifferencePixels before: 1868
+INFO 06 Oct 15 18:06:45,069 websee.WebSeeTool.getErrorElements - lDifferencePixels after: 1868
+INFO 06 Oct 15 18:06:45,070 websee.WebSeeTool.getErrorElements - element /html[1]/body[1]/section[1]/section[1]/main[1]/div[2]/article[1]/h4[1]/a[1] found at 173, 362 with rectangle [173, 352, 84, 18]
+INFO 06 Oct 15 18:06:45,071 websee.WebSeeTool.getErrorElements - lDifferencePixels before: 1868
+INFO 06 Oct 15 18:06:45,071 websee.WebSeeTool.getErrorElements - lDifferencePixels after: 1868
+INFO 06 Oct 15 18:06:45,071 websee.WebSeeTool.getErrorElements - element /html[1]/body[1]/section[1]/section[1]/main[1]/div[2]/article[1]/p[1] found at 173, 384 with rectangle [173, 377, 322, 80]
+INFO 06 Oct 15 18:06:45,071 websee.WebSeeTool.getErrorElements - lDifferencePixels before: 1868
+INFO 06 Oct 15 18:06:45,073 websee.WebSeeTool.getErrorElements - lDifferencePixels after: 1868
+INFO 06 Oct 15 18:06:45,073 websee.WebSeeTool.getErrorElements - element /html[1]/body[1]/section[1]/section[1]/main[1]/div[2]/article[1]/h4[2] found at 173, 484 with rectangle [173, 472, 322, 18]
+INFO 06 Oct 15 18:06:45,073 websee.WebSeeTool.getErrorElements - lDifferencePixels before: 1868
+INFO 06 Oct 15 18:06:45,073 websee.WebSeeTool.getErrorElements - lDifferencePixels after: 1868
+INFO 06 Oct 15 18:06:45,073 websee.WebSeeTool.getErrorElements - element /html[1]/body[1]/section[1]/section[1]/main[1]/div[2]/article[1]/ul[1] found at 173, 530 with rectangle [173, 497, 322, 54]
+INFO 06 Oct 15 18:06:45,074 websee.WebSeeTool.getErrorElements - lDifferencePixels before: 1868
+INFO 06 Oct 15 18:06:45,074 websee.WebSeeTool.getErrorElements - lDifferencePixels after: 1868
+INFO 06 Oct 15 18:06:45,075 websee.WebSeeTool.getErrorElements - element /html[1]/body[1]/section[1]/section[1]/main[1]/div[2]/article[1]/h4[3] found at 173, 577 with rectangle [173, 567, 322, 18]
+INFO 06 Oct 15 18:06:45,075 websee.WebSeeTool.getErrorElements - lDifferencePixels before: 1868
+INFO 06 Oct 15 18:06:45,075 websee.WebSeeTool.getErrorElements - lDifferencePixels after: 1868
+INFO 06 Oct 15 18:06:45,075 websee.WebSeeTool.getErrorElements - element /html[1]/body[1]/section[1]/section[1]/main[1]/div[2]/article[1]/ul[2] found at 173, 604 with rectangle [173, 592, 322, 35]
+INFO 06 Oct 15 18:06:45,075 websee.WebSeeTool.getErrorElements - lDifferencePixels before: 1868
+INFO 06 Oct 15 18:06:45,076 websee.WebSeeTool.getErrorElements - lDifferencePixels after: 1868
+INFO 06 Oct 15 18:06:45,076 websee.WebSeeTool.getErrorElements - element /html[1]/body[1]/section[1]/section[1]/main[1]/div[2]/article[1]/h4[4] found at 177, 647 with rectangle [173, 643, 322, 18]
+INFO 06 Oct 15 18:06:45,076 websee.WebSeeTool.getErrorElements - lDifferencePixels before: 1868
+INFO 06 Oct 15 18:06:45,076 websee.WebSeeTool.getErrorElements - lDifferencePixels after: 1868
+INFO 06 Oct 15 18:06:45,077 websee.WebSeeTool.getErrorElements - element /html[1]/body[1]/section[1]/section[1]/main[1]/div[2]/article[1]/ul[1]/li[1] found at 189, 499 with rectangle [189, 497, 298, 16]
+INFO 06 Oct 15 18:06:45,077 websee.WebSeeTool.getErrorElements - lDifferencePixels before: 1868
+INFO 06 Oct 15 18:06:45,077 websee.WebSeeTool.getErrorElements - lDifferencePixels after: 1868
+INFO 06 Oct 15 18:06:45,077 websee.WebSeeTool.getErrorElements - element /html[1]/body[1]/section[1]/section[1]/main[1]/div[2]/article[1]/ul[1]/li[1]/a[1] found at 189, 499 with rectangle [189, 497, 47, 16]
+INFO 06 Oct 15 18:06:45,077 websee.WebSeeTool.getErrorElements - lDifferencePixels before: 1868
+INFO 06 Oct 15 18:06:45,078 websee.WebSeeTool.getErrorElements - lDifferencePixels after: 1868
+INFO 06 Oct 15 18:06:45,078 websee.WebSeeTool.getErrorElements - element /html[1]/body[1]/section[1]/section[1]/main[1]/div[2]/article[1]/ul[1]/li[3] found at 189, 540 with rectangle [189, 535, 298, 16]
+INFO 06 Oct 15 18:06:45,078 websee.WebSeeTool.getErrorElements - lDifferencePixels before: 1868
+INFO 06 Oct 15 18:06:45,078 websee.WebSeeTool.getErrorElements - lDifferencePixels after: 1868
+INFO 06 Oct 15 18:06:45,078 websee.WebSeeTool.getErrorElements - element /html[1]/body[1]/section[1]/section[1]/main[1]/div[2]/article[1]/ul[1]/li[3]/a[1] found at 189, 540 with rectangle [189, 535, 75, 16]
+INFO 06 Oct 15 18:06:45,078 websee.WebSeeTool.getErrorElements - lDifferencePixels before: 1868
+INFO 06 Oct 15 18:06:45,079 websee.WebSeeTool.getErrorElements - lDifferencePixels after: 1868
+INFO 06 Oct 15 18:06:45,079 websee.WebSeeTool.getErrorElements - element /html[1]/body[1]/section[1]/section[1]/main[1]/div[2]/article[1]/ul[2]/li[1]/a[1] found at 189, 608 with rectangle [189, 592, 159, 16]
+INFO 06 Oct 15 18:06:45,079 websee.WebSeeTool.getErrorElements - lDifferencePixels before: 1868
+INFO 06 Oct 15 18:06:45,079 websee.WebSeeTool.getErrorElements - lDifferencePixels after: 1868
+INFO 06 Oct 15 18:06:45,079 websee.WebSeeTool.getErrorElements - element /html[1]/body[1]/section[1]/section[1]/main[1]/div[2]/article[1]/ul[2]/li[1] found at 189, 608 with rectangle [189, 592, 298, 16]
+INFO 06 Oct 15 18:06:45,079 websee.WebSeeTool.getErrorElements - lDifferencePixels before: 1868
+INFO 06 Oct 15 18:06:45,080 websee.WebSeeTool.getErrorElements - lDifferencePixels after: 1868
+INFO 06 Oct 15 18:06:45,080 websee.WebSeeTool.getErrorElements - element /html[1]/body[1]/section[1]/section[1]/main[1]/div[2]/article[1]/ul[1]/li[2] found at 190, 522 with rectangle [189, 516, 298, 16]
+INFO 06 Oct 15 18:06:45,080 websee.WebSeeTool.getErrorElements - lDifferencePixels before: 1868
+INFO 06 Oct 15 18:06:45,080 websee.WebSeeTool.getErrorElements - lDifferencePixels after: 1868
+INFO 06 Oct 15 18:06:45,080 websee.WebSeeTool.getErrorElements - element /html[1]/body[1]/section[1]/section[1]/main[1]/div[2]/article[1]/ul[1]/li[2]/a[1] found at 190, 522 with rectangle [189, 516, 55, 16]
+INFO 06 Oct 15 18:06:45,080 websee.WebSeeTool.getErrorElements - lDifferencePixels before: 1868
+INFO 06 Oct 15 18:06:45,080 websee.WebSeeTool.getErrorElements - lDifferencePixels after: 1868
+INFO 06 Oct 15 18:06:45,081 websee.WebSeeTool.getErrorElements - element /html[1]/body[1]/section[1]/section[1]/main[1]/div[2]/article[1]/ul[2]/li[2] found at 191, 627 with rectangle [189, 611, 298, 16]
+INFO 06 Oct 15 18:06:45,081 websee.WebSeeTool.getErrorElements - lDifferencePixels before: 1868
+INFO 06 Oct 15 18:06:45,081 websee.WebSeeTool.getErrorElements - lDifferencePixels after: 1868
+INFO 06 Oct 15 18:06:45,081 websee.WebSeeTool.getErrorElements - element /html[1]/body[1]/section[1]/section[1]/main[1]/div[2]/article[1]/ul[2]/li[2]/a[1] found at 191, 627 with rectangle [189, 611, 121, 16]
+INFO 06 Oct 15 18:06:45,081 websee.WebSeeTool.getErrorElements - lDifferencePixels before: 1868
+INFO 06 Oct 15 18:06:45,081 websee.WebSeeTool.getErrorElements - lDifferencePixels after: 1868
+INFO 06 Oct 15 18:06:45,082 websee.WebSeeTool.getErrorElements - element /html[1]/body[1]/header[1]/div[1]/div[2] found at 894, 49 with rectangle [828, 13, 240, 65]
+INFO 06 Oct 15 18:06:45,082 websee.WebSeeTool.getErrorElements - lDifferencePixels before: 1868
+INFO 06 Oct 15 18:06:45,082 websee.WebSeeTool.getErrorElements - lDifferencePixels after: 1868
+INFO 06 Oct 15 18:06:45,082 websee.WebSeeTool.getErrorElements - element /html[1]/body[1]/header[1]/div[1]/div[2]/span[1] found at 894, 49 with rectangle [828, 36, 240, 20]
+INFO 06 Oct 15 18:06:45,082 websee.WebSeeTool.getErrorElements - lDifferencePixels before: 1868
+INFO 06 Oct 15 18:06:45,082 websee.WebSeeTool.getErrorElements - lDifferencePixels after: 1868
+INFO 05 Nov 15 23:08:51,478 pDiff.PerceptualImageDifferencing.compare - Converting RGB and constructing Laplacian Pyramids
+INFO 05 Nov 15 23:08:51,735 pDiff.PerceptualImageDifferencing.compare - Performing test
+INFO 05 Nov 15 23:08:52,200 pDiff.PerceptualImageDifferencing.compare - 18670 pixels are different
+INFO 05 Nov 15 23:09:36,595 websee.WebSeeTool.getErrorElements - ---- GETERRORELEMENTS START ----
+INFO 05 Nov 15 23:09:36,614 websee.WebSeeTool.getErrorElements - element /html[1]/body[1]/section[1]/section[1]/main[1]/div[2] found at 173, 317 with rectangle [172, 297, 680, 350]
+INFO 05 Nov 15 23:09:36,614 websee.WebSeeTool.getErrorElements - lDifferencePixels before: 1833
+INFO 05 Nov 15 23:09:36,615 websee.WebSeeTool.getErrorElements - lDifferencePixels after: 1833
+INFO 05 Nov 15 23:09:36,616 websee.WebSeeTool.getErrorElements - element /html[1]/body[1]/section[1]/section[1]/main[1]/div[2]/article[1]/h4[1] found at 174, 357 with rectangle [174, 352, 322, 18]
+INFO 05 Nov 15 23:09:36,616 websee.WebSeeTool.getErrorElements - lDifferencePixels before: 1833
+INFO 05 Nov 15 23:09:36,617 websee.WebSeeTool.getErrorElements - lDifferencePixels after: 1833
+INFO 05 Nov 15 23:09:36,617 websee.WebSeeTool.getErrorElements - element /html[1]/body[1]/section[1]/section[1]/main[1]/div[2]/article[1]/h4[1]/a[1] found at 174, 357 with rectangle [174, 352, 84, 18]
+INFO 05 Nov 15 23:09:36,617 websee.WebSeeTool.getErrorElements - lDifferencePixels before: 1833
+INFO 05 Nov 15 23:09:36,617 websee.WebSeeTool.getErrorElements - lDifferencePixels after: 1833
+INFO 05 Nov 15 23:09:36,618 websee.WebSeeTool.getErrorElements - element /html[1]/body[1]/section[1]/section[1]/main[1]/div[2]/article[1]/p[1] found at 174, 388 with rectangle [174, 377, 322, 80]
+INFO 05 Nov 15 23:09:36,618 websee.WebSeeTool.getErrorElements - lDifferencePixels before: 1833
+INFO 05 Nov 15 23:09:36,619 websee.WebSeeTool.getErrorElements - lDifferencePixels after: 1833
+INFO 05 Nov 15 23:09:36,620 websee.WebSeeTool.getErrorElements - element /html[1]/body[1]/section[1]/section[1]/main[1]/div[2]/article[1] found at 175, 351 with rectangle [174, 347, 337, 336]
+INFO 05 Nov 15 23:09:36,620 websee.WebSeeTool.getErrorElements - lDifferencePixels before: 1833
+INFO 05 Nov 15 23:09:36,622 websee.WebSeeTool.getErrorElements - lDifferencePixels after: 1833
+INFO 05 Nov 15 23:09:36,622 websee.WebSeeTool.getErrorElements - element /html[1]/body[1]/section[1]/section[1]/main[1]/div[2]/article[1]/h4[2] found at 174, 481 with rectangle [174, 472, 322, 18]
+INFO 05 Nov 15 23:09:36,622 websee.WebSeeTool.getErrorElements - lDifferencePixels before: 1833
+INFO 05 Nov 15 23:09:36,622 websee.WebSeeTool.getErrorElements - lDifferencePixels after: 1833
+INFO 05 Nov 15 23:09:36,622 websee.WebSeeTool.getErrorElements - element /html[1]/body[1]/section[1]/section[1]/main[1]/div[2]/article[1]/ul[1] found at 180, 502 with rectangle [174, 497, 322, 54]
+INFO 05 Nov 15 23:09:36,623 websee.WebSeeTool.getErrorElements - lDifferencePixels before: 1833
+INFO 05 Nov 15 23:09:36,623 websee.WebSeeTool.getErrorElements - lDifferencePixels after: 1833
+INFO 05 Nov 15 23:09:36,623 websee.WebSeeTool.getErrorElements - element /html[1]/body[1]/section[1]/section[1]/main[1]/div[2]/article[1]/ul[1]/li[1] found at 190, 503 with rectangle [190, 497, 298, 16]
+INFO 05 Nov 15 23:09:36,623 websee.WebSeeTool.getErrorElements - lDifferencePixels before: 1833
+INFO 05 Nov 15 23:09:36,624 websee.WebSeeTool.getErrorElements - lDifferencePixels after: 1833
+INFO 05 Nov 15 23:09:36,624 websee.WebSeeTool.getErrorElements - element /html[1]/body[1]/section[1]/section[1]/main[1]/div[2]/article[1]/ul[1]/li[1]/a[1] found at 190, 503 with rectangle [190, 497, 47, 16]
+INFO 05 Nov 15 23:09:36,624 websee.WebSeeTool.getErrorElements - lDifferencePixels before: 1833
+INFO 05 Nov 15 23:09:36,624 websee.WebSeeTool.getErrorElements - lDifferencePixels after: 1833
+INFO 05 Nov 15 23:09:36,624 websee.WebSeeTool.getErrorElements - element /html[1]/body[1]/section[1]/section[1]/main[1]/div[2]/article[1]/ul[1]/li[2] found at 190, 525 with rectangle [190, 516, 298, 16]
+INFO 05 Nov 15 23:09:36,624 websee.WebSeeTool.getErrorElements - lDifferencePixels before: 1833
+INFO 05 Nov 15 23:09:36,625 websee.WebSeeTool.getErrorElements - lDifferencePixels after: 1833
+INFO 05 Nov 15 23:09:36,625 websee.WebSeeTool.getErrorElements - element /html[1]/body[1]/section[1]/section[1]/main[1]/div[2]/article[1]/ul[1]/li[2]/a[1] found at 190, 525 with rectangle [190, 516, 55, 16]
+INFO 05 Nov 15 23:09:36,625 websee.WebSeeTool.getErrorElements - lDifferencePixels before: 1833
+INFO 05 Nov 15 23:09:36,625 websee.WebSeeTool.getErrorElements - lDifferencePixels after: 1833
+INFO 05 Nov 15 23:09:36,625 websee.WebSeeTool.getErrorElements - element /html[1]/body[1]/section[1]/section[1]/main[1]/div[2]/article[1]/ul[1]/li[3] found at 190, 543 with rectangle [190, 535, 298, 16]
+INFO 05 Nov 15 23:09:36,625 websee.WebSeeTool.getErrorElements - lDifferencePixels before: 1833
+INFO 05 Nov 15 23:09:36,626 websee.WebSeeTool.getErrorElements - lDifferencePixels after: 1833
+INFO 05 Nov 15 23:09:36,626 websee.WebSeeTool.getErrorElements - element /html[1]/body[1]/section[1]/section[1]/main[1]/div[2]/article[1]/ul[1]/li[3]/a[1] found at 190, 543 with rectangle [190, 535, 75, 16]
+INFO 05 Nov 15 23:09:36,626 websee.WebSeeTool.getErrorElements - lDifferencePixels before: 1833
+INFO 05 Nov 15 23:09:36,626 websee.WebSeeTool.getErrorElements - lDifferencePixels after: 1833
+INFO 05 Nov 15 23:09:36,627 websee.WebSeeTool.getErrorElements - element /html[1]/body[1]/section[1]/section[1]/main[1]/div[2]/article[1]/h4[3] found at 174, 574 with rectangle [174, 567, 322, 18]
+INFO 05 Nov 15 23:09:36,627 websee.WebSeeTool.getErrorElements - lDifferencePixels before: 1833
+INFO 05 Nov 15 23:09:36,627 websee.WebSeeTool.getErrorElements - lDifferencePixels after: 1833
+INFO 05 Nov 15 23:09:36,628 websee.WebSeeTool.getErrorElements - element /html[1]/body[1]/section[1]/section[1]/main[1]/div[2]/article[1]/ul[2]/li[1]/a[1] found at 194, 595 with rectangle [190, 592, 159, 16]
+INFO 05 Nov 15 23:09:36,628 websee.WebSeeTool.getErrorElements - lDifferencePixels before: 1833
+INFO 05 Nov 15 23:09:36,628 websee.WebSeeTool.getErrorElements - lDifferencePixels after: 1833
+INFO 05 Nov 15 23:09:36,628 websee.WebSeeTool.getErrorElements - element /html[1]/body[1]/section[1]/section[1]/main[1]/div[2]/article[1]/ul[2]/li[1] found at 194, 595 with rectangle [190, 592, 298, 16]
+INFO 05 Nov 15 23:09:36,628 websee.WebSeeTool.getErrorElements - lDifferencePixels before: 1833
+INFO 05 Nov 15 23:09:36,628 websee.WebSeeTool.getErrorElements - lDifferencePixels after: 1833
+INFO 05 Nov 15 23:09:36,629 websee.WebSeeTool.getErrorElements - element /html[1]/body[1]/section[1]/section[1]/main[1]/div[2]/article[1]/ul[2] found at 174, 601 with rectangle [174, 592, 322, 35]
+INFO 05 Nov 15 23:09:36,629 websee.WebSeeTool.getErrorElements - lDifferencePixels before: 1833
+INFO 05 Nov 15 23:09:36,629 websee.WebSeeTool.getErrorElements - lDifferencePixels after: 1833
+INFO 05 Nov 15 23:09:36,630 websee.WebSeeTool.getErrorElements - element /html[1]/body[1]/section[1]/section[1]/main[1]/div[2]/article[1]/ul[2]/li[2] found at 194, 619 with rectangle [190, 611, 298, 16]
+INFO 05 Nov 15 23:09:36,630 websee.WebSeeTool.getErrorElements - lDifferencePixels before: 1833
+INFO 05 Nov 15 23:09:36,630 websee.WebSeeTool.getErrorElements - lDifferencePixels after: 1833
+INFO 05 Nov 15 23:09:36,630 websee.WebSeeTool.getErrorElements - element /html[1]/body[1]/section[1]/section[1]/main[1]/div[2]/article[1]/ul[2]/li[2]/a[1] found at 194, 619 with rectangle [190, 611, 121, 16]
+INFO 05 Nov 15 23:09:36,630 websee.WebSeeTool.getErrorElements - lDifferencePixels before: 1833
+INFO 05 Nov 15 23:09:36,630 websee.WebSeeTool.getErrorElements - lDifferencePixels after: 1833
+INFO 05 Nov 15 23:09:36,631 websee.WebSeeTool.getErrorElements - element /html[1]/body[1]/section[1]/section[1]/main[1]/div[2]/article[1]/h4[4] found at 174, 648 with rectangle [174, 643, 322, 18]
+INFO 05 Nov 15 23:09:36,631 websee.WebSeeTool.getErrorElements - lDifferencePixels before: 1833
+INFO 05 Nov 15 23:09:36,631 websee.WebSeeTool.getErrorElements - lDifferencePixels after: 1833
+INFO 05 Nov 15 23:09:36,631 websee.WebSeeTool.getErrorElements - element /html[1]/body[1]/section[1]/section[1]/main[1]/div[2]/article[1]/ul[3] found at 190, 675 with rectangle [174, 668, 322, 16]
+INFO 05 Nov 15 23:09:36,632 websee.WebSeeTool.getErrorElements - lDifferencePixels before: 1833
+INFO 05 Nov 15 23:09:36,632 websee.WebSeeTool.getErrorElements - lDifferencePixels after: 1833
+INFO 05 Nov 15 23:09:36,632 websee.WebSeeTool.getErrorElements - element /html[1]/body[1]/section[1]/section[1]/main[1]/div[2]/article[1]/ul[3]/li[1] found at 190, 675 with rectangle [190, 668, 298, 16]
+INFO 05 Nov 15 23:09:36,632 websee.WebSeeTool.getErrorElements - lDifferencePixels before: 1833
+INFO 05 Nov 15 23:09:36,632 websee.WebSeeTool.getErrorElements - lDifferencePixels after: 1833
+INFO 05 Nov 15 23:09:36,632 websee.WebSeeTool.getErrorElements - element /html[1]/body[1]/section[1]/section[1]/main[1]/div[2]/article[1]/ul[3]/li[1]/a[1] found at 190, 675 with rectangle [190, 668, 162, 16]
+INFO 05 Nov 15 23:09:36,632 websee.WebSeeTool.getErrorElements - lDifferencePixels before: 1833
+INFO 05 Nov 15 23:09:36,632 websee.WebSeeTool.getErrorElements - lDifferencePixels after: 1833
+INFO 05 Nov 15 23:09:39,196 websee.WebSeeTool.getErrorElements - ---- GETERRORELEMENTS START ----
+INFO 05 Nov 15 23:09:39,212 websee.WebSeeTool.getErrorElements - element /html[1]/body[1]/header[1]/div[1]/div[2] found at 897, 51 with rectangle [829, 13, 240, 65]
+INFO 05 Nov 15 23:09:39,212 websee.WebSeeTool.getErrorElements - lDifferencePixels before: 34
+INFO 05 Nov 15 23:09:39,212 websee.WebSeeTool.getErrorElements - lDifferencePixels after: 34
+INFO 05 Nov 15 23:09:39,212 websee.WebSeeTool.getErrorElements - element /html[1]/body[1]/header[1]/div[1]/div[2]/span[1] found at 897, 51 with rectangle [829, 36, 240, 20]
+INFO 05 Nov 15 23:09:39,212 websee.WebSeeTool.getErrorElements - lDifferencePixels before: 34
+INFO 05 Nov 15 23:09:39,212 websee.WebSeeTool.getErrorElements - lDifferencePixels after: 34
+INFO 05 Nov 15 23:11:28,839 pDiff.PerceptualImageDifferencing.compare - Converting RGB and constructing Laplacian Pyramids
+INFO 05 Nov 15 23:11:29,109 pDiff.PerceptualImageDifferencing.compare - Performing test
+INFO 05 Nov 15 23:11:29,582 pDiff.PerceptualImageDifferencing.compare - 18670 pixels are different
+INFO 05 Nov 15 23:12:17,690 websee.WebSeeTool.getErrorElements - ---- GETERRORELEMENTS START ----
+INFO 05 Nov 15 23:12:17,708 websee.WebSeeTool.getErrorElements - element /html[1]/body[1]/section[1]/section[1]/main[1]/div[2] found at 173, 317 with rectangle [172, 297, 680, 350]
+INFO 05 Nov 15 23:12:17,708 websee.WebSeeTool.getErrorElements - lDifferencePixels before: 1833
+INFO 05 Nov 15 23:12:17,710 websee.WebSeeTool.getErrorElements - lDifferencePixels after: 1833
+INFO 05 Nov 15 23:12:17,710 websee.WebSeeTool.getErrorElements - element /html[1]/body[1]/section[1]/section[1]/main[1]/div[2]/article[1]/h4[1] found at 174, 357 with rectangle [174, 352, 322, 18]
+INFO 05 Nov 15 23:12:17,710 websee.WebSeeTool.getErrorElements - lDifferencePixels before: 1833
+INFO 05 Nov 15 23:12:17,711 websee.WebSeeTool.getErrorElements - lDifferencePixels after: 1833
+INFO 05 Nov 15 23:12:17,711 websee.WebSeeTool.getErrorElements - element /html[1]/body[1]/section[1]/section[1]/main[1]/div[2]/article[1]/h4[1]/a[1] found at 174, 357 with rectangle [174, 352, 84, 18]
+INFO 05 Nov 15 23:12:17,711 websee.WebSeeTool.getErrorElements - lDifferencePixels before: 1833
+INFO 05 Nov 15 23:12:17,712 websee.WebSeeTool.getErrorElements - lDifferencePixels after: 1833
+INFO 05 Nov 15 23:12:17,712 websee.WebSeeTool.getErrorElements - element /html[1]/body[1]/section[1]/section[1]/main[1]/div[2]/article[1]/p[1] found at 174, 388 with rectangle [174, 377, 322, 80]
+INFO 05 Nov 15 23:12:17,712 websee.WebSeeTool.getErrorElements - lDifferencePixels before: 1833
+INFO 05 Nov 15 23:12:17,713 websee.WebSeeTool.getErrorElements - lDifferencePixels after: 1833
+INFO 05 Nov 15 23:12:17,714 websee.WebSeeTool.getErrorElements - element /html[1]/body[1]/section[1]/section[1]/main[1]/div[2]/article[1] found at 175, 351 with rectangle [174, 347, 337, 336]
+INFO 05 Nov 15 23:12:17,714 websee.WebSeeTool.getErrorElements - lDifferencePixels before: 1833
+INFO 05 Nov 15 23:12:17,716 websee.WebSeeTool.getErrorElements - lDifferencePixels after: 1833
+INFO 05 Nov 15 23:12:17,717 websee.WebSeeTool.getErrorElements - element /html[1]/body[1]/section[1]/section[1]/main[1]/div[2]/article[1]/h4[2] found at 174, 481 with rectangle [174, 472, 322, 18]
+INFO 05 Nov 15 23:12:17,717 websee.WebSeeTool.getErrorElements - lDifferencePixels before: 1833
+INFO 05 Nov 15 23:12:17,717 websee.WebSeeTool.getErrorElements - lDifferencePixels after: 1833
+INFO 05 Nov 15 23:12:17,717 websee.WebSeeTool.getErrorElements - element /html[1]/body[1]/section[1]/section[1]/main[1]/div[2]/article[1]/ul[1] found at 180, 502 with rectangle [174, 497, 322, 54]
+INFO 05 Nov 15 23:12:17,717 websee.WebSeeTool.getErrorElements - lDifferencePixels before: 1833
+INFO 05 Nov 15 23:12:17,718 websee.WebSeeTool.getErrorElements - lDifferencePixels after: 1833
+INFO 05 Nov 15 23:12:17,718 websee.WebSeeTool.getErrorElements - element /html[1]/body[1]/section[1]/section[1]/main[1]/div[2]/article[1]/ul[1]/li[1] found at 190, 503 with rectangle [190, 497, 298, 16]
+INFO 05 Nov 15 23:12:17,718 websee.WebSeeTool.getErrorElements - lDifferencePixels before: 1833
+INFO 05 Nov 15 23:12:17,718 websee.WebSeeTool.getErrorElements - lDifferencePixels after: 1833
+INFO 05 Nov 15 23:12:17,719 websee.WebSeeTool.getErrorElements - element /html[1]/body[1]/section[1]/section[1]/main[1]/div[2]/article[1]/ul[1]/li[1]/a[1] found at 190, 503 with rectangle [190, 497, 47, 16]
+INFO 05 Nov 15 23:12:17,719 websee.WebSeeTool.getErrorElements - lDifferencePixels before: 1833
+INFO 05 Nov 15 23:12:17,719 websee.WebSeeTool.getErrorElements - lDifferencePixels after: 1833
+INFO 05 Nov 15 23:12:17,720 websee.WebSeeTool.getErrorElements - element /html[1]/body[1]/section[1]/section[1]/main[1]/div[2]/article[1]/ul[1]/li[2] found at 190, 525 with rectangle [190, 516, 298, 16]
+INFO 05 Nov 15 23:12:17,720 websee.WebSeeTool.getErrorElements - lDifferencePixels before: 1833
+INFO 05 Nov 15 23:12:17,720 websee.WebSeeTool.getErrorElements - lDifferencePixels after: 1833
+INFO 05 Nov 15 23:12:17,720 websee.WebSeeTool.getErrorElements - element /html[1]/body[1]/section[1]/section[1]/main[1]/div[2]/article[1]/ul[1]/li[2]/a[1] found at 190, 525 with rectangle [190, 516, 55, 16]
+INFO 05 Nov 15 23:12:17,720 websee.WebSeeTool.getErrorElements - lDifferencePixels before: 1833
+INFO 05 Nov 15 23:12:17,720 websee.WebSeeTool.getErrorElements - lDifferencePixels after: 1833
+INFO 05 Nov 15 23:12:17,721 websee.WebSeeTool.getErrorElements - element /html[1]/body[1]/section[1]/section[1]/main[1]/div[2]/article[1]/ul[1]/li[3] found at 190, 543 with rectangle [190, 535, 298, 16]
+INFO 05 Nov 15 23:12:17,721 websee.WebSeeTool.getErrorElements - lDifferencePixels before: 1833
+INFO 05 Nov 15 23:12:17,721 websee.WebSeeTool.getErrorElements - lDifferencePixels after: 1833
+INFO 05 Nov 15 23:12:17,721 websee.WebSeeTool.getErrorElements - element /html[1]/body[1]/section[1]/section[1]/main[1]/div[2]/article[1]/ul[1]/li[3]/a[1] found at 190, 543 with rectangle [190, 535, 75, 16]
+INFO 05 Nov 15 23:12:17,721 websee.WebSeeTool.getErrorElements - lDifferencePixels before: 1833
+INFO 05 Nov 15 23:12:17,721 websee.WebSeeTool.getErrorElements - lDifferencePixels after: 1833
+INFO 05 Nov 15 23:12:17,722 websee.WebSeeTool.getErrorElements - element /html[1]/body[1]/section[1]/section[1]/main[1]/div[2]/article[1]/h4[3] found at 174, 574 with rectangle [174, 567, 322, 18]
+INFO 05 Nov 15 23:12:17,722 websee.WebSeeTool.getErrorElements - lDifferencePixels before: 1833
+INFO 05 Nov 15 23:12:17,722 websee.WebSeeTool.getErrorElements - lDifferencePixels after: 1833
+INFO 05 Nov 15 23:12:17,723 websee.WebSeeTool.getErrorElements - element /html[1]/body[1]/section[1]/section[1]/main[1]/div[2]/article[1]/ul[2]/li[1]/a[1] found at 194, 595 with rectangle [190, 592, 159, 16]
+INFO 05 Nov 15 23:12:17,723 websee.WebSeeTool.getErrorElements - lDifferencePixels before: 1833
+INFO 05 Nov 15 23:12:17,723 websee.WebSeeTool.getErrorElements - lDifferencePixels after: 1833
+INFO 05 Nov 15 23:12:17,723 websee.WebSeeTool.getErrorElements - element /html[1]/body[1]/section[1]/section[1]/main[1]/div[2]/article[1]/ul[2]/li[1] found at 194, 595 with rectangle [190, 592, 298, 16]
+INFO 05 Nov 15 23:12:17,723 websee.WebSeeTool.getErrorElements - lDifferencePixels before: 1833
+INFO 05 Nov 15 23:12:17,724 websee.WebSeeTool.getErrorElements - lDifferencePixels after: 1833
+INFO 05 Nov 15 23:12:17,724 websee.WebSeeTool.getErrorElements - element /html[1]/body[1]/section[1]/section[1]/main[1]/div[2]/article[1]/ul[2] found at 174, 601 with rectangle [174, 592, 322, 35]
+INFO 05 Nov 15 23:12:17,724 websee.WebSeeTool.getErrorElements - lDifferencePixels before: 1833
+INFO 05 Nov 15 23:12:17,725 websee.WebSeeTool.getErrorElements - lDifferencePixels after: 1833
+INFO 05 Nov 15 23:12:17,725 websee.WebSeeTool.getErrorElements - element /html[1]/body[1]/section[1]/section[1]/main[1]/div[2]/article[1]/ul[2]/li[2] found at 194, 619 with rectangle [190, 611, 298, 16]
+INFO 05 Nov 15 23:12:17,725 websee.WebSeeTool.getErrorElements - lDifferencePixels before: 1833
+INFO 05 Nov 15 23:12:17,726 websee.WebSeeTool.getErrorElements - lDifferencePixels after: 1833
+INFO 05 Nov 15 23:12:17,726 websee.WebSeeTool.getErrorElements - element /html[1]/body[1]/section[1]/section[1]/main[1]/div[2]/article[1]/ul[2]/li[2]/a[1] found at 194, 619 with rectangle [190, 611, 121, 16]
+INFO 05 Nov 15 23:12:17,726 websee.WebSeeTool.getErrorElements - lDifferencePixels before: 1833
+INFO 05 Nov 15 23:12:17,726 websee.WebSeeTool.getErrorElements - lDifferencePixels after: 1833
+INFO 05 Nov 15 23:12:17,727 websee.WebSeeTool.getErrorElements - element /html[1]/body[1]/section[1]/section[1]/main[1]/div[2]/article[1]/h4[4] found at 174, 648 with rectangle [174, 643, 322, 18]
+INFO 05 Nov 15 23:12:17,727 websee.WebSeeTool.getErrorElements - lDifferencePixels before: 1833
+INFO 05 Nov 15 23:12:17,727 websee.WebSeeTool.getErrorElements - lDifferencePixels after: 1833
+INFO 05 Nov 15 23:12:17,727 websee.WebSeeTool.getErrorElements - element /html[1]/body[1]/section[1]/section[1]/main[1]/div[2]/article[1]/ul[3] found at 190, 675 with rectangle [174, 668, 322, 16]
+INFO 05 Nov 15 23:12:17,727 websee.WebSeeTool.getErrorElements - lDifferencePixels before: 1833
+INFO 05 Nov 15 23:12:17,728 websee.WebSeeTool.getErrorElements - lDifferencePixels after: 1833
+INFO 05 Nov 15 23:12:17,728 websee.WebSeeTool.getErrorElements - element /html[1]/body[1]/section[1]/section[1]/main[1]/div[2]/article[1]/ul[3]/li[1] found at 190, 675 with rectangle [190, 668, 298, 16]
+INFO 05 Nov 15 23:12:17,728 websee.WebSeeTool.getErrorElements - lDifferencePixels before: 1833
+INFO 05 Nov 15 23:12:17,728 websee.WebSeeTool.getErrorElements - lDifferencePixels after: 1833
+INFO 05 Nov 15 23:12:17,728 websee.WebSeeTool.getErrorElements - element /html[1]/body[1]/section[1]/section[1]/main[1]/div[2]/article[1]/ul[3]/li[1]/a[1] found at 190, 675 with rectangle [190, 668, 162, 16]
+INFO 05 Nov 15 23:12:17,728 websee.WebSeeTool.getErrorElements - lDifferencePixels before: 1833
+INFO 05 Nov 15 23:12:17,728 websee.WebSeeTool.getErrorElements - lDifferencePixels after: 1833
+INFO 05 Nov 15 23:12:20,373 websee.WebSeeTool.getErrorElements - ---- GETERRORELEMENTS START ----
+INFO 05 Nov 15 23:12:20,390 websee.WebSeeTool.getErrorElements - element /html[1]/body[1]/header[1]/div[1]/div[2] found at 897, 51 with rectangle [829, 13, 240, 65]
+INFO 05 Nov 15 23:12:20,390 websee.WebSeeTool.getErrorElements - lDifferencePixels before: 34
+INFO 05 Nov 15 23:12:20,390 websee.WebSeeTool.getErrorElements - lDifferencePixels after: 34
+INFO 05 Nov 15 23:12:20,390 websee.WebSeeTool.getErrorElements - element /html[1]/body[1]/header[1]/div[1]/div[2]/span[1] found at 897, 51 with rectangle [829, 36, 240, 20]
+INFO 05 Nov 15 23:12:20,390 websee.WebSeeTool.getErrorElements - lDifferencePixels before: 34
+INFO 05 Nov 15 23:12:20,390 websee.WebSeeTool.getErrorElements - lDifferencePixels after: 34
+INFO 05 Nov 15 23:20:39,800 pDiff.PerceptualImageDifferencing.compare - Converting RGB and constructing Laplacian Pyramids
+INFO 05 Nov 15 23:20:40,060 pDiff.PerceptualImageDifferencing.compare - Performing test
+INFO 05 Nov 15 23:20:40,497 pDiff.PerceptualImageDifferencing.compare - 18670 pixels are different
+INFO 05 Nov 15 23:21:31,086 websee.WebSeeTool.getErrorElements - ---- GETERRORELEMENTS START ----
+INFO 05 Nov 15 23:21:31,104 websee.WebSeeTool.getErrorElements - element /html[1]/body[1]/section[1]/section[1]/main[1]/div[2] found at 173, 317 with rectangle [173, 297, 680, 350]
+INFO 05 Nov 15 23:21:31,104 websee.WebSeeTool.getErrorElements - lDifferencePixels before: 1833
+INFO 05 Nov 15 23:21:31,106 websee.WebSeeTool.getErrorElements - lDifferencePixels after: 1833
+INFO 05 Nov 15 23:21:31,107 websee.WebSeeTool.getErrorElements - element /html[1]/body[1]/section[1]/section[1]/main[1]/div[2]/article[1] found at 175, 351 with rectangle [175, 347, 337, 336]
+INFO 05 Nov 15 23:21:31,107 websee.WebSeeTool.getErrorElements - lDifferencePixels before: 1833
+INFO 05 Nov 15 23:21:31,109 websee.WebSeeTool.getErrorElements - lDifferencePixels after: 1833
+INFO 05 Nov 15 23:21:31,110 websee.WebSeeTool.getErrorElements - element /html[1]/body[1]/section[1]/section[1]/main[1]/div[2]/article[1]/h4[1] found at 175, 362 with rectangle [175, 352, 322, 18]
+INFO 05 Nov 15 23:21:31,110 websee.WebSeeTool.getErrorElements - lDifferencePixels before: 1833
+INFO 05 Nov 15 23:21:31,110 websee.WebSeeTool.getErrorElements - lDifferencePixels after: 1833
+INFO 05 Nov 15 23:21:31,110 websee.WebSeeTool.getErrorElements - element /html[1]/body[1]/section[1]/section[1]/main[1]/div[2]/article[1]/h4[1]/a[1] found at 175, 362 with rectangle [175, 352, 84, 18]
+INFO 05 Nov 15 23:21:31,111 websee.WebSeeTool.getErrorElements - lDifferencePixels before: 1833
+INFO 05 Nov 15 23:21:31,111 websee.WebSeeTool.getErrorElements - lDifferencePixels after: 1833
+INFO 05 Nov 15 23:21:31,112 websee.WebSeeTool.getErrorElements - element /html[1]/body[1]/section[1]/section[1]/main[1]/div[2]/article[1]/p[1] found at 175, 384 with rectangle [175, 377, 322, 80]
+INFO 05 Nov 15 23:21:31,112 websee.WebSeeTool.getErrorElements - lDifferencePixels before: 1833
+INFO 05 Nov 15 23:21:31,113 websee.WebSeeTool.getErrorElements - lDifferencePixels after: 1833
+INFO 05 Nov 15 23:21:31,113 websee.WebSeeTool.getErrorElements - element /html[1]/body[1]/section[1]/section[1]/main[1]/div[2]/article[1]/h4[2] found at 175, 484 with rectangle [175, 472, 322, 18]
+INFO 05 Nov 15 23:21:31,113 websee.WebSeeTool.getErrorElements - lDifferencePixels before: 1833
+INFO 05 Nov 15 23:21:31,114 websee.WebSeeTool.getErrorElements - lDifferencePixels after: 1833
+INFO 05 Nov 15 23:21:31,114 websee.WebSeeTool.getErrorElements - element /html[1]/body[1]/section[1]/section[1]/main[1]/div[2]/article[1]/ul[1] found at 180, 502 with rectangle [175, 497, 322, 54]
+INFO 05 Nov 15 23:21:31,114 websee.WebSeeTool.getErrorElements - lDifferencePixels before: 1833
+INFO 05 Nov 15 23:21:31,115 websee.WebSeeTool.getErrorElements - lDifferencePixels after: 1833
+INFO 05 Nov 15 23:21:31,115 websee.WebSeeTool.getErrorElements - element /html[1]/body[1]/section[1]/section[1]/main[1]/div[2]/article[1]/ul[1]/li[1] found at 191, 499 with rectangle [191, 497, 298, 16]
+INFO 05 Nov 15 23:21:31,115 websee.WebSeeTool.getErrorElements - lDifferencePixels before: 1833
+INFO 05 Nov 15 23:21:31,116 websee.WebSeeTool.getErrorElements - lDifferencePixels after: 1833
+INFO 05 Nov 15 23:21:31,116 websee.WebSeeTool.getErrorElements - element /html[1]/body[1]/section[1]/section[1]/main[1]/div[2]/article[1]/ul[1]/li[1]/a[1] found at 191, 499 with rectangle [191, 497, 47, 16]
+INFO 05 Nov 15 23:21:31,116 websee.WebSeeTool.getErrorElements - lDifferencePixels before: 1833
+INFO 05 Nov 15 23:21:31,116 websee.WebSeeTool.getErrorElements - lDifferencePixels after: 1833
+INFO 05 Nov 15 23:21:31,116 websee.WebSeeTool.getErrorElements - element /html[1]/body[1]/section[1]/section[1]/main[1]/div[2]/article[1]/ul[1]/li[3] found at 191, 540 with rectangle [191, 535, 298, 16]
+INFO 05 Nov 15 23:21:31,117 websee.WebSeeTool.getErrorElements - lDifferencePixels before: 1833
+INFO 05 Nov 15 23:21:31,117 websee.WebSeeTool.getErrorElements - lDifferencePixels after: 1833
+INFO 05 Nov 15 23:21:31,117 websee.WebSeeTool.getErrorElements - element /html[1]/body[1]/section[1]/section[1]/main[1]/div[2]/article[1]/ul[1]/li[3]/a[1] found at 191, 540 with rectangle [191, 535, 75, 16]
+INFO 05 Nov 15 23:21:31,117 websee.WebSeeTool.getErrorElements - lDifferencePixels before: 1833
+INFO 05 Nov 15 23:21:31,117 websee.WebSeeTool.getErrorElements - lDifferencePixels after: 1833
+INFO 05 Nov 15 23:21:31,118 websee.WebSeeTool.getErrorElements - element /html[1]/body[1]/section[1]/section[1]/main[1]/div[2]/article[1]/ul[1]/li[2] found at 192, 522 with rectangle [191, 516, 298, 16]
+INFO 05 Nov 15 23:21:31,118 websee.WebSeeTool.getErrorElements - lDifferencePixels before: 1833
+INFO 05 Nov 15 23:21:31,118 websee.WebSeeTool.getErrorElements - lDifferencePixels after: 1833
+INFO 05 Nov 15 23:21:31,118 websee.WebSeeTool.getErrorElements - element /html[1]/body[1]/section[1]/section[1]/main[1]/div[2]/article[1]/ul[1]/li[2]/a[1] found at 192, 522 with rectangle [191, 516, 55, 16]
+INFO 05 Nov 15 23:21:31,118 websee.WebSeeTool.getErrorElements - lDifferencePixels before: 1833
+INFO 05 Nov 15 23:21:31,119 websee.WebSeeTool.getErrorElements - lDifferencePixels after: 1833
+INFO 05 Nov 15 23:21:31,119 websee.WebSeeTool.getErrorElements - element /html[1]/body[1]/section[1]/section[1]/main[1]/div[2]/article[1]/h4[3] found at 175, 577 with rectangle [175, 567, 322, 18]
+INFO 05 Nov 15 23:21:31,119 websee.WebSeeTool.getErrorElements - lDifferencePixels before: 1833
+INFO 05 Nov 15 23:21:31,120 websee.WebSeeTool.getErrorElements - lDifferencePixels after: 1833
+INFO 05 Nov 15 23:21:31,120 websee.WebSeeTool.getErrorElements - element /html[1]/body[1]/section[1]/section[1]/main[1]/div[2]/article[1]/ul[2]/li[1]/a[1] found at 194, 595 with rectangle [191, 592, 159, 16]
+INFO 05 Nov 15 23:21:31,120 websee.WebSeeTool.getErrorElements - lDifferencePixels before: 1833
+INFO 05 Nov 15 23:21:31,120 websee.WebSeeTool.getErrorElements - lDifferencePixels after: 1833
+INFO 05 Nov 15 23:21:31,120 websee.WebSeeTool.getErrorElements - element /html[1]/body[1]/section[1]/section[1]/main[1]/div[2]/article[1]/ul[2]/li[1] found at 194, 595 with rectangle [191, 592, 298, 16]
+INFO 05 Nov 15 23:21:31,121 websee.WebSeeTool.getErrorElements - lDifferencePixels before: 1833
+INFO 05 Nov 15 23:21:31,121 websee.WebSeeTool.getErrorElements - lDifferencePixels after: 1833
+INFO 05 Nov 15 23:21:31,121 websee.WebSeeTool.getErrorElements - element /html[1]/body[1]/section[1]/section[1]/main[1]/div[2]/article[1]/ul[2] found at 183, 600 with rectangle [175, 592, 322, 35]
+INFO 05 Nov 15 23:21:31,121 websee.WebSeeTool.getErrorElements - lDifferencePixels before: 1833
+INFO 05 Nov 15 23:21:31,122 websee.WebSeeTool.getErrorElements - lDifferencePixels after: 1833
+INFO 05 Nov 15 23:21:31,122 websee.WebSeeTool.getErrorElements - element /html[1]/body[1]/section[1]/section[1]/main[1]/div[2]/article[1]/ul[2]/li[2] found at 194, 619 with rectangle [191, 611, 298, 16]
+INFO 05 Nov 15 23:21:31,122 websee.WebSeeTool.getErrorElements - lDifferencePixels before: 1833
+INFO 05 Nov 15 23:21:31,122 websee.WebSeeTool.getErrorElements - lDifferencePixels after: 1833
+INFO 05 Nov 15 23:21:31,122 websee.WebSeeTool.getErrorElements - element /html[1]/body[1]/section[1]/section[1]/main[1]/div[2]/article[1]/ul[2]/li[2]/a[1] found at 194, 619 with rectangle [191, 611, 121, 16]
+INFO 05 Nov 15 23:21:31,122 websee.WebSeeTool.getErrorElements - lDifferencePixels before: 1833
+INFO 05 Nov 15 23:21:31,122 websee.WebSeeTool.getErrorElements - lDifferencePixels after: 1833
+INFO 05 Nov 15 23:21:31,122 websee.WebSeeTool.getErrorElements - element /html[1]/body[1]/section[1]/section[1]/main[1] found at 174, 648 with rectangle [170, 132, 683, 551]
+INFO 05 Nov 15 23:21:31,123 websee.WebSeeTool.getErrorElements - lDifferencePixels before: 1833
+INFO 05 Nov 15 23:21:31,123 websee.WebSeeTool.getErrorElements - lDifferencePixels after: 1833
+INFO 05 Nov 15 23:21:31,123 websee.WebSeeTool.getErrorElements - element /html[1]/body[1]/section[1]/section[1]/main[1]/div[2]/article[1]/h4[4] found at 179, 647 with rectangle [175, 643, 322, 18]
+INFO 05 Nov 15 23:21:31,123 websee.WebSeeTool.getErrorElements - lDifferencePixels before: 1833
+INFO 05 Nov 15 23:21:31,123 websee.WebSeeTool.getErrorElements - lDifferencePixels after: 1833
+INFO 05 Nov 15 23:21:33,897 websee.WebSeeTool.getErrorElements - ---- GETERRORELEMENTS START ----
+INFO 05 Nov 15 23:21:33,919 websee.WebSeeTool.getErrorElements - element /html[1]/body[1]/header[1]/div[1]/div[2] found at 897, 51 with rectangle [830, 13, 240, 65]
+INFO 05 Nov 15 23:21:33,919 websee.WebSeeTool.getErrorElements - lDifferencePixels before: 34
+INFO 05 Nov 15 23:21:33,920 websee.WebSeeTool.getErrorElements - lDifferencePixels after: 34
+INFO 05 Nov 15 23:21:33,920 websee.WebSeeTool.getErrorElements - element /html[1]/body[1]/header[1]/div[1]/div[2]/span[1] found at 897, 51 with rectangle [830, 36, 240, 20]
+INFO 05 Nov 15 23:21:33,920 websee.WebSeeTool.getErrorElements - lDifferencePixels before: 34
+INFO 05 Nov 15 23:21:33,920 websee.WebSeeTool.getErrorElements - lDifferencePixels after: 34

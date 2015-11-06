@@ -14,6 +14,7 @@ import org.apache.log4j.Logger;
 import org.opencv.core.Core;
 import org.opencv.core.Core.MinMaxLocResult;
 import org.opencv.core.CvException;
+import org.opencv.core.CvType;
 import org.opencv.core.Mat;
 import org.opencv.core.MatOfByte;
 import org.opencv.core.MatOfDMatch;
@@ -205,9 +206,9 @@ public class ImageProcessing
 	public Rectangle findSubImage(String originalImageFullPath, String templateImageFileNameFullPath) throws IOException
 	{
 		// source image
-		Mat img = Highgui.imread(originalImageFullPath, 1);
+		Mat img = Highgui.imread(originalImageFullPath, Highgui.CV_LOAD_IMAGE_ANYDEPTH);
 		// template image
-		Mat templ = Highgui.imread(templateImageFileNameFullPath, 1);
+		Mat templ = Highgui.imread(templateImageFileNameFullPath, Highgui.CV_LOAD_IMAGE_ANYDEPTH);
 		
 		Mat img_display = new Mat();
 		img.copyTo(img_display);

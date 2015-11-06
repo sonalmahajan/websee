@@ -40,8 +40,8 @@ import org.apache.log4j.Logger;
  */
 public class PerceptualImageDifferencing
 {
-	private static final int COLOR_PASS = 0xff0000ff;
-	private static final int COLOR_FAIL = 0xffff0000;
+	public static final int COLOR_PASS = 0xff000000;
+	public static final int COLOR_FAIL = 0xffffffff;
 
 	private static Logger logger = Logger.getLogger(PerceptualImageDifferencing.class);
 

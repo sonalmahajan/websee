@@ -35,7 +35,7 @@ public final class Constants
 	public static final int ATTRIBUTES_PER_ELEMENT = 1;
 	public static final String BASE_PATH = "evaluation";
 	public static final String[] NON_TEXT_TAGS = new String[] {"img", "area", "audio", "video", "iframe", "meter", "progress", "canvas"};
-	public static final String[] NON_VISUAL_TAGS = new String[] {"head", "script", "link", "meta", "style"};
+	public static final String[] NON_VISUAL_TAGS = new String[] {"head", "script", "link", "meta", "style", "title"};
 	public static final String SEED_ERRORS_XML_FILENAME = "seed_errors.xml";
 	public static final String SEED_ERRORS_DTD_FILENAME = "seed_errors.dtd";
 	public static final String SEED_ERRORS_DTD_FILENAME_WITH_PATH = "evaluationframework" + File.separatorChar + "seed_errors.dtd";
@@ -54,11 +54,11 @@ public final class Constants
 	public static final String CROPPED_IMAGE_NAME = "crop." + IMAGE_EXTENSION;
 	public static final String DIRECTORY_TO_STORE_CROP_IMAGES = "crops";
 	public static final String WINDOWS_FILE_ENCLOSING_CHARACTER_IMAGE_PROCESSING = "\"";
-	public static final double WEIGHT_FOR_RATIO_CALCULATION = 0.5;
-	public static final double WEIGHT_FOR_CASCADING_CALCULATION = 1;
+	public static final double WEIGHT_FOR_RATIO_CALCULATION = 1;
+	public static final double WEIGHT_FOR_CASCADING_CALCULATION = 0.5;
 	public static final double WEIGHT_FOR_HEURISTIC1 = 0.5;
-	public static final double WEIGHT_FOR_HEURISTIC2 = 0.5;
-	public static final double WEIGHT_FOR_NORMALIZED_DOM_HEIGHT = 1;
+	public static final double WEIGHT_FOR_HEURISTIC2 = 1;
+	public static final double WEIGHT_FOR_NORMALIZED_DOM_HEIGHT = 0.5;
 	public static final String IMAGEMAGICK_COMPARE_MINUS_SRC = "Minus_Src";
 	public static final String IMAGEMAGICK_COMPARE_MINUS_DST = "Minus_Dst";
 	public static final String IMAGEMAGICK_COMPARE_DIFFERENCE = "Difference";
@@ -93,6 +93,7 @@ public final class Constants
 	public static final int NUMERIC_ANALYSIS_TRANSLATION_SUB_SAMPLING_VALUE = 1;
 	public static final int RCA_WEBSEE_RANKING_BASED_ELEMENTS_CUTOFF = 10;
 	public static final int RCA_NUMERIC_ANALYSIS_RATE_OF_CHANGE_WINDOW_SIZE = 50;
+	public static final boolean HEADLESS_FIREFOX = false;
 	
 	// this value should specify at a minimum how much reduction in the difference pixels do you expect
 	// reduction = 100% => exact match, no tolerance
@@ -102,10 +103,10 @@ public final class Constants
 	public static final int RCA_SBST_SEARCH_SPACE_SIZE = 200;
 	
 	// PHANTOM JS
-	public static final String PHANTOM_JS_EXECUTABLE_PATH = "C:\\USC\\visual_checking\\phantomjs-1.9.7-windows\\phantomjs.exe";
+	public static final String PHANTOM_JS_EXECUTABLE_PATH = "/Users/sonal/USC/visual_checking/phantomjs-2.0.0-macosx/bin/phantomjs";
 	
 	// APACHE
-	public static final String APACHE_DEPLOYMENT_PATH = "C:\\apache\\tomcat-6.0.35\\webapps";
+	public static final String APACHE_DEPLOYMENT_PATH = "/Users/sonal/USC/visual_checking/apache/apache-tomcat-8.0.21/webapps";
 	public static final String APACHE_DEPLOY_FILE_PATH = APACHE_DEPLOYMENT_PATH + File.separatorChar + "RCA" + File.separatorChar + "test.html";
 	public static final String APACHE_DEPLOYED_FILE_HOST = "http://localhost:8080/RCA/test.html";
 	

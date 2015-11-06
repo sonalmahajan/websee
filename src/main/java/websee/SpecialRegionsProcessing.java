@@ -86,7 +86,7 @@ public class SpecialRegionsProcessing
 		String[] newPNameAndPath = Util.getPathAndFileNameFromFullPath(newP);
 		String[] newPNameAndExtention = Util.getFileNameAndExtension(newPNameAndPath[1]);
 		String imageName = Util.getNextAvailableFileName(newPNameAndPath[0], newPNameAndExtention[0] + Constants.SCREENSHOT_FILE_EXTENSION);
-		Util.getScreenshot(newPNameAndPath[1], newPNameAndPath[0], imageName, Constants.DO_NOT_OVERWRITE);
+		Util.getScreenshot(newPNameAndPath[1], newPNameAndPath[0], imageName, null, Constants.DO_NOT_OVERWRITE);
 		
 		// call WebSee's detect and localize functions
 		WebSeeTool vit = new WebSeeTool(O, newP);

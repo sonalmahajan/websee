@@ -1,8 +1,10 @@
 package clustering;
 
+import java.awt.BasicStroke;
 import java.awt.Color;
 import java.awt.Font;
 import java.awt.Graphics;
+import java.awt.Graphics2D;
 import java.awt.image.BufferedImage;
 import java.io.File;
 import java.io.IOException;
@@ -110,9 +112,7 @@ public class DifferencePixelsClustering
 
 	public void outputClusteringResults() throws IOException
 	{
-		System.out.println("clusterResults.size() = " + clusterResults.size());
 		Set<String> el = new HashSet<String>();
-		int count = 0;
 		String[] differenceImagePathAndName = Util.getPathAndFileNameFromFullPath(differenceImageFullPath);
 		FileUtils.copyFile(new File(differenceImageFullPath), new File(differenceImagePathAndName[0] + File.separatorChar + Constants.CLUSTERING_DIFFERENCE_PIXELS_IMAGENAME));
 		BufferedImage bi = ImageIO.read(new File(differenceImagePathAndName[0] + File.separatorChar + Constants.CLUSTERING_DIFFERENCE_PIXELS_IMAGENAME));
@@ -131,7 +131,7 @@ public class DifferencePixelsClustering
 		{
 			// System.out.println("Cluster " + i);
 			// Java 'Color' class takes 3 floats, from 0 to 1.
-			float r = rand.nextFloat();
+			/*float r = rand.nextFloat();
 			float g = rand.nextFloat();
 			float b = rand.nextFloat();
 			while (r == 0 && g == 0 && b == 0)
@@ -139,7 +139,11 @@ public class DifferencePixelsClustering
 				r = rand.nextFloat();
 				g = rand.nextFloat();
 				b = rand.nextFloat();
-			}
+			}*/
+			
+			float r = 1;
+			float g = 1;
+			float b = 1;
 			Color color = new Color(r, g, b);
 			int rgb = color.getRGB();
 			int firstX = (int)clusterResults.get(i).getPoints().get(0).getLocation().getX();
@@ -150,14 +154,13 @@ public class DifferencePixelsClustering
 				int x = (int) locationWrapper.getLocation().getX();
 				int y = (int) locationWrapper.getLocation().getY();
 
-				count++;
 				// write filtered difference pixels
 				bi.setRGB(x, y, rgb);
 			}
-			for (String s : el)
+			/*for (String s : el)
 			{
 				// System.out.println(s);
-			}
+			}*/
 			el = new HashSet<String>();
 			// System.out.println();
 			
@@ -165,7 +168,38 @@ public class DifferencePixelsClustering
 			 graphics.setColor(Color.WHITE);
 			 graphics.setFont(new Font("Arial Black", Font.BOLD, 20));
 			 //graphics.drawString("Cluster " + i + ": " + Util.getHexFromDecimal(rgb), firstX, firstY);
-			 graphics.drawString("Cluster " + (i+1), firstX, firstY);
+			 graphics.drawString("Cluster " + (i+1), firstX, firstY-20);
+			 
+			 // find minX, minY and maxX, maxY
+			 int minX = Integer.MAX_VALUE;
+			 int minY = Integer.MAX_VALUE;
+			 int maxX = Integer.MIN_VALUE;
+			 int maxY = Integer.MIN_VALUE;
+			 for(LocationWrapper lw : clusterResults.get(i).getPoints())
+			 {
+				 int x = (int) lw.getLocation().getX();
+				 if(x < minX)
+				 {
+					 minX = x;
+				 }
+				 if(x > maxX)
+				 {
+					 maxX = x;
+				 }
+				 
+				 int y = (int) lw.getLocation().getY();
+				 if(y < minY)
+				 {
+					 minY = y;
+				 }
+				 if(y > maxY)
+				 {
+					 maxY = y;
+				 }
+			 }
+			 Graphics2D g2D = (Graphics2D) graphics;
+			 g2D.setStroke(new BasicStroke(3F));
+			 g2D.drawOval(minX, minY, (maxX-minX), (maxY-minY));
 		}
 		ImageIO.write(bi, "png", new File(differenceImagePathAndName[0] + File.separatorChar + Constants.CLUSTERING_DIFFERENCE_PIXELS_IMAGENAME));
 	}

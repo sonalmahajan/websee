@@ -2,12 +2,18 @@ package util;
 
 import java.awt.Color;
 import java.awt.Graphics2D;
+import java.awt.Rectangle;
 import java.awt.image.BufferedImage;
+import java.io.BufferedReader;
 import java.io.File;
+import java.io.FileReader;
 import java.io.IOException;
 import java.io.PrintWriter;
 import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 import java.util.Random;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
@@ -15,6 +21,8 @@ import java.util.regex.Pattern;
 import javax.imageio.ImageIO;
 
 import org.apache.commons.io.FileUtils;
+import org.apache.commons.io.IOUtils;
+import org.apache.commons.lang.RandomStringUtils;
 import org.apache.log4j.FileAppender;
 import org.apache.log4j.Layout;
 import org.apache.log4j.Logger;
@@ -23,6 +31,7 @@ import org.jsoup.Jsoup;
 import org.jsoup.nodes.Document;
 import org.jsoup.nodes.Element;
 import org.jsoup.select.Elements;
+import org.openqa.selenium.Dimension;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
@@ -61,18 +70,19 @@ public class Util
 	public static void saveHTMLPageWindows(String urlString, String path, String fileName, boolean doNotOverwrite) throws IOException
 	{
 		File file = new File(path + File.separatorChar + fileName);
-		
-		// check if overwrite=false and file exists and is not empty. Do not overwrite if the file seems proper
-		if(doNotOverwrite && file.exists() && file.length() > 0)
+
+		// check if overwrite=false and file exists and is not empty. Do not
+		// overwrite if the file seems proper
+		if (doNotOverwrite && file.exists() && file.length() > 0)
 		{
 			return;
 		}
-		
+
 		Document doc = Jsoup.connect(urlString).get();
-		
-		//fix position to absolute
-		//Element root = doc.select("html").first();
-		//root.attr("style", "position:absolute");
+
+		// fix position to absolute
+		// Element root = doc.select("html").first();
+		// root.attr("style", "position:absolute");
 
 		// check for relative urls (href, src, action, background, url)
 		ArrayList<String> htmlRelativeUrlsTagsAttributes = Constants.getHtmlRelativeUrlsTagsAttributes();
@@ -86,8 +96,8 @@ public class Util
 
 		file.createNewFile();
 		doc.outputSettings().prettyPrint(false);
-		//doc.outputSettings().escapeMode(Entities.EscapeMode.extended);
-		String html = doc.html();		
+		// doc.outputSettings().escapeMode(Entities.EscapeMode.extended);
+		String html = doc.html();
 		PrintWriter out = new PrintWriter(file);
 		out.print(html);
 		out.close();
@@ -125,41 +135,25 @@ public class Util
 	 */
 	public static String getElementXPath(JavascriptExecutor js, WebElement element)
 	{
-		return (String) js.executeScript(
-		"var getElementXPath = function(element) {" + 
-//			"if (element && element.id){" + 
-//				"return '//*[@id=\"' + element.id + '\"]';" + 
-//			"}" + 
-//			"else {" + 
-				"return getElementTreeXPath(element);" + 
-//			"}" + 
-		"};" +
+		return (String) js.executeScript("var getElementXPath = function(element) {" +
+		// "if (element && element.id){" +
+		// "return '//*[@id=\"' + element.id + '\"]';" +
+		// "}" +
+		// "else {" +
+				"return getElementTreeXPath(element);" +
+				// "}" +
+				"};" +
 
-		"var getElementTreeXPath = function(element) {" + 
-			"var paths = [];" + 
-			"for (; element && element.nodeType == 1; element = element.parentNode)  {" + 
-				"var index = 0;" + 
-//				"if (element && element.id) {" + 
-//					"paths.splice(0, 0, '/*[@id=\"' + element.id + '\"]');" + 
-//					"break;" + 
-//				"}" +
-				"for (var sibling = element.previousSibling; sibling; sibling = sibling.previousSibling) {" + 
-					"if (sibling.nodeType == Node.DOCUMENT_TYPE_NODE) {" + 
-						"continue;" + 
-					"}" +
-					"if (sibling.nodeName == element.nodeName) {" + 
-						"++index;" + 
-					"}" + 
-				"}" +
+				"var getElementTreeXPath = function(element) {" + "var paths = [];" + "for (; element && element.nodeType == 1; element = element.parentNode)  {" + "var index = 0;" +
+				// "if (element && element.id) {" +
+				// "paths.splice(0, 0, '/*[@id=\"' + element.id + '\"]');" +
+				// "break;" +
+				// "}" +
+				"for (var sibling = element.previousSibling; sibling; sibling = sibling.previousSibling) {" + "if (sibling.nodeType == Node.DOCUMENT_TYPE_NODE) {" + "continue;" + "}" + "if (sibling.nodeName == element.nodeName) {" + "++index;" + "}" + "}" +
 
-				"var tagName = element.nodeName.toLowerCase();" + 
-				"var pathIndex = (\"[\" + (index+1) + \"]\");" + 
-				"paths.splice(0, 0, tagName + pathIndex);" + 
-			"}" +
-			"return paths.length ? \"/\" + paths.join(\"/\") : null;" + 
-		"};" +
-			
-		"return getElementXPath(arguments[0]);", element);
+				"var tagName = element.nodeName.toLowerCase();" + "var pathIndex = (\"[\" + (index+1) + \"]\");" + "paths.splice(0, 0, tagName + pathIndex);" + "}" + "return paths.length ? \"/\" + paths.join(\"/\") : null;" + "};" +
+
+				"return getElementXPath(arguments[0]);", element);
 	}
 
 	/**
@@ -209,8 +203,7 @@ public class Util
 			do
 			{
 				dir = new File(dirPath + "_" + count++);
-			}
-			while (dir.exists());
+			} while (dir.exists());
 			dir.mkdir();
 		}
 		return dir.getAbsolutePath();
@@ -219,43 +212,53 @@ public class Util
 	/**
 	 * Take screenshot of the saved html page
 	 */
-	public static void getScreenshot(String savedHTMLFileName, String dirPath, String imageName, boolean doNotOverwrite) throws IOException
+	public static void getScreenshot(String savedHTMLFileName, String dirPath, String imageName, String oracleImageFullPath, boolean doNotOverwrite) throws IOException
 	{
 		File imageFile = new File(dirPath + File.separatorChar + imageName);
-		
-		// check if overwrite=false and file exists and is not empty. Do not overwrite if the file seems proper
-		if(doNotOverwrite && imageFile.exists() && imageFile.length() > 0)
+
+		// check if overwrite=false and file exists and is not empty. Do not
+		// overwrite if the file seems proper
+		if (doNotOverwrite && imageFile.exists() && imageFile.length() > 0)
 		{
 			return;
 		}
-		
+
 		WebDriverSingleton instance = WebDriverSingleton.getInstance();
 		WebDriver driver = instance.getDriver();
-		
+
 		File file = new File(dirPath + File.separatorChar + savedHTMLFileName);
 		WebDriverSingleton.getInstance().loadPage(file.getAbsolutePath());
+		/*
+		 * if(oracleImageFullPath != null && !oracleImageFullPath.isEmpty()) {
+		 * ImageProcessing ip = new ImageProcessing(); String
+		 * oracleImagePathAndName[] =
+		 * Util.getPathAndFileNameFromFullPath(oracleImageFullPath); try {
+		 * Rectangle r = ip.getImageSize(oracleImagePathAndName[0],
+		 * oracleImagePathAndName[1]); driver.manage().window().setSize(new
+		 * Dimension(r.width, r.height)); } catch (IOException e) {
+		 * e.printStackTrace(); } }
+		 */
 		try
 		{
 			File screenshotFile = ((TakesScreenshot) driver).getScreenshotAs(OutputType.FILE);
 			FileUtils.copyFile(screenshotFile, imageFile);
 		}
-		catch(WebDriverException wde)
+		catch (WebDriverException wde)
 		{
 			System.out.println("File " + file.getAbsolutePath() + " has canvas too big for Selenium to capture image. Hence, skipping.");
 			return;
 		}
-		
+
 		// check if the screenshot is blank
 		ImageProcessing ip = new ImageProcessing();
-		if(ip.isImageBlank(imageFile.getAbsolutePath()))
+		if (ip.isImageBlank(imageFile.getAbsolutePath()))
 		{
 			// close the browser instance and get screenshot again
 			WebDriverSingleton.closeDriver();
-			getScreenshot(savedHTMLFileName, dirPath, imageName, false);
+			getScreenshot(savedHTMLFileName, dirPath, imageName, oracleImageFullPath, false);
 		}
-		
-		
-		//WebDriverSingleton.closeDriver();
+
+		// WebDriverSingleton.closeDriver();
 	}
 
 	public static ArrayList<String[]> getHtmlFileNamesInDirectory(String dirPath)
@@ -284,31 +287,28 @@ public class Util
 
 	public static String getXPathOfElementJava(Element element)
 	{
-		/*if(element != null && !element.id().isEmpty())
-		{
-			return "//*[@id=\"" + element.id() + "\"]";
-		}
-		else
-		{*/
-			return getElementTreeXPathJava(element);
-		//}
+		/*
+		 * if(element != null && !element.id().isEmpty()) { return "//*[@id=\""
+		 * + element.id() + "\"]"; } else {
+		 */
+		return getElementTreeXPathJava(element);
+		// }
 	}
-	
+
 	private static String getElementTreeXPathJava(Element element)
 	{
 		ArrayList<String> paths = new ArrayList<String>();
-		for(; element != null && !element.tagName().equals("#root") ; element = element.parent())
+		for (; element != null && !element.tagName().equals("#root"); element = element.parent())
 		{
 			int index = 0;
-			/*if(!element.id().isEmpty())
+			/*
+			 * if(!element.id().isEmpty()) { paths.add("/*[@id=\"" +
+			 * element.id() + "\"]"); break; }
+			 */
+
+			for (Element sibling = element.previousElementSibling(); sibling != null && !sibling.tagName().equals("#root"); sibling = sibling.previousElementSibling())
 			{
-				paths.add("/*[@id=\"" + element.id() + "\"]");
-				break;
-			}*/
-			
-			for(Element sibling = element.previousElementSibling() ; sibling != null && !sibling.tagName().equals("#root") ; sibling = sibling.previousElementSibling())
-			{
-				if(sibling.tagName().equals(element.tagName()))
+				if (sibling.tagName().equals(element.tagName()))
 				{
 					++index;
 				}
@@ -317,29 +317,29 @@ public class Util
 			String pathIndex = "[" + (index + 1) + "]";
 			paths.add(tagName + pathIndex);
 		}
-		
+
 		String result = null;
-		if(paths.size() > 0)
+		if (paths.size() > 0)
 		{
 			result = "/";
-			for (int i = paths.size()-1 ; i > 0 ; i--)
+			for (int i = paths.size() - 1; i > 0; i--)
 			{
 				result = result + paths.get(i) + "/";
 			}
 			result = result + paths.get(0);
 		}
-		
+
 		return result;
 	}
-	
+
 	public static Element getElementFromXPathJava(String xPath, Document doc) throws IOException
 	{
 		String xPathArray[] = xPath.split("/");
 		ArrayList<String> xPathList = new ArrayList<String>();
-		
+
 		for (int i = 0; i < xPathArray.length; i++)
 		{
-			if(!xPathArray[i].isEmpty())
+			if (!xPathArray[i].isEmpty())
 			{
 				xPathList.add(xPathArray[i]);
 			}
@@ -348,12 +348,12 @@ public class Util
 		Element foundElement = null;
 		Elements elements;
 		int startIndex = 0;
-		
+
 		String id = getElementId(xPathList.get(0));
-		if(id != null && !id.isEmpty())
+		if (id != null && !id.isEmpty())
 		{
 			foundElement = doc.getElementById(id);
-			if(foundElement == null)
+			if (foundElement == null)
 				return null;
 			elements = foundElement.children();
 			startIndex = 1;
@@ -362,29 +362,29 @@ public class Util
 		{
 			elements = doc.select(xPathList.get(0).replaceFirst(Constants.REGEX_FOR_GETTING_INDEX, ""));
 		}
-		for (int i = startIndex ; i < xPathList.size() ; i++)
+		for (int i = startIndex; i < xPathList.size(); i++)
 		{
 			String xPathFragment = xPathList.get(i);
 			int index = getSiblingIndex(xPathFragment);
 			boolean found = false;
-			
-			//strip off sibling index in square brackets
+
+			// strip off sibling index in square brackets
 			xPathFragment = xPathFragment.replaceFirst(Constants.REGEX_FOR_GETTING_INDEX, "");
-			
+
 			for (Element element : elements)
 			{
-				if(found == false && xPathFragment.equalsIgnoreCase(element.tagName()))
+				if (found == false && xPathFragment.equalsIgnoreCase(element.tagName()))
 				{
-					//check if sibling index present
-					if(index > 1)
+					// check if sibling index present
+					if (index > 1)
 					{
 						int siblingCount = 0;
-						for(Element siblingElement = element.firstElementSibling() ; siblingElement != null ; siblingElement = siblingElement.nextElementSibling())
+						for (Element siblingElement = element.firstElementSibling(); siblingElement != null; siblingElement = siblingElement.nextElementSibling())
 						{
-							if((siblingElement.tagName().equalsIgnoreCase(xPathFragment)))
+							if ((siblingElement.tagName().equalsIgnoreCase(xPathFragment)))
 							{
 								siblingCount++;
-								if(index == siblingCount)
+								if (index == siblingCount)
 								{
 									foundElement = siblingElement;
 									found = true;
@@ -392,8 +392,8 @@ public class Util
 								}
 							}
 						}
-						//invalid element (sibling index does not exist)
-						if(found == false)
+						// invalid element (sibling index does not exist)
+						if (found == false)
 							return null;
 					}
 					else
@@ -404,83 +404,70 @@ public class Util
 					break;
 				}
 			}
-			
-			//element not found
-			if(found == false)
+
+			// element not found
+			if (found == false)
 			{
 				return null;
 			}
-			
+
 			elements = foundElement.children();
 		}
 		return foundElement;
 	}
-	
+
 	private static int getSiblingIndex(String xPathElement)
 	{
 		String value = getValueFromRegex(Constants.REGEX_FOR_GETTING_INDEX, xPathElement);
-		if(value == null)
+		if (value == null)
 			return -1;
 		return Integer.parseInt(value);
 	}
-	
+
 	private static String getElementId(String xPathElement)
 	{
 		return getValueFromRegex(Constants.REGEX_FOR_GETTING_ID, xPathElement);
 	}
-	
+
 	public static String getValueFromRegex(String regex, String str)
 	{
 		Pattern p = Pattern.compile(regex, Pattern.DOTALL);
 		Matcher m = p.matcher(str);
 		if (m.find())
 		{
-			return m.group(1);		
+			return m.group(1);
 		}
-		return null;		
+		return null;
 	}
 
 	public static WebElement getElementFromCoordinates(JavascriptExecutor js, double x, double y)
 	{
-		//convert absolute co-ordinate values to relative with respect to the viewport
-		//handle elements like embed which are javascript functions instead of DOM elements. In this case, return parent
-		
-		String javscriptGetElementFromCoordinates = "var getElementFromCoordinates = function (x, y) " +
-													"{" +
-														"var scrollx = window.scrollX;" +
-														"var scrolly = window.scrollY;" +
-														"var newx = x + scrollx;" +
-														"var newy = y + scrolly;" +
-														"window.scrollTo(newx, newy);" +
-														"scrollx = window.scrollX;" +
-														"scrolly = window.scrollY;" +
-														"var element = document.elementFromPoint((newx-scrollx), (newy-scrolly));" +
-														"while(typeof element === 'function')" +
-														"{" +
-															"element = element.parentElement;" +
-														"}" +
-														"window.scrollTo(0, 0);" +
-														"return element;" +											
-													"};" +
-													"return getElementFromCoordinates(arguments[0], arguments[1]);";
+		// convert absolute co-ordinate values to relative with respect to the
+		// viewport
+		// handle elements like embed which are javascript functions instead of
+		// DOM elements. In this case, return parent
+
+		String javscriptGetElementFromCoordinates = "var getElementFromCoordinates = function (x, y) " + "{" + "var scrollx = window.scrollX;" + "var scrolly = window.scrollY;" + "var newx = x + scrollx;" + "var newy = y + scrolly;" + "window.scrollTo(newx, newy);" + "scrollx = window.scrollX;"
+				+ "scrolly = window.scrollY;" + "var element = document.elementFromPoint((newx-scrollx), (newy-scrolly));" + "while(typeof element === 'function')" + "{" + "element = element.parentElement;" + "}" + "window.scrollTo(0, 0);" + "return element;" + "};"
+				+ "return getElementFromCoordinates(arguments[0], arguments[1]);";
 		return (WebElement) js.executeScript(javscriptGetElementFromCoordinates, x, y);
 	}
-	
+
 	public static String getHtmlPageCharset(Document document)
 	{
 		String charsetName = Constants.DEFAULT_CHARSET;
 		Element meta = document.select("meta[http-equiv=content-type], meta[charset]").first();
-        if (meta != null) 
-        {
-        	String foundCharset = meta.hasAttr("http-equiv") ? getValueFromRegex(Constants.CHARSET_REGEX, meta.attr("content")) : meta.attr("charset");
-        	if (foundCharset != null && foundCharset.length() != 0) 
-        	{
-                charsetName = foundCharset;
-            }
-        }
-        return charsetName;
+		if (meta != null)
+		{
+			String foundCharset = meta.hasAttr("http-equiv") ? getValueFromRegex(Constants.CHARSET_REGEX, meta.attr("content")) : meta.attr("charset");
+			if (foundCharset != null && foundCharset.length() != 0)
+			{
+				charsetName = foundCharset;
+			}
+		}
+		return charsetName;
 	}
-	
+
 	public static String getNextAvailableFileName(String dir, String baseFileName)
 	{
 		File file = null;
@@ -491,40 +478,40 @@ public class Util
 		{
 			count++;
 			newFileName = fileNameArray[0];
-			if(count > 0)
+			if (count > 0)
 			{
 				newFileName = newFileName + "_" + count;
 			}
 			file = new File(dir + File.separatorChar + newFileName + fileNameArray[1]);
-			
-		} while(file != null && file.exists());
-		
+
+		} while (file != null && file.exists());
+
 		return newFileName + fileNameArray[1];
 	}
-	
+
 	public static int getTotalNumberOfHtmlElementsInPage(String fileNameWithPath) throws IOException
 	{
 		Document document = Jsoup.parse(new File(fileNameWithPath), null);
 		return document.getAllElements().size();
 	}
-	
+
 	public static List<Integer> getNumbersFromString(String string)
 	{
 		List<Integer> numbers = new ArrayList<Integer>();
 		Pattern p = Pattern.compile("-?\\d+");
 		Matcher m = p.matcher(string);
-		while (m.find()) 
+		while (m.find())
 		{
 			numbers.add(Integer.valueOf(m.group()));
 		}
 		return numbers;
 	}
-	
+
 	public static Double getDecimalNumberFromString(String string)
 	{
 		Pattern p = Pattern.compile("-?\\d+\\.?\\d*");
 		Matcher m = p.matcher(string);
-		if (m.find()) 
+		if (m.find())
 		{
 			return Double.valueOf(m.group());
 		}
@@ -534,30 +521,30 @@ public class Util
 	public static String[] getPathAndFileNameFromFullPath(String fullPath)
 	{
 		String[] result = new String[2];
-		
+
 		File file = new File(fullPath);
-		if(file.exists() && file.isFile())
+		if (file.exists() && file.isFile())
 		{
 			result[0] = file.getParent();
 			result[1] = file.getName();
 		}
 		return result;
 	}
-	
+
 	public static double getWeightedMean(List<Double> weights, List<Double> values)
 	{
 		double numerator = 0.0;
 		double denominator = 0.0;
-		
+
 		for (int i = 0; i < weights.size(); i++)
 		{
 			numerator = numerator + (weights.get(i) * values.get(i));
 			denominator = denominator + weights.get(i);
 		}
-		
-		return numerator/denominator;
+
+		return numerator / denominator;
 	}
-	
+
 	public static int getDistance(String expected, String actual)
 	{
 		String expectedArray[] = expected.split("/");
@@ -565,11 +552,11 @@ public class Util
 		int expectedLength = expectedArray.length - 1;
 		int actualLength = actualArray.length - 1;
 		int distance;
-		
+
 		int matchingCount = 0;
-		for(int i = 1 ; i < expectedArray.length && i < actualArray.length ; i++)
+		for (int i = 1; i < expectedArray.length && i < actualArray.length; i++)
 		{
-			if(expectedArray[i].equals(actualArray[i]))
+			if (expectedArray[i].equals(actualArray[i]))
 			{
 				matchingCount++;
 			}
@@ -578,49 +565,49 @@ public class Util
 				break;
 			}
 		}
-		
+
 		distance = (actualLength - matchingCount) + (expectedLength - matchingCount);
-		
+
 		return distance;
 	}
-	
+
 	public static boolean isPointInRectangle(int x, int y, int left, int top, int width, int height, boolean isBorderIncluded)
 	{
-		if(isBorderIncluded)
+		if (isBorderIncluded)
 		{
-			if(x >= left && y >= top && x <= (left + width) && y <= (top + height))
+			if (x >= left && y >= top && x <= (left + width) && y <= (top + height))
 				return true;
 		}
 		else
 		{
-			if(x > left && y > top && x < (left + width) && y < (top + height))
+			if (x > left && y > top && x < (left + width) && y < (top + height))
 				return true;
 		}
 		return false;
 	}
-	
+
 	public static double convertNanosecondsToSeconds(long time)
 	{
-		return (double) time/1000000000.0;
+		return (double) time / 1000000000.0;
 	}
-	
+
 	public static Logger getNewLogger(String filePathWithName, String loggerName) throws IOException
 	{
 		Logger log = org.apache.log4j.Logger.getLogger(loggerName);
 		PatternLayout layout = new PatternLayout(Layout.LINE_SEP + "%m");
-	    FileAppender appender = new FileAppender(layout, filePathWithName, true);    
-	    log.addAppender(appender);
-	    return log;
+		FileAppender appender = new FileAppender(layout, filePathWithName, true);
+		log.addAppender(appender);
+		return log;
 	}
 
 	public static org.w3c.dom.Element getW3CElementFromXPathJava(String xPath, org.w3c.dom.Document doc) throws IOException
 	{
 		String xPathArray[] = xPath.split("/");
 		ArrayList<String> xPathList = new ArrayList<String>();
-		
+
 		for (int i = 0; i < xPathArray.length; i++)
 		{
-			if(!xPathArray[i].isEmpty())
+			if (!xPathArray[i].isEmpty())
 			{
 				xPathList.add(xPathArray[i]);
 			}
@@ -629,12 +616,12 @@ public class Util
 		org.w3c.dom.Element foundElement = null;
 		org.w3c.dom.NodeList elements;
 		int startIndex = 0;
-		
+
 		String id = getElementId(xPathList.get(0));
-		if(id != null && !id.isEmpty())
+		if (id != null && !id.isEmpty())
 		{
 			foundElement = doc.getElementById(id);
-			if(foundElement == null)
+			if (foundElement == null)
 				return null;
 			elements = foundElement.getChildNodes();
 			startIndex = 1;
@@ -643,43 +630,43 @@ public class Util
 		{
 			elements = doc.getElementsByTagName(xPathList.get(0).replaceFirst(Constants.REGEX_FOR_GETTING_INDEX, ""));
 		}
-		for (int i = startIndex ; i < xPathList.size() ; i++)
+		for (int i = startIndex; i < xPathList.size(); i++)
 		{
 			String xPathFragment = xPathList.get(i);
 			int index = getSiblingIndex(xPathFragment);
 			boolean found = false;
-			
-			//strip off sibling index in square brackets
+
+			// strip off sibling index in square brackets
 			xPathFragment = xPathFragment.replaceFirst(Constants.REGEX_FOR_GETTING_INDEX, "");
-			
+
 			for (int j = 0; j < elements.getLength(); j++)
 			{
-				if(elements.item(j).getNodeType() != Node.ELEMENT_NODE)
+				if (elements.item(j).getNodeType() != Node.ELEMENT_NODE)
 				{
 					continue;
 				}
-				
+
 				org.w3c.dom.Element element = (org.w3c.dom.Element) elements.item(j);
 
-				if(found == false && xPathFragment.equalsIgnoreCase(element.getTagName()))
+				if (found == false && xPathFragment.equalsIgnoreCase(element.getTagName()))
 				{
-					//check if sibling index present
-					if(index > 1)
+					// check if sibling index present
+					if (index > 1)
 					{
 						int siblingCount = 0;
-						
-						for(org.w3c.dom.Node siblingNode = element.getParentNode().getFirstChild() ; siblingNode != null ; siblingNode = siblingNode.getNextSibling())
+
+						for (org.w3c.dom.Node siblingNode = element.getParentNode().getFirstChild(); siblingNode != null; siblingNode = siblingNode.getNextSibling())
 						{
-							if(siblingNode.getNodeType() != Node.ELEMENT_NODE)
+							if (siblingNode.getNodeType() != Node.ELEMENT_NODE)
 							{
 								continue;
 							}
-							
-							org.w3c.dom.Element siblingElement = (org.w3c.dom.Element)siblingNode;
-							if((siblingElement.getTagName().equalsIgnoreCase(xPathFragment)))
+
+							org.w3c.dom.Element siblingElement = (org.w3c.dom.Element) siblingNode;
+							if ((siblingElement.getTagName().equalsIgnoreCase(xPathFragment)))
 							{
 								siblingCount++;
-								if(index == siblingCount)
+								if (index == siblingCount)
 								{
 									foundElement = siblingElement;
 									found = true;
@@ -687,8 +674,8 @@ public class Util
 								}
 							}
 						}
-						//invalid element (sibling index does not exist)
-						if(found == false)
+						// invalid element (sibling index does not exist)
+						if (found == false)
 							return null;
 					}
 					else
@@ -699,36 +686,36 @@ public class Util
 					break;
 				}
 			}
-			
-			//element not found
-			if(found == false)
+
+			// element not found
+			if (found == false)
 			{
 				return null;
 			}
-			
+
 			elements = foundElement.getChildNodes();
 		}
 		return foundElement;
 	}
-	
+
 	public static int getDecimalFromHex(String hex)
 	{
 		try
 		{
 			return Integer.parseInt(hex.replace("#", ""), 16);
 		}
-		catch(Exception e)
+		catch (Exception e)
 		{
 			return -1;
 		}
 	}
-	
+
 	public static String getHexFromDecimal(int dec)
 	{
-		//return "#" + Integer.toHexString(dec);
+		// return "#" + Integer.toHexString(dec);
 		return String.format("#%06X", (0xFFFFFF & dec));
 	}
-	
+
 	public static String getHexFromRGB(int red, int green, int blue)
 	{
 		return String.format("#%02x%02x%02x", red, green, blue);
@@ -736,8 +723,8 @@ public class Util
 
 	public static int getRandomNumber(int low, int high)
 	{
-		Random generator = new Random(); 
-		if(low == Integer.MIN_VALUE && high == Integer.MAX_VALUE)
+		Random generator = new Random();
+		if (low == Integer.MIN_VALUE && high == Integer.MAX_VALUE)
 		{
 			return generator.nextInt();
 		}
@@ -747,28 +734,168 @@ public class Util
 	public static void drawRectangleOnImage(String imageFileName, String path, int x, int y, int w, int h) throws IOException
 	{
 		File imageFile = new File(path + File.separatorChar + imageFileName);
-        BufferedImage img = ImageIO.read(imageFile);
+		BufferedImage img = ImageIO.read(imageFile);
 
-        Graphics2D graph = img.createGraphics();
-        graph.setColor(Color.BLACK);
-        graph.drawRect(x, y, w, h);
-        graph.dispose();
+		Graphics2D graph = img.createGraphics();
+		graph.setColor(Color.BLACK);
+		graph.drawRect(x, y, w, h);
+		graph.dispose();
 
-        ImageIO.write(img, Constants.IMAGE_EXTENSION, new File(path + File.separatorChar + imageFileName));
+		ImageIO.write(img, Constants.IMAGE_EXTENSION, new File(path + File.separatorChar + imageFileName));
 	}
 
 	public static double getNormalizedValue(double min, double max, double val)
 	{
-		return ((val - min) /(max - min));
+		return ((val - min) / (max - min));
 	}
-	
+
 	public static boolean isCurrentInAcceptableReductionThreshold(double current, double original)
 	{
-		return ((original - current)/original) * 100.0 >= Constants.RCA_NUMERIC_ANALYSIS_REDUCTION_IN_DIFFERENCE_PIXELS_THRESHOLD_PERCENTAGE;
+		return ((original - current) / original) * 100.0 >= Constants.RCA_NUMERIC_ANALYSIS_REDUCTION_IN_DIFFERENCE_PIXELS_THRESHOLD_PERCENTAGE;
+	}
+
+	public static void insertIdsInPage(String fileNameWithPath) throws IOException
+	{
+		Document doc = Jsoup.parse(new File(fileNameWithPath), null);
+		int count = 1;
+
+		for (Element e : doc.getAllElements())
+		{
+			if (!Arrays.asList(Constants.NON_VISUAL_TAGS).contains(e.tagName()) && e.attr("id").isEmpty())
+			{
+				e.attr("id", "e" + count);
+				count++;
+			}
+		}
+
+		doc.outputSettings().prettyPrint(false);
+		String html = doc.html();
+		PrintWriter out = new PrintWriter(fileNameWithPath);
+		out.print(html);
+		out.close();
+	}
+
+	public static void replaceOriginalWithRandomClassNames(String fileNameWithPath, String basePath) throws IOException
+	{
+		// read CSS file and replace the original class name with a random one
+		List<String> paths = new ArrayList<String>();
+		List<String> files = getFiles(basePath, paths);
+		
+		System.out.println("paths:");
+		for (String string : files)
+		{
+			System.out.println(string);
+		}
+
+		Map<String, String> originalToRandomClassMap = new HashMap<String, String>();
+		for (String file : files)
+		{
+			if(file.contains("index.css"))
+			{
+				String original = IOUtils.toString(new BufferedReader(new FileReader(new File(file))));
+				original = original.replace("{", " {");
+				
+				String pattern = "(\\.-?)([_a-zA-Z\\-]+[\\w\\-]*)(?!\\-)(\\s*\\{)";
+	
+				Pattern r = Pattern.compile(pattern);
+				Matcher m = r.matcher(original);
+				while (m.find())
+				{
+					String randomClassName = RandomStringUtils.randomAlphabetic(5).toLowerCase();
+					if(!originalToRandomClassMap.containsKey(m.group(2).trim()))
+					{
+						originalToRandomClassMap.put(m.group(2).trim(), randomClassName);
+						original = original.replaceFirst(m.group(2).trim(), randomClassName);
+					}
+				}
+				
+				PrintWriter out2 = new PrintWriter(file);
+				out2.print(original);
+				out2.close();
+			}
+		}
+		System.out.println("\n\noriginalToRandomClassMap: ");
+		for(String c : originalToRandomClassMap.keySet())
+		{
+			System.out.println(c + " : " + originalToRandomClassMap.get(c));
+		}
+
+		
+		// read html file and find all the class names used and create a map with random class names
+		Document doc = Jsoup.parse(new File(fileNameWithPath), null);
+		
+
+		for (Element e : doc.getAllElements())
+		{
+			if (!e.className().isEmpty())
+			{
+				String[] classNames = e.className().trim().split("\\s");
+				
+				for(String className : classNames)
+				{
+					if(originalToRandomClassMap.containsKey(className.trim()))
+					{
+						e.attr("class", e.className().replace(className, originalToRandomClassMap.get(className.trim())));
+					}
+				}
+			}
+		}
+		
+		doc.outputSettings().prettyPrint(false);
+		String html = doc.html();
+		PrintWriter out = new PrintWriter(fileNameWithPath);
+		out.print(html);
+		out.close();
+	}
+
+	private static List<String> getFiles(String path, List<String> paths)
+	{
+		File root = new File(path);
+		File[] list = root.listFiles();
+
+		if (list == null)
+			return null;
+
+		for (File f : list)
+		{
+			if (f.isDirectory())
+			{
+				getFiles(f.getAbsolutePath(), paths);
+			}
+			else if (f.getName().contains("index.css") || f.getName().contains("index.html"))
+			{
+				paths.add(f.getAbsolutePath());
+			}
+		}
+		return paths;
 	}
 	
 	public static void main(String[] args) throws IOException
 	{
-		System.out.println(Util.getTotalNumberOfHtmlElementsInPage("C:\\USC\\visual_checking\\evaluation\\test\\Student1\\test7\\test.html"));
+		// System.out.println(Util.getTotalNumberOfHtmlElementsInPage("/Users/sonal/USC/papers/2015/mahajan15icst-tool/demo/regression_debugging/test/dbi.perl.org/test.html"));
+		// Util.saveHTMLPageWindows("http://www.lufthansa.com/dz/fr/Homepage#",
+		// "/Users/sonal/USC/internationalization/tests", "test.html", false);
+
+		/*String basePath = "/Users/sonal/USC/rca_ml/ICST_2016_user_study/test_cases/www.cs.cmu.edu";
+		List<String> files = new ArrayList<String>();
+		files = Util.getFiles(basePath, files);
+		for(String file : files)
+		{
+			if(file.endsWith("index.html"))
+			{
+				Util.replaceOriginalWithRandomClassNames(file, file.substring(0, file.indexOf("index.html")));
+			}
+		}*/
+		
+		String basePath = "/Users/sonal/USC/rca_ml/ICST_2016_user_study/test_cases/www.cs.cmu.edu";
+		List<String> files = new ArrayList<String>();
+		files = Util.getFiles(basePath, files);
+		for(String file : files)
+		{
+			if(file.endsWith("index.html"))
+			{
+				Util.insertIdsInPage(file);
+			}
+		}
 	}
 }

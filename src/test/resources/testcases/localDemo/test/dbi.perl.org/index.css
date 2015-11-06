@@ -1,0 +1,43 @@
+
+.ts-1 {
+    border: medium none;
+    height: 350px;
+    text-align: left;
+    width: 680px;
+}
+.ts-1-1 {
+    border: medium none;
+    display: inline;
+    float: left;
+    height: 336px;
+    margin-left: 2px;
+    margin-top: 2px;
+    padding: 0 15px 0 0;
+    width: 322px;
+}
+.ts-1-2 {
+    border: medium none;
+    display: inline;
+    float: left;
+    height: 333px;
+    margin-left: 2px;
+    margin-top: 2px;
+    padding: 0 15px 0 0;
+    width: 322px;
+}
+.gen-1 {
+    margin-bottom: 0;
+}
+.gen-2 {
+    clear: both;
+}
+.gen-3 {
+    height: 240px;
+    width: 120px;
+}
+.gen-4 {
+    font-weight: 700;
+}
+.gen-6 {
+    border-width: 0;
+}
